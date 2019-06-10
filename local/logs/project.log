@@ -1,0 +1,81 @@
+2019-06-10T08:19:30.819Z - normal: Load ~/.CocosCreator/settings.json
+2019-06-10T08:19:30.823Z - normal: checking language setting...
+2019-06-10T08:19:30.823Z - normal: Language: zh
+2019-06-10T08:19:32.593Z - success: protocol editor-framework registered
+2019-06-10T08:19:32.593Z - success: protocol app registered
+2019-06-10T08:19:32.593Z - success: protocol theme registered
+2019-06-10T08:19:32.593Z - success: protocol packages registered
+2019-06-10T08:19:32.594Z - success: protocol unpack registerred
+2019-06-10T08:19:32.594Z - success: protocol disable-commonjs registerred
+2019-06-10T08:19:32.774Z - normal: connected!
+2019-06-10T08:19:32.776Z - normal: Check project F:\CocosCreator\TestLine\TestLine
+2019-06-10T08:19:32.779Z - normal: Initializing Cocos2d
+2019-06-10T08:19:32.993Z - normal: Initializing Asset Database
+2019-06-10T08:19:33.026Z - success: protocol uuid registerred
+2019-06-10T08:19:33.026Z - success: protocol db registerred
+2019-06-10T08:19:33.026Z - success: protocol thumbnail registerred
+2019-06-10T08:19:33.027Z - normal: Loading editor/builtin packages
+2019-06-10T08:19:33.045Z - success: anysdk loaded
+2019-06-10T08:19:33.162Z - success: assets loaded
+2019-06-10T08:19:33.164Z - success: builder loaded
+2019-06-10T08:19:33.166Z - success: cocos-analytics loaded
+2019-06-10T08:19:33.170Z - success: console loaded
+2019-06-10T08:19:33.213Z - success: fb-instant-games loaded
+2019-06-10T08:19:33.216Z - success: hierarchy loaded
+2019-06-10T08:19:33.218Z - success: inspector loaded
+2019-06-10T08:19:33.220Z - success: keystore loaded
+2019-06-10T08:19:33.222Z - success: node-library loaded
+2019-06-10T08:19:33.223Z - success: package-asset loaded
+2019-06-10T08:19:33.225Z - success: preferences loaded
+2019-06-10T08:19:33.226Z - success: project-exporter loaded
+2019-06-10T08:19:33.241Z - success: project-importer loaded
+2019-06-10T08:19:33.243Z - success: project-settings loaded
+2019-06-10T08:19:33.245Z - success: ui-kit loaded
+2019-06-10T08:19:33.246Z - success: ui-grid loaded
+2019-06-10T08:19:33.249Z - success: scene loaded
+2019-06-10T08:19:33.249Z - success: sprite-editor loaded
+2019-06-10T08:19:33.252Z - success: store loaded
+2019-06-10T08:19:33.256Z - success: timeline loaded
+2019-06-10T08:19:33.256Z - normal: Loading builtin packages
+2019-06-10T08:19:33.258Z - success: asset-db-debugger loaded
+2019-06-10T08:19:33.260Z - success: code-editor loaded
+2019-06-10T08:19:33.260Z - success: color-picker loaded
+2019-06-10T08:19:33.262Z - success: package-manager loaded
+2019-06-10T08:19:33.263Z - success: qqplay-adapter loaded
+2019-06-10T08:19:33.268Z - success: sdkbox loaded
+2019-06-10T08:19:33.270Z - success: tester loaded
+2019-06-10T08:19:33.271Z - success: ui-kit-preview-extra loaded
+2019-06-10T08:19:33.273Z - success: ui-kit-preview loaded
+2019-06-10T08:19:33.274Z - success: ui-tree loaded
+2019-06-10T08:19:33.274Z - success: weapp-adapter loaded
+2019-06-10T08:19:34.367Z - normal: Initializing project F:\CocosCreator\TestLine\TestLine
+2019-06-10T08:19:34.371Z - normal: Loading packages
+2019-06-10T08:19:34.375Z - normal: Watching packages
+2019-06-10T08:19:34.584Z - normal: Run Application
+2019-06-10T08:19:35.305Z - success: preview server running at http://localhost:7456
+2019-06-10T08:19:39.024Z - normal: 1.9.3
+2019-06-10T08:19:39.185Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-10T08:19:39.185Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-10T08:19:39.185Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-10T08:19:39.187Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
