@@ -60,7 +60,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 5,
+      "x": 68,
       "y": 515
     },
     "_skewX": 0,
@@ -81,8 +81,8 @@
     "_type": 2,
     "_allowSleep": true,
     "_gravityScale": 1,
-    "_linearDamping": 0.5,
-    "_angularDamping": 0,
+    "_linearDamping": 0.8,
+    "_angularDamping": 0.1,
     "_linearVelocity": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -104,8 +104,8 @@
     "tag": 0,
     "_density": 0.5,
     "_sensor": false,
-    "_friction": 0,
-    "_restitution": 1,
+    "_friction": 0.2,
+    "_restitution": 0.8,
     "body": null,
     "_offset": {
       "__type__": "cc.Vec2",
