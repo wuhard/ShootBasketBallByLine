@@ -1,60 +1,60 @@
-2019-06-10T10:39:15.669Z - normal: Load ~/.CocosCreator/settings.json
-2019-06-10T10:39:15.673Z - normal: checking language setting...
-2019-06-10T10:39:15.673Z - normal: Language: zh
-2019-06-10T10:39:17.389Z - success: protocol editor-framework registered
-2019-06-10T10:39:17.389Z - success: protocol app registered
-2019-06-10T10:39:17.390Z - success: protocol theme registered
-2019-06-10T10:39:17.390Z - success: protocol packages registered
-2019-06-10T10:39:17.390Z - success: protocol unpack registerred
-2019-06-10T10:39:17.390Z - success: protocol disable-commonjs registerred
-2019-06-10T10:39:17.567Z - normal: connected!
-2019-06-10T10:39:17.569Z - normal: Check project C:\Users\ws\Desktop\ShootBasketBallByLine-master\ShootBasketBallByLine-master
-2019-06-10T10:39:17.571Z - normal: Initializing Cocos2d
-2019-06-10T10:39:18.990Z - normal: Initializing Asset Database
-2019-06-10T10:39:19.023Z - success: protocol uuid registerred
-2019-06-10T10:39:19.023Z - success: protocol db registerred
-2019-06-10T10:39:19.024Z - success: protocol thumbnail registerred
-2019-06-10T10:39:19.024Z - normal: Loading editor/builtin packages
-2019-06-10T10:39:19.042Z - success: anysdk loaded
-2019-06-10T10:39:19.149Z - success: assets loaded
-2019-06-10T10:39:19.151Z - success: builder loaded
-2019-06-10T10:39:19.153Z - success: cocos-analytics loaded
-2019-06-10T10:39:19.156Z - success: console loaded
-2019-06-10T10:39:19.190Z - success: fb-instant-games loaded
-2019-06-10T10:39:19.192Z - success: hierarchy loaded
-2019-06-10T10:39:19.194Z - success: inspector loaded
-2019-06-10T10:39:19.201Z - success: keystore loaded
-2019-06-10T10:39:19.203Z - success: node-library loaded
-2019-06-10T10:39:19.204Z - success: package-asset loaded
-2019-06-10T10:39:19.206Z - success: preferences loaded
-2019-06-10T10:39:19.207Z - success: project-exporter loaded
-2019-06-10T10:39:19.220Z - success: project-importer loaded
-2019-06-10T10:39:19.221Z - success: project-settings loaded
-2019-06-10T10:39:19.223Z - success: ui-kit loaded
-2019-06-10T10:39:19.224Z - success: ui-grid loaded
-2019-06-10T10:39:19.226Z - success: scene loaded
-2019-06-10T10:39:19.227Z - success: sprite-editor loaded
-2019-06-10T10:39:19.230Z - success: store loaded
-2019-06-10T10:39:19.233Z - success: timeline loaded
-2019-06-10T10:39:19.234Z - normal: Loading builtin packages
-2019-06-10T10:39:19.236Z - success: asset-db-debugger loaded
-2019-06-10T10:39:19.237Z - success: code-editor loaded
-2019-06-10T10:39:19.237Z - success: color-picker loaded
-2019-06-10T10:39:19.239Z - success: package-manager loaded
-2019-06-10T10:39:19.240Z - success: qqplay-adapter loaded
-2019-06-10T10:39:19.243Z - success: sdkbox loaded
-2019-06-10T10:39:19.245Z - success: tester loaded
-2019-06-10T10:39:19.248Z - success: ui-kit-preview-extra loaded
-2019-06-10T10:39:19.249Z - success: ui-kit-preview loaded
-2019-06-10T10:39:19.250Z - success: ui-tree loaded
-2019-06-10T10:39:19.251Z - success: weapp-adapter loaded
-2019-06-10T10:39:20.293Z - normal: Initializing project C:\Users\ws\Desktop\ShootBasketBallByLine-master\ShootBasketBallByLine-master
-2019-06-10T10:39:20.295Z - normal: Loading packages
-2019-06-10T10:39:20.299Z - normal: Watching packages
-2019-06-10T10:39:20.504Z - normal: Run Application
-2019-06-10T10:39:20.852Z - success: preview server running at http://localhost:7456
-2019-06-10T10:39:26.105Z - normal: 1.9.3
-2019-06-10T10:39:26.230Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-11T10:56:11.648Z - normal: Load ~/.CocosCreator/settings.json
+2019-06-11T10:56:11.651Z - normal: checking language setting...
+2019-06-11T10:56:11.651Z - normal: Language: zh
+2019-06-11T10:56:14.703Z - success: protocol editor-framework registered
+2019-06-11T10:56:14.703Z - success: protocol app registered
+2019-06-11T10:56:14.703Z - success: protocol theme registered
+2019-06-11T10:56:14.703Z - success: protocol packages registered
+2019-06-11T10:56:14.704Z - success: protocol unpack registerred
+2019-06-11T10:56:14.704Z - success: protocol disable-commonjs registerred
+2019-06-11T10:56:14.889Z - normal: connected!
+2019-06-11T10:56:14.890Z - normal: Check project F:\CocosCreator\ShootBasketBallByLine
+2019-06-11T10:56:14.894Z - normal: Initializing Cocos2d
+2019-06-11T10:56:16.227Z - normal: Initializing Asset Database
+2019-06-11T10:56:16.306Z - success: protocol uuid registerred
+2019-06-11T10:56:16.306Z - success: protocol db registerred
+2019-06-11T10:56:16.307Z - success: protocol thumbnail registerred
+2019-06-11T10:56:16.307Z - normal: Loading editor/builtin packages
+2019-06-11T10:56:16.400Z - success: anysdk loaded
+2019-06-11T10:56:16.582Z - success: assets loaded
+2019-06-11T10:56:16.584Z - success: builder loaded
+2019-06-11T10:56:16.586Z - success: cocos-analytics loaded
+2019-06-11T10:56:16.589Z - success: console loaded
+2019-06-11T10:56:16.633Z - success: fb-instant-games loaded
+2019-06-11T10:56:16.636Z - success: hierarchy loaded
+2019-06-11T10:56:16.639Z - success: inspector loaded
+2019-06-11T10:56:16.640Z - success: keystore loaded
+2019-06-11T10:56:16.644Z - success: node-library loaded
+2019-06-11T10:56:16.646Z - success: package-asset loaded
+2019-06-11T10:56:16.647Z - success: preferences loaded
+2019-06-11T10:56:16.651Z - success: project-exporter loaded
+2019-06-11T10:56:16.673Z - success: project-importer loaded
+2019-06-11T10:56:16.676Z - success: project-settings loaded
+2019-06-11T10:56:16.678Z - success: ui-kit loaded
+2019-06-11T10:56:16.720Z - success: ui-grid loaded
+2019-06-11T10:56:16.724Z - success: scene loaded
+2019-06-11T10:56:16.725Z - success: sprite-editor loaded
+2019-06-11T10:56:16.727Z - success: store loaded
+2019-06-11T10:56:16.743Z - success: timeline loaded
+2019-06-11T10:56:16.743Z - normal: Loading builtin packages
+2019-06-11T10:56:16.831Z - success: asset-db-debugger loaded
+2019-06-11T10:56:16.846Z - success: code-editor loaded
+2019-06-11T10:56:16.848Z - success: color-picker loaded
+2019-06-11T10:56:16.850Z - success: package-manager loaded
+2019-06-11T10:56:16.852Z - success: qqplay-adapter loaded
+2019-06-11T10:56:16.856Z - success: sdkbox loaded
+2019-06-11T10:56:16.859Z - success: tester loaded
+2019-06-11T10:56:16.862Z - success: ui-kit-preview-extra loaded
+2019-06-11T10:56:16.864Z - success: ui-kit-preview loaded
+2019-06-11T10:56:16.865Z - success: ui-tree loaded
+2019-06-11T10:56:16.866Z - success: weapp-adapter loaded
+2019-06-11T10:56:18.941Z - normal: Initializing project F:\CocosCreator\ShootBasketBallByLine
+2019-06-11T10:56:18.994Z - normal: Loading packages
+2019-06-11T10:56:18.999Z - normal: Watching packages
+2019-06-11T10:56:19.559Z - normal: Run Application
+2019-06-11T10:56:20.729Z - success: preview server running at http://localhost:7456
+2019-06-11T10:56:26.971Z - normal: 1.9.3
+2019-06-11T10:56:27.455Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -62,7 +62,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T10:39:26.230Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-11T10:56:27.455Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -70,7 +70,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T10:39:26.230Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-11T10:56:27.455Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -78,18 +78,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T10:39:26.232Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-10T10:42:14.076Z - error: Should not add renderer component (cc.Sprite) to a Canvas node.
-    at Object.errorID (D:\CocosCreator\resources\engine\CCDebugger.js:343:18)
-    at cc_Sprite._registSizeProvider (D:\CocosCreator\resources\engine\cocos2d\core\components\CCSGComponent.js:91:20)
-    at cc_Sprite.__preload (D:\CocosCreator\resources\engine\cocos2d\core\components\CCRendererUnderSG.js:61:14)
-    at cc_Sprite.Sprite.__preload (D:\CocosCreator\resources\engine\cocos2d\core\components\CCSprite.js:630:14)
-    at call__preloadInTryCatch (eval at misc.tryCatchFunctor_EDITOR (D:\CocosCreator\resources\engine\cocos2d\core\utils\misc.js:1:1), <anonymous>:5:24)
-    at CCClass.activateComp (D:\CocosCreator\resources\engine\cocos2d\core\node-activator.js:257:25)
-    at cc_Node.addComponent (D:\CocosCreator\resources\engine\cocos2d\core\utils\base-node.js:915:40)
-    at Object.addComponent (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:11769)
-    at HTMLElement.scene:add-component (file:///D:/CocosCreator/resources/app.asar/editor/builtin/scene/panel/scene.js:1:8626)
-2019-06-10T10:51:00.901Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-11T10:56:27.457Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-11T11:13:27.897Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -97,7 +87,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T10:51:00.903Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-11T11:13:27.898Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -105,7 +95,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T10:51:00.903Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-11T11:13:27.899Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -113,8 +103,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T10:51:00.904Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-10T10:51:42.058Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-11T11:13:27.900Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-11T11:13:45.151Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -122,7 +112,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T10:51:42.059Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-11T11:13:45.151Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -130,7 +120,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T10:51:42.060Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-11T11:13:45.151Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -138,8 +128,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T10:51:42.060Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-10T11:17:10.837Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-11T11:13:45.152Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-11T11:17:36.776Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -147,7 +137,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T11:17:10.838Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-11T11:17:36.777Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -155,7 +145,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T11:17:10.839Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-11T11:17:36.778Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -163,8 +153,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T11:17:10.840Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-10T11:18:03.502Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-11T11:17:36.778Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-11T11:24:10.782Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -172,7 +162,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T11:18:03.502Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-11T11:24:10.784Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -180,7 +170,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T11:18:03.502Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-11T11:24:10.784Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -188,8 +178,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T11:18:03.503Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-10T11:21:31.577Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-11T11:24:10.784Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-11T11:24:39.567Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -197,7 +187,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T11:21:31.579Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-11T11:24:39.568Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -205,7 +195,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T11:21:31.579Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-11T11:24:39.568Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -213,55 +203,4 @@
     // After:
     @property(...)
     value = 0;
-2019-06-10T11:21:31.580Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-10T11:26:53.976Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-06-10T11:26:53.977Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-06-10T11:26:53.977Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-06-10T11:26:53.982Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-10T11:33:02.397Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-06-10T11:33:02.398Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-06-10T11:33:02.398Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-06-10T11:33:02.401Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-10T11:47:51.480Z - info: shutdown preview server
+2019-06-11T11:24:39.568Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.

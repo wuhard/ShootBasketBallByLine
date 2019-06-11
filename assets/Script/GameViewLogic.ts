@@ -33,7 +33,7 @@ export default class GameViewLogic extends cc.Component {
         // cc.PhysicsManager.DrawBits.e_jointBit |
         // cc.PhysicsManager.DrawBits.e_shapeBit
         // ;
-        cc.director.getPhysicsManager().gravity = cc.v2(0, -600);
+        cc.director.getPhysicsManager().gravity = cc.v2(0, -640);
 
         let self = this;
         

@@ -31,7 +31,7 @@ var GameViewLogic = /** @class */ (function (_super) {
         // cc.PhysicsManager.DrawBits.e_jointBit |
         // cc.PhysicsManager.DrawBits.e_shapeBit
         // ;
-        cc.director.getPhysicsManager().gravity = cc.v2(0, -600);
+        cc.director.getPhysicsManager().gravity = cc.v2(0, -640);
         var self = this;
         this.instantiateOneBall();
         self.node.on(cc.Node.EventType.TOUCH_START, self.touchStart.bind(self));

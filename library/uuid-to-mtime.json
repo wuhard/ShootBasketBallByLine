@@ -40,17 +40,17 @@
     "relativePath": "prefab"
   },
   "29f52784-2fca-467b-92e7-8fd9ef8c57b7": {
-    "asset": 1560101674000,
+    "asset": 1560155261520,
     "meta": 1560101674000,
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1560101674000,
+    "asset": 1560155261535,
     "meta": 1560101674000,
     "relativePath": "Script"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
-    "asset": 1560101674000,
+    "asset": 1560234863629,
     "meta": 1560101674000,
     "relativePath": "Texture"
   },
@@ -65,22 +65,22 @@
     "relativePath": "Texture\\HelloWorld.png"
   },
   "45519884-8f2b-4e1c-95b8-f489861b906c": {
-    "asset": 1560167250126,
-    "meta": 1560167250133,
+    "asset": 1560252014393,
+    "meta": 1560252014405,
     "relativePath": "resources\\prefab\\physicsNode.prefab"
   },
   "aa031956-af82-4cc1-9cbd-47038a432a40": {
-    "asset": 1560167270970,
-    "meta": 1560167270977,
+    "asset": 1560252532022,
+    "meta": 1560252532035,
     "relativePath": "Scene\\MainScene.fire"
   },
   "40c9ac6b-a8f2-48fe-89ed-e48af884ea31": {
-    "asset": 1560101674000,
+    "asset": 1560155261510,
     "meta": 1560101674000,
     "relativePath": "resources"
   },
   "c7c73f50-4f67-43bd-9c36-c45ce05a2dc9": {
-    "asset": 1560101674000,
+    "asset": 1560155261515,
     "meta": 1560101674000,
     "relativePath": "resources\\prefab"
   },
@@ -95,8 +95,8 @@
     "relativePath": "Texture\\ball.png"
   },
   "05229913-f510-41eb-804d-840796ab433e": {
-    "asset": 1560167104292,
-    "meta": 1560167104300,
+    "asset": 1560252444574,
+    "meta": 1560252444641,
     "relativePath": "resources\\prefab\\ball.prefab"
   },
   "71561142-4c83-4933-afca-cb7a17f67053": {
@@ -315,8 +315,8 @@
     "relativePath": "Script\\Ball.js"
   },
   "56f273f6-8127-46cc-bfda-0bc55729882c": {
-    "asset": 1560166379898,
-    "meta": 1560166382089,
+    "asset": 1560252277817,
+    "meta": 1560252279208,
     "relativePath": "Script\\GameViewLogic.ts"
   }
 }
