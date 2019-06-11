@@ -49,6 +49,16 @@ cc.Class({
            this.node.destroy();
 
         }
+        else if(otherCollider.node.name == 'BasketBottom')
+        {
+            cc.log("get one score");
+            var script = cc.find("Canvas/Logic").getComponent("GameViewLogic");
+
+            script.instantiateOneBall();
+            script.RemaveAllLine();
+            this.node.destroy();
+
+        }
       
     }
 });

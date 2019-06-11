@@ -24,12 +24,13 @@ var physicsNodeLogic = /** @class */ (function (_super) {
         _this.physicsLine = null;
         _this.rigibodyLogic = null;
         _this.pathWidth = 10;
+        _this.pathColor = cc.color(0, 0, 0);
         return _this;
     }
     // LIFE-CYCLE CALLBACKS:    
     physicsNodeLogic.prototype.onLoad = function () {
         this.path = this.addComponent(cc.Graphics);
-        this.path.strokeColor = cc.color(255, 0, 0);
+        this.path.strokeColor = this.pathColor;
         this.path.lineWidth = this.pathWidth;
         this.touchStartHandler = this.touchStart.bind(this);
         this.touchMoveHandler = this.touchMove.bind(this);
@@ -128,6 +129,9 @@ var physicsNodeLogic = /** @class */ (function (_super) {
     __decorate([
         property(Number)
     ], physicsNodeLogic.prototype, "pathWidth", void 0);
+    __decorate([
+        property(cc.color)
+    ], physicsNodeLogic.prototype, "pathColor", void 0);
     physicsNodeLogic = __decorate([
         ccclass
     ], physicsNodeLogic);

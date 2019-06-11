@@ -30,11 +30,13 @@ export default class physicsNodeLogic extends cc.Component {
     rigibodyLogic: cc.RigidBody = null;
     @property(Number)
     pathWidth : number = 10;
+    @property(cc.color)
+    pathColor: cc.Color = cc.color(0,0,0);
 
     // LIFE-CYCLE CALLBACKS:    
     onLoad () {
         this.path = this.addComponent(cc.Graphics);
-        this.path.strokeColor = cc.color(255, 0, 0);
+        this.path.strokeColor = this.pathColor;
         this.path.lineWidth = this.pathWidth;
 
         this.touchStartHandler = this.touchStart.bind(this);

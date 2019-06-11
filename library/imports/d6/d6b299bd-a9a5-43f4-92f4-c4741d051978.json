@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "basketball",
+    "texture": "ff6e0d25-2e4b-4d62-9f7d-947b8a9970da",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      94,
+      91
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      94,
+      91
+    ]
+  }
+}
