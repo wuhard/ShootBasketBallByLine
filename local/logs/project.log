@@ -1,60 +1,61 @@
-2019-06-11T13:04:31.128Z - normal: Load ~/.CocosCreator/settings.json
-2019-06-11T13:04:31.133Z - normal: checking language setting...
-2019-06-11T13:04:31.133Z - normal: Language: zh
-2019-06-11T13:04:36.809Z - success: protocol editor-framework registered
-2019-06-11T13:04:36.809Z - success: protocol app registered
-2019-06-11T13:04:36.809Z - success: protocol theme registered
-2019-06-11T13:04:36.809Z - success: protocol packages registered
-2019-06-11T13:04:36.810Z - success: protocol unpack registerred
-2019-06-11T13:04:36.810Z - success: protocol disable-commonjs registerred
-2019-06-11T13:04:37.012Z - normal: connected!
-2019-06-11T13:04:37.019Z - normal: Check project E:\Github\CocosCreator\ShootBasketBallByLine
-2019-06-11T13:04:37.023Z - normal: Initializing Cocos2d
-2019-06-11T13:04:38.995Z - normal: Initializing Asset Database
-2019-06-11T13:04:39.530Z - success: protocol uuid registerred
-2019-06-11T13:04:39.530Z - success: protocol db registerred
-2019-06-11T13:04:39.531Z - success: protocol thumbnail registerred
-2019-06-11T13:04:39.531Z - normal: Loading editor/builtin packages
-2019-06-11T13:04:39.661Z - success: anysdk loaded
-2019-06-11T13:04:39.856Z - success: assets loaded
-2019-06-11T13:04:39.859Z - success: builder loaded
-2019-06-11T13:04:39.862Z - success: cocos-analytics loaded
-2019-06-11T13:04:39.866Z - success: console loaded
-2019-06-11T13:04:39.917Z - success: fb-instant-games loaded
-2019-06-11T13:04:39.920Z - success: hierarchy loaded
-2019-06-11T13:04:39.923Z - success: inspector loaded
-2019-06-11T13:04:39.930Z - success: keystore loaded
-2019-06-11T13:04:39.933Z - success: node-library loaded
-2019-06-11T13:04:39.935Z - success: package-asset loaded
-2019-06-11T13:04:39.938Z - success: preferences loaded
-2019-06-11T13:04:39.940Z - success: project-exporter loaded
-2019-06-11T13:04:39.962Z - success: project-importer loaded
-2019-06-11T13:04:39.964Z - success: project-settings loaded
-2019-06-11T13:04:39.967Z - success: ui-kit loaded
-2019-06-11T13:04:40.018Z - success: ui-grid loaded
-2019-06-11T13:04:40.023Z - success: scene loaded
-2019-06-11T13:04:40.025Z - success: sprite-editor loaded
-2019-06-11T13:04:40.029Z - success: store loaded
-2019-06-11T13:04:40.041Z - success: timeline loaded
-2019-06-11T13:04:40.041Z - normal: Loading builtin packages
-2019-06-11T13:04:40.211Z - success: asset-db-debugger loaded
-2019-06-11T13:04:40.231Z - success: code-editor loaded
-2019-06-11T13:04:40.232Z - success: color-picker loaded
-2019-06-11T13:04:40.286Z - success: package-manager loaded
-2019-06-11T13:04:40.289Z - success: qqplay-adapter loaded
-2019-06-11T13:04:40.300Z - success: sdkbox loaded
-2019-06-11T13:04:40.326Z - success: tester loaded
-2019-06-11T13:04:40.341Z - success: ui-kit-preview-extra loaded
-2019-06-11T13:04:40.357Z - success: ui-kit-preview loaded
-2019-06-11T13:04:40.360Z - success: ui-tree loaded
-2019-06-11T13:04:40.361Z - success: weapp-adapter loaded
-2019-06-11T13:04:43.125Z - normal: Initializing project E:\Github\CocosCreator\ShootBasketBallByLine
-2019-06-11T13:04:43.128Z - normal: Loading packages
-2019-06-11T13:04:43.133Z - normal: Watching packages
-2019-06-11T13:04:44.569Z - normal: Run Application
-2019-06-11T13:04:51.394Z - success: preview server running at http://localhost:7456
-2019-06-11T13:05:01.858Z - normal: 1.9.3
-2019-06-11T13:05:02.448Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T10:57:42.260Z - normal: Load ~/.CocosCreator/settings.json
+2019-06-12T10:57:42.263Z - normal: checking language setting...
+2019-06-12T10:57:42.263Z - normal: Language: zh
+2019-06-12T10:57:45.414Z - success: protocol editor-framework registered
+2019-06-12T10:57:45.415Z - success: protocol app registered
+2019-06-12T10:57:45.415Z - success: protocol theme registered
+2019-06-12T10:57:45.415Z - success: protocol packages registered
+2019-06-12T10:57:45.415Z - success: protocol unpack registerred
+2019-06-12T10:57:45.415Z - success: protocol disable-commonjs registerred
+2019-06-12T10:57:45.590Z - normal: connected!
+2019-06-12T10:57:45.592Z - normal: Check project F:\CocosCreator\ShootBasketBallByLine
+2019-06-12T10:57:45.617Z - normal: Initializing Cocos2d
+2019-06-12T10:57:47.017Z - normal: Initializing Asset Database
+2019-06-12T10:57:47.100Z - success: protocol uuid registerred
+2019-06-12T10:57:47.100Z - success: protocol db registerred
+2019-06-12T10:57:47.100Z - success: protocol thumbnail registerred
+2019-06-12T10:57:47.100Z - normal: Loading editor/builtin packages
+2019-06-12T10:57:48.010Z - success: anysdk loaded
+2019-06-12T10:57:48.159Z - success: assets loaded
+2019-06-12T10:57:48.162Z - success: builder loaded
+2019-06-12T10:57:48.164Z - success: cocos-analytics loaded
+2019-06-12T10:57:48.172Z - success: console loaded
+2019-06-12T10:57:48.211Z - success: fb-instant-games loaded
+2019-06-12T10:57:48.214Z - success: hierarchy loaded
+2019-06-12T10:57:48.217Z - success: inspector loaded
+2019-06-12T10:57:48.218Z - success: keystore loaded
+2019-06-12T10:57:48.221Z - success: node-library loaded
+2019-06-12T10:57:48.223Z - success: package-asset loaded
+2019-06-12T10:57:48.224Z - success: preferences loaded
+2019-06-12T10:57:48.227Z - success: project-exporter loaded
+2019-06-12T10:57:48.246Z - success: project-importer loaded
+2019-06-12T10:57:48.247Z - success: project-settings loaded
+2019-06-12T10:57:48.250Z - success: ui-kit loaded
+2019-06-12T10:57:48.291Z - success: ui-grid loaded
+2019-06-12T10:57:48.323Z - success: scene loaded
+2019-06-12T10:57:48.324Z - success: sprite-editor loaded
+2019-06-12T10:57:48.327Z - success: store loaded
+2019-06-12T10:57:48.363Z - success: timeline loaded
+2019-06-12T10:57:48.363Z - normal: Loading builtin packages
+2019-06-12T10:57:48.442Z - success: asset-db-debugger loaded
+2019-06-12T10:57:48.458Z - success: code-editor loaded
+2019-06-12T10:57:48.459Z - success: color-picker loaded
+2019-06-12T10:57:48.462Z - success: package-manager loaded
+2019-06-12T10:57:48.464Z - success: qqplay-adapter loaded
+2019-06-12T10:57:48.478Z - success: sdkbox loaded
+2019-06-12T10:57:48.481Z - success: tester loaded
+2019-06-12T10:57:48.483Z - success: ui-kit-preview-extra loaded
+2019-06-12T10:57:48.485Z - success: ui-kit-preview loaded
+2019-06-12T10:57:48.487Z - success: ui-tree loaded
+2019-06-12T10:57:48.487Z - success: weapp-adapter loaded
+2019-06-12T10:57:50.027Z - normal: Initializing project F:\CocosCreator\ShootBasketBallByLine
+2019-06-12T10:57:50.081Z - normal: Loading packages
+2019-06-12T10:57:50.086Z - normal: Watching packages
+2019-06-12T10:57:50.678Z - normal: Run Application
+2019-06-12T10:57:52.123Z - warn: [db-task][init] Backup unused meta file: db://assets/Animations.meta
+2019-06-12T10:57:59.842Z - success: preview server running at http://localhost:7456
+2019-06-12T10:58:06.674Z - normal: 1.9.3
+2019-06-12T10:58:06.948Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -62,7 +63,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T13:05:02.448Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T10:58:06.948Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -70,7 +71,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T13:05:02.449Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T10:58:06.949Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -78,76 +79,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T13:05:02.451Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-11T13:26:34.372Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:18527
-2019-06-11T13:26:34.376Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:18528
-2019-06-11T13:26:34.376Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:18529
-2019-06-11T13:26:34.376Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:18530
-2019-06-11T13:30:15.625Z - warn: timeline 找不到指定的节点数据，无法获取关键帧
-2019-06-11T13:30:29.118Z - warn: timeline 找不到指定的节点数据，无法获取关键帧
-2019-06-11T13:30:47.316Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:30:57.026Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:30:58.082Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:31:02.561Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:31:05.961Z - error: Can't generate child path for node.
-    at Object.showTrajectoryGizmo (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\anim-utils.js:1:4471)
-    at Object.activate (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\anim-utils.js:1:5126)
-    at Object.activate (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:17882)
-    at HTMLElement.selection:activated (file:///D:/CocosCreator/resources/app.asar/editor/builtin/scene/panel/scene.js:1:14236)
-    at EventEmitter.e.on.t (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\polymer-utils.js:1:353)
-    at emitThree (events.js:121:20)
-    at EventEmitter.emit (events.js:197:7)
-2019-06-11T13:34:21.602Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:34:29.725Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:34:30.577Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:34:31.112Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:34:31.730Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:34:36.963Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:34:37.668Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:34:38.254Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:34:38.495Z - warn: Can not select this node in Animation Edit Mode
-2019-06-11T13:37:08.122Z - error: Failed to reset layout: Error: Failed to close panel scene
-    at Object.Panel._unloadAll (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\panel.js:1:2459)
-    at Async.waterfall.e (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\dock-utils.js:1:8071)
-    at fn (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:746:34)
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:1213:16
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:166:37
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:706:43
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:167:37
-    at Object.async.waterfall (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:710:44)
-    at Object.DockUtils.reset (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\dock-utils.js:1:8050)
-    at EventEmitter.ipcRenderer.on (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\dock-utils.js:1:9933)
-    at DockUtils.reset.e (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\dock-utils.js:1:9971)
-    at Async.waterfall.e (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\dock-utils.js:1:9060)
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:52:16
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:696:30
-    at D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:167:37
-    at Immediate.<anonymous> (D:\CocosCreator\resources\app.asar\node_modules\async\lib\async.js:1206:34)
-    at runCallback (timers.js:672:20)
-    at tryOnImmediate (timers.js:645:5)
-    at processImmediate [as _immediateCallback] (timers.js:617:5)
-2019-06-11T13:41:32.948Z - warn: 找不到缓存的节点数据
-2019-06-11T13:42:54.574Z - warn: 找不到缓存的节点数据
-2019-06-11T13:43:22.925Z - error: Can't generate child path for node.
-    at Object.showTrajectoryGizmo (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\anim-utils.js:1:4471)
-    at Object.activate (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\anim-utils.js:1:5126)
-    at Object.activate (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:17882)
-    at HTMLElement.selection:activated (file:///D:/CocosCreator/resources/app.asar/editor/builtin/scene/panel/scene.js:1:14236)
-    at EventEmitter.e.on.t (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\polymer-utils.js:1:353)
-    at emitThree (events.js:121:20)
-    at EventEmitter.emit (events.js:197:7)
-2019-06-11T13:43:31.710Z - warn: timeline 找不到指定的节点数据，无法获取关键帧
-2019-06-11T13:50:48.209Z - warn: timeline 找不到指定的节点数据，无法获取关键帧
-2019-06-11T14:38:28.961Z - error: Can't generate child path for node.
-    at Object.showTrajectoryGizmo (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\anim-utils.js:1:4471)
-    at Object.activate (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\anim-utils.js:1:5126)
-    at Object.activate (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:17882)
-    at HTMLElement.selection:activated (file:///D:/CocosCreator/resources/app.asar/editor/builtin/scene/panel/scene.js:1:14236)
-    at EventEmitter.e.on.t (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\polymer-utils.js:1:353)
-    at emitThree (events.js:121:20)
-    at EventEmitter.emit (events.js:197:7)
-2019-06-11T14:39:08.812Z - info: Path: EnterBallAni/point_yellow, UUID: f142yej6ZBeLzJF+jhToSg
-2019-06-11T14:39:42.333Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T10:58:06.951Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T10:59:05.414Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -155,7 +88,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:39:42.333Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T10:59:05.416Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -163,7 +96,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:39:42.334Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T10:59:05.416Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -171,12 +104,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:39:42.337Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-11T14:39:45.342Z - warn: reference node is destroyed
-2019-06-11T14:39:45.418Z - warn: reference node is destroyed
-2019-06-11T14:39:45.422Z - warn: reference node is destroyed
-2019-06-11T14:39:45.893Z - warn: reference node is destroyed
-2019-06-11T14:40:09.599Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T10:59:05.419Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:03:57.592Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -184,7 +113,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:09.599Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T11:03:57.594Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -192,7 +121,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:09.599Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T11:03:57.594Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -200,7 +129,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:09.602Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T11:03:57.597Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:05:31.400Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -208,7 +138,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:09.602Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T11:05:31.400Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -216,7 +146,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:09.602Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T11:05:31.401Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -224,16 +154,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:09.603Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-11T14:40:09.716Z - error: Can't generate child path for node.
-    at Object.showTrajectoryGizmo (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\anim-utils.js:1:4471)
-    at Object.activate (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\anim-utils.js:1:5126)
-    at Object.activate (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:17882)
-    at HTMLElement.selection:activated (file:///D:/CocosCreator/resources/app.asar/editor/builtin/scene/panel/scene.js:1:14236)
-    at EventEmitter.e.on.t (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\polymer-utils.js:1:353)
-    at emitThree (events.js:121:20)
-    at EventEmitter.emit (events.js:197:7)
-2019-06-11T14:40:24.604Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T11:05:31.403Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:07:14.775Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -241,7 +163,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:24.604Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T11:07:14.777Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -249,7 +171,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:24.604Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T11:07:14.777Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -257,7 +179,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:24.606Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T11:07:14.777Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:08:14.016Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -265,7 +188,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:24.606Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T11:08:14.016Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -273,7 +196,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:24.606Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T11:08:14.016Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -281,8 +204,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:40:24.607Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-11T14:42:50.040Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T11:08:14.018Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:12:13.720Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -290,7 +213,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:42:50.042Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T11:12:13.722Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -298,7 +221,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:42:50.042Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T11:12:13.722Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -306,7 +229,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:42:50.042Z - warn: Please specifiy a default value for "onLoad" property at its declaration: 😂
+2019-06-12T11:12:13.867Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:13:54.714Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -314,33 +238,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:42:50.043Z - error: Can not declare EnterBallAni.onLoad, it is already defined in the prototype of EnterBallAni
-    at Object.errorID (D:\CocosCreator\resources\engine\CCDebugger.js:343:18)
-    at defineProp (D:\CocosCreator\resources\engine\cocos2d\core\platform\CCClass.js:136:16)
-    at declareProperties (D:\CocosCreator\resources\engine\cocos2d\core\platform\CCClass.js:812:17)
-    at Object.CCClass [as Class] (D:\CocosCreator\resources\engine\cocos2d\core\platform\CCClass.js:947:9)
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCClassDecorator.js:279:18
-    at D:\CocosCreator\resources\engine\cocos2d\core\platform\CCClassDecorator.js:60:20
-    at window.__decorate (D:\CocosCreator\resources\engine\polyfill\typescript.js:29:95)
-    at E:\Github\CocosCreator\ShootBasketBallByLine\temp\quick-scripts\assets\Script\EnterBallAni.js:32:20
-    at __define (E:\Github\CocosCreator\ShootBasketBallByLine\temp\quick-scripts\assets\Script\EnterBallAni.js:36:2)
-2019-06-11T14:42:50.043Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-11T14:42:50.155Z - error: Can't generate child path for node.
-    at Object.showTrajectoryGizmo (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\anim-utils.js:1:4471)
-    at Object.activate (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\anim-utils.js:1:5126)
-    at Object.activate (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:17882)
-    at HTMLElement.selection:activated (file:///D:/CocosCreator/resources/app.asar/editor/builtin/scene/panel/scene.js:1:14236)
-    at EventEmitter.e.on.t (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ui\utils\polymer-utils.js:1:353)
-    at emitThree (events.js:121:20)
-    at EventEmitter.emit (events.js:197:7)
-2019-06-11T14:43:21.337Z - error: Can not remove cc.Animation Component in Animation Edit Mode
-    at Object.removeComponent (D:\CocosCreator\resources\app.asar\editor\page\scene-utils\index.js:1:12134)
-    at HTMLElement.scene:remove-component (file:///D:/CocosCreator/resources/app.asar/editor/builtin/scene/panel/scene.js:1:8765)
-    at Object.Panel._dispatch (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\panel.js:1:2283)
-    at EventEmitter.ipcRenderer.on.o (D:\CocosCreator\resources\app.asar\editor-framework\lib\renderer\ipc.js:1:4054)
-    at emitMany (events.js:127:13)
-    at EventEmitter.emit (events.js:204:7)
-2019-06-11T14:44:19.709Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T11:13:54.715Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -348,7 +246,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:44:19.710Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T11:13:54.715Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -356,7 +254,8 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:44:19.710Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T11:13:54.715Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:15:00.430Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -364,16 +263,7 @@
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:44:19.711Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-11T14:44:19.778Z - warn: The Asset used by component "cc.Animation" is missing. Detailed information:
-Node path: "EnterBallAni"
-Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
-
-2019-06-11T14:44:19.783Z - warn: The Asset used by component "cc.Animation" is missing. Detailed information:
-Node path: "EnterBallAni"
-Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
-
-2019-06-11T14:45:31.677Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T11:15:00.430Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -381,7 +271,7 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:45:31.678Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T11:15:00.430Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -389,7 +279,7 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:45:31.678Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T11:15:00.430Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -397,8 +287,8 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:45:31.679Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-11T14:46:20.922Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T11:15:00.431Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:18:27.272Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -406,7 +296,7 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:46:20.923Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T11:18:27.273Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -414,7 +304,7 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:46:20.923Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T11:18:27.274Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -422,8 +312,7 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:46:20.925Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-11T14:59:52.310Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T11:18:27.274Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -431,7 +320,26 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:59:52.312Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T11:18:27.274Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:22:17.476Z - failed: [db-task][sync-changes] Failed to import asset F:\CocosCreator\ShootBasketBallByLine\assets\Script\Ball.js, message: Compile error: SyntaxError: F:/CocosCreator/ShootBasketBallByLine/assets/Script/Ball.js: Unexpected token, expected , (61:12)
+  59 |             script.RemaveAllLine();
+  60 |             script.PlayEnterBallAni(otherCollider.node
+> 61 |             this.node.destroy();
+     |             ^
+  62 | 
+  63 |         }
+  64 |       
+    at Parser.pp$5.raise (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp.expect (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1749:33)
+    at Parser.pp$3.parseCallExpressionArguments (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3564:12)
+    at Parser.pp$3.parseSubscripts (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3533:31)
+    at Parser.pp$3.parseExprSubscripts (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)
+2019-06-12T11:22:17.697Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -439,7 +347,7 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:59:52.312Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T11:22:17.697Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -447,8 +355,7 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T14:59:52.317Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-11T15:02:59.016Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-06-12T11:22:17.697Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -456,7 +363,7 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T15:02:59.018Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-06-12T11:22:17.697Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -464,7 +371,8 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T15:02:59.019Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-06-12T11:22:17.698Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:25:11.495Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -472,5 +380,162 @@ Missing uuid: "ae9f2523-85fd-48a6-9f5e-8f6b8405a9da"
     // After:
     @property(...)
     value = 0;
-2019-06-11T15:02:59.023Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-06-11T15:03:22.265Z - info: shutdown preview server
+2019-06-12T11:25:11.497Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:25:11.497Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:25:11.497Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:25:11.497Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:25:42.082Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:25:42.083Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:25:42.084Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:25:42.084Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:25:42.085Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:28:17.550Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:28:17.552Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:28:17.552Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:28:17.552Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:28:17.552Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:31:12.590Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:31:12.591Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:31:12.591Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:31:12.591Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:31:12.591Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:32:38.574Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:32:38.575Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:32:38.575Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:32:38.575Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-12T11:32:38.587Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-12T11:43:15.624Z - warn: Error: ipc timeout. message: scene:query-node, session: scene@renderer:37785
+2019-06-12T11:43:17.456Z - info: shutdown preview server

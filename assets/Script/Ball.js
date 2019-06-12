@@ -1,4 +1,5 @@
 import GameViewLogic from "./GameViewLogic";
+import EnterBallAni from "./EnterBallAni";
 
 // Learn cc.Class:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
@@ -12,7 +13,7 @@ import GameViewLogic from "./GameViewLogic";
 
 cc.Class({
     extends: cc.Component,
-
+ 
     properties: {
         // foo: {
         //     // ATTRIBUTES:
@@ -55,10 +56,14 @@ cc.Class({
             var script = cc.find("Canvas/Logic").getComponent("GameViewLogic");
 
             script.instantiateOneBall();
-            script.RemaveAllLine();
+            script.RemoveNode(otherCollider.node.parent);
+            script.RemaveAllLine(otherCollider.node.parent);
+            script.PlayEnterBallAni(otherCollider.node.convertToWorldSpaceAR(cc.v2(0, 0)));
             this.node.destroy();
-
+            
         }
       
     }
+
+   
 });

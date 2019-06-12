@@ -8,6 +8,10 @@ var _GameViewLogic = require("./GameViewLogic");
 
 var _GameViewLogic2 = _interopRequireDefault(_GameViewLogic);
 
+var _EnterBallAni = require("./EnterBallAni");
+
+var _EnterBallAni2 = _interopRequireDefault(_EnterBallAni);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Learn cc.Class:
@@ -59,7 +63,9 @@ cc.Class({
             var script = cc.find("Canvas/Logic").getComponent("GameViewLogic");
 
             script.instantiateOneBall();
-            script.RemaveAllLine();
+            script.RemoveNode(otherCollider.node.parent);
+            script.RemaveAllLine(otherCollider.node.parent);
+            script.PlayEnterBallAni(otherCollider.node.convertToWorldSpaceAR(cc.v2(0, 0)));
             this.node.destroy();
         }
     }

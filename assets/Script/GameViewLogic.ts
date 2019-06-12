@@ -1,3 +1,5 @@
+import EnterBallAni from "./EnterBallAni";
+
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/editors_and_tools/creator-chapters/scripting/typescript/index.html
@@ -24,6 +26,8 @@ export default class GameViewLogic extends cc.Component {
     @property(cc.Node)
     linesParent:cc.Node;
     physicsNodeArr: cc.Node[] = [];
+    @property(cc.Prefab)
+    enterBallAni:cc.Prefab;
 
     onLoad () {
         cc.director.getPhysicsManager().enabled = true;
@@ -84,6 +88,14 @@ export default class GameViewLogic extends cc.Component {
       
     }
 
+    public PlayEnterBallAni(pos:cc.Vec2)
+    {
+        let ani = cc.instantiate(this.enterBallAni);
+        cc.log("PlayAni");
+        this.node.addChild(ani);
+        ani.setPosition(pos);
+    }
+
     public RemaveAllLine()
     {
         cc.log("removeline");
@@ -96,5 +108,10 @@ export default class GameViewLogic extends cc.Component {
 
         var arrLenght = this.physicsNodeArr.length;
         this.physicsNodeArr.slice(0,arrLenght-1);
+    }
+
+    public RemoveNode(nodeObj:cc.Node)
+    {
+        nodeObj.destroy();
     }
 }

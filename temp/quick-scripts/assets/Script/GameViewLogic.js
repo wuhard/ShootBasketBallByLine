@@ -2,6 +2,7 @@
 cc._RF.push(module, '56f27P2gSdGzL/aC8VXKYgs', 'GameViewLogic', __filename);
 // Script/GameViewLogic.ts
 
+Object.defineProperty(exports, "__esModule", { value: true });
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/editors_and_tools/creator-chapters/scripting/typescript/index.html
@@ -11,7 +12,6 @@ cc._RF.push(module, '56f27P2gSdGzL/aC8VXKYgs', 'GameViewLogic', __filename);
 // Learn life-cycle callbacks:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/life-cycle-callbacks.html
 //  - [English] http://www.cocos2d-x.org/docs/editors_and_tools/creator-chapters/scripting/life-cycle-callbacks/index.html
-Object.defineProperty(exports, "__esModule", { value: true });
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var talefun = cc.talefun;
 var GameViewLogic = /** @class */ (function (_super) {
@@ -64,6 +64,12 @@ var GameViewLogic = /** @class */ (function (_super) {
         this.ballParent.addChild(tempball);
         tempball.setPosition(startPos);
     };
+    GameViewLogic.prototype.PlayEnterBallAni = function (pos) {
+        var ani = cc.instantiate(this.enterBallAni);
+        cc.log("PlayAni");
+        this.node.addChild(ani);
+        ani.setPosition(pos);
+    };
     GameViewLogic.prototype.RemaveAllLine = function () {
         cc.log("removeline");
         var children = this.node.children;
@@ -73,6 +79,9 @@ var GameViewLogic = /** @class */ (function (_super) {
         }
         var arrLenght = this.physicsNodeArr.length;
         this.physicsNodeArr.slice(0, arrLenght - 1);
+    };
+    GameViewLogic.prototype.RemoveNode = function (nodeObj) {
+        nodeObj.destroy();
     };
     __decorate([
         property(cc.Prefab)
@@ -86,6 +95,9 @@ var GameViewLogic = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], GameViewLogic.prototype, "linesParent", void 0);
+    __decorate([
+        property(cc.Prefab)
+    ], GameViewLogic.prototype, "enterBallAni", void 0);
     GameViewLogic = __decorate([
         ccclass
     ], GameViewLogic);
