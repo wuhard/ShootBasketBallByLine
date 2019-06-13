@@ -22,11 +22,36 @@ export default class Basket extends cc.Component {
     @property(cc.Node)
     frontSprit: cc.Node;
    
-    
+    @property(cc.Node)
+    colliderR: cc.Node;
+    @property(cc.Node)
+    colliderL: cc.Node;
+    @property(cc.Node)
+    colliderB: cc.Node;
+
+
 
     onLoad () {
         
     }
+
+    start(){
+        var offsetR = this.colliderR.position;
+        var offsetL = this.colliderL.position;
+        var offsetB = this.colliderB.position;
+      
+        this.MoveToPos(this.colliderR,offsetR);
+        this.MoveToPos(this.colliderL,offsetL);
+        this.MoveToPos(this.colliderB,offsetB);
+    }
+    
+    MoveToPos(colliderNode:cc.Node,pos : cc.Vec2){
+        
+        this.scheduleOnce(function(){
+                colliderNode.position = pos;
+            },0);
+    }
+    
 
     onEnter() {
         

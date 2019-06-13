@@ -59,7 +59,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 68,
+      "x": 411,
       "y": 515
     },
     "_skewX": 0,
@@ -80,7 +80,7 @@
     "_type": 2,
     "_allowSleep": true,
     "_gravityScale": 1,
-    "_linearDamping": 0.8,
+    "_linearDamping": 0.85,
     "_angularDamping": 0.1,
     "_linearVelocity": {
       "__type__": "cc.Vec2",

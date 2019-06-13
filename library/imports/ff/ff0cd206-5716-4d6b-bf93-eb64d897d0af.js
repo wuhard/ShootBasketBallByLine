@@ -21,6 +21,19 @@ var Basket = /** @class */ (function (_super) {
     }
     Basket.prototype.onLoad = function () {
     };
+    Basket.prototype.start = function () {
+        var offsetR = this.colliderR.position;
+        var offsetL = this.colliderL.position;
+        var offsetB = this.colliderB.position;
+        this.MoveToPos(this.colliderR, offsetR);
+        this.MoveToPos(this.colliderL, offsetL);
+        this.MoveToPos(this.colliderB, offsetB);
+    };
+    Basket.prototype.MoveToPos = function (colliderNode, pos) {
+        this.scheduleOnce(function () {
+            colliderNode.position = pos;
+        }, 0);
+    };
     Basket.prototype.onEnter = function () {
     };
     Basket.prototype.touchStart = function (event) {
@@ -47,6 +60,15 @@ var Basket = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], Basket.prototype, "frontSprit", void 0);
+    __decorate([
+        property(cc.Node)
+    ], Basket.prototype, "colliderR", void 0);
+    __decorate([
+        property(cc.Node)
+    ], Basket.prototype, "colliderL", void 0);
+    __decorate([
+        property(cc.Node)
+    ], Basket.prototype, "colliderB", void 0);
     Basket = __decorate([
         ccclass
     ], Basket);

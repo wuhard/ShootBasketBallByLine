@@ -25,13 +25,12 @@ var GameViewLogic = /** @class */ (function (_super) {
     }
     GameViewLogic.prototype.onLoad = function () {
         cc.director.getPhysicsManager().enabled = true;
-        // cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
-        // cc.PhysicsManager.DrawBits.e_pairBit |
-        // cc.PhysicsManager.DrawBits.e_centerOfMassBit |
-        // cc.PhysicsManager.DrawBits.e_jointBit |
-        // cc.PhysicsManager.DrawBits.e_shapeBit
-        // ;
-        cc.director.getPhysicsManager().gravity = cc.v2(0, -640);
+        cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
+            cc.PhysicsManager.DrawBits.e_pairBit |
+            cc.PhysicsManager.DrawBits.e_centerOfMassBit |
+            cc.PhysicsManager.DrawBits.e_jointBit |
+            cc.PhysicsManager.DrawBits.e_shapeBit;
+        cc.director.getPhysicsManager().gravity = cc.v2(0, -960);
         var self = this;
         this.instantiateOneBall();
         self.node.on(cc.Node.EventType.TOUCH_START, self.touchStart.bind(self));
@@ -43,7 +42,7 @@ var GameViewLogic = /** @class */ (function (_super) {
         this.node.addChild(physicsNode);
         physicsNode.name = "first";
         this.physicsNodeArr.push(physicsNode);
-        this.ProduceOneBasket(cc.v2(500, 500));
+        this.ProduceOneBasket(cc.v2(182, 509));
         // this.schedule(function() {
         //     // 这里的 this 指向 component
         //     this.ProduceOneBasket(cc.v2(600,500));
@@ -76,20 +75,34 @@ var GameViewLogic = /** @class */ (function (_super) {
         ani.setPosition(pos);
     };
     GameViewLogic.prototype.ProduceOneBasket = function (pos) {
-        cc.log("ProduceOneBasketBall");
         var startPos = this.node.convertToNodeSpaceAR(pos);
         var tempbasket = cc.instantiate(this.basket);
+        this.basketParent.addChild(tempbasket);
         var backSp = tempbasket.getChildByName("BackSprite");
         var frontSp = tempbasket.getChildByName("FrontSprite");
-        this.basketBackParent.addChild(backSp);
-        this.basketFrontParent.addChild(frontSp);
-        this.basketParent.addChild(tempbasket);
+        var bottom = tempbasket.getChildByName("BasketBottom");
         tempbasket.setPosition(startPos);
+        var backTargetPos = cc.pAdd(backSp.position, tempbasket.position);
+        cc.log(backTargetPos);
+        // var FrontTargetPos = cc.pAdd(frontSp.position,tempbasket.position);
+        var offsetBottomPos = bottom.position;
+        tempbasket.removeChild(backSp);
+        // tempbasket.removeChild(frontSp);
+        this.basketBackParent.addChild(backSp);
+        // this.basketFrontParent.addChild(frontSp);
+        backSp.position = backTargetPos;
+        // frontSp.position = FrontTargetPos;
+        //this.MoveToPos(backSp,backTargetPos);
+        bottom.position = offsetBottomPos;
+        // this.basketParent.addChild(tempbasket);
+    };
+    GameViewLogic.prototype.MoveToPos = function (colliderNode, pos) {
+        this.scheduleOnce(function () {
+            colliderNode.position = pos;
+        }, 0);
     };
     GameViewLogic.prototype.RemaveAllLine = function () {
-        cc.log("removeline");
         var children = this.node.children;
-        cc.log(children.length);
         for (var i = 0; i < children.length - 1; i++) {
             children[i].destroy();
         }
