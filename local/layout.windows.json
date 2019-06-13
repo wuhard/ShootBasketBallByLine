@@ -18,50 +18,34 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 300,
+                "height": 235,
                 "type": "panel",
-                "width": 361
+                "width": 620
               },
               {
                 "active": 0,
                 "children": [
                   "assets"
                 ],
-                "height": 445.984375,
+                "height": 511,
                 "type": "panel",
-                "width": 361
+                "width": 620
               }
             ],
             "height": 749,
             "type": "dock-v",
-            "width": 361
+            "width": 620
           },
           {
             "children": [
               {
+                "active": 0,
                 "children": [
-                  {
-                    "active": 0,
-                    "children": [
-                      "scene"
-                    ],
-                    "height": 480,
-                    "type": "panel",
-                    "width": 553
-                  },
-                  {
-                    "active": 0,
-                    "children": [
-                      "node-library"
-                    ],
-                    "height": 480,
-                    "type": "panel",
-                    "width": 204
-                  }
+                  "scene"
                 ],
                 "height": 480,
-                "type": "dock-h",
-                "width": 760
+                "type": "panel",
+                "width": 504
               },
               {
                 "active": 0,
@@ -71,12 +55,12 @@
                 ],
                 "height": 266,
                 "type": "panel",
-                "width": 760
+                "width": 504
               }
             ],
             "height": 749,
             "type": "dock-v",
-            "width": 760
+            "width": 504
           },
           {
             "active": 0,
@@ -85,13 +69,12 @@
             ],
             "height": 749,
             "type": "panel",
-            "width": 307
+            "width": 304
           }
         ],
         "type": "dock-h"
       },
       "panels": [
-        "node-library",
         "console",
         "timeline",
         "inspector",

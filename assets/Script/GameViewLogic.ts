@@ -24,10 +24,19 @@ export default class GameViewLogic extends cc.Component {
     @property(cc.Node)
     ballParent:cc.Node;
     @property(cc.Node)
+    basketBackParent:cc.Node;//篮球背面图片
+    @property(cc.Node)
+    basketParent:cc.Node;
+    @property(cc.Node)
+    basketFrontParent:cc.Node;//篮球前面图片
+    @property(cc.Node)
     linesParent:cc.Node;
     physicsNodeArr: cc.Node[] = [];
     @property(cc.Prefab)
     enterBallAni:cc.Prefab;
+    @property(cc.Prefab)
+    basket:cc.Prefab;
+    
 
     onLoad () {
         cc.director.getPhysicsManager().enabled = true;
@@ -52,6 +61,12 @@ export default class GameViewLogic extends cc.Component {
         this.node.addChild(physicsNode);
         physicsNode.name = "first";
         this.physicsNodeArr.push(physicsNode);
+
+        this.ProduceOneBasket(cc.v2(500,500));
+        // this.schedule(function() {
+        //     // 这里的 this 指向 component
+        //     this.ProduceOneBasket(cc.v2(600,500));
+        // }, 5); //5s执行一次
     }
 
     onEnter() {
@@ -80,7 +95,6 @@ export default class GameViewLogic extends cc.Component {
 
     public instantiateOneBall()
     {
-    
         var startPos =  this.node.convertToNodeSpaceAR(cc.v2(600,1155));
         let tempball = cc.instantiate(this.ball);
         this.ballParent.addChild(tempball);
@@ -94,6 +108,19 @@ export default class GameViewLogic extends cc.Component {
         cc.log("PlayAni");
         this.node.addChild(ani);
         ani.setPosition(pos);
+    }
+
+    public ProduceOneBasket(pos:cc.Vec2)
+    {
+        cc.log("ProduceOneBasketBall");
+        var startPos =  this.node.convertToNodeSpaceAR(pos);
+        let tempbasket= cc.instantiate(this.basket);
+        let backSp = tempbasket.getChildByName("BackSprite");
+        let frontSp = tempbasket.getChildByName("FrontSprite");
+        this.basketBackParent.addChild(backSp);
+        this.basketFrontParent.addChild(frontSp);
+        this.basketParent.addChild(tempbasket);
+        tempbasket.setPosition(startPos);
     }
 
     public RemaveAllLine()

@@ -70,8 +70,8 @@
     "relativePath": "resources\\prefab\\physicsNode.prefab"
   },
   "aa031956-af82-4cc1-9cbd-47038a432a40": {
-    "asset": 1560339797089,
-    "meta": 1560339797115,
+    "asset": 1560426350521,
+    "meta": 1560426350624,
     "relativePath": "Scene\\MainScene.fire"
   },
   "40c9ac6b-a8f2-48fe-89ed-e48af884ea31": {
@@ -80,7 +80,7 @@
     "relativePath": "resources"
   },
   "c7c73f50-4f67-43bd-9c36-c45ce05a2dc9": {
-    "asset": 1560337030828,
+    "asset": 1560337743133,
     "meta": 1560101674000,
     "relativePath": "resources\\prefab"
   },
@@ -324,14 +324,24 @@
     "meta": 1560338780217,
     "relativePath": "resources\\prefab\\EnterBallAni.prefab"
   },
-  "56f273f6-8127-46cc-bfda-0bc55729882c": {
-    "asset": 1560339026073,
-    "meta": 1560339072161,
-    "relativePath": "Script\\GameViewLogic.ts"
-  },
   "ada22ce0-4cd6-4ce5-bcbd-a5a3dcfba028": {
     "asset": 1560339152306,
     "meta": 1560339158188,
     "relativePath": "Script\\Ball.js"
+  },
+  "b71a7ac9-681c-4707-909f-4216dfc7d9aa": {
+    "asset": 1560425882519,
+    "meta": 1560425882536,
+    "relativePath": "resources\\prefab\\Basket.prefab"
+  },
+  "ff0cd206-5716-4d6b-bf93-eb64d897d0af": {
+    "asset": 1560424958207,
+    "meta": 1560424961480,
+    "relativePath": "Script\\Basket.ts"
+  },
+  "56f273f6-8127-46cc-bfda-0bc55729882c": {
+    "asset": 1560426229871,
+    "meta": 1560426235265,
+    "relativePath": "Script\\GameViewLogic.ts"
   }
 }

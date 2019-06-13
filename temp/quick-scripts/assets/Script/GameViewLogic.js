@@ -43,6 +43,11 @@ var GameViewLogic = /** @class */ (function (_super) {
         this.node.addChild(physicsNode);
         physicsNode.name = "first";
         this.physicsNodeArr.push(physicsNode);
+        this.ProduceOneBasket(cc.v2(500, 500));
+        // this.schedule(function() {
+        //     // 这里的 this 指向 component
+        //     this.ProduceOneBasket(cc.v2(600,500));
+        // }, 5); //5s执行一次
     };
     GameViewLogic.prototype.onEnter = function () {
     };
@@ -70,6 +75,17 @@ var GameViewLogic = /** @class */ (function (_super) {
         this.node.addChild(ani);
         ani.setPosition(pos);
     };
+    GameViewLogic.prototype.ProduceOneBasket = function (pos) {
+        cc.log("ProduceOneBasketBall");
+        var startPos = this.node.convertToNodeSpaceAR(pos);
+        var tempbasket = cc.instantiate(this.basket);
+        var backSp = tempbasket.getChildByName("BackSprite");
+        var frontSp = tempbasket.getChildByName("FrontSprite");
+        this.basketBackParent.addChild(backSp);
+        this.basketFrontParent.addChild(frontSp);
+        this.basketParent.addChild(tempbasket);
+        tempbasket.setPosition(startPos);
+    };
     GameViewLogic.prototype.RemaveAllLine = function () {
         cc.log("removeline");
         var children = this.node.children;
@@ -94,10 +110,22 @@ var GameViewLogic = /** @class */ (function (_super) {
     ], GameViewLogic.prototype, "ballParent", void 0);
     __decorate([
         property(cc.Node)
+    ], GameViewLogic.prototype, "basketBackParent", void 0);
+    __decorate([
+        property(cc.Node)
+    ], GameViewLogic.prototype, "basketParent", void 0);
+    __decorate([
+        property(cc.Node)
+    ], GameViewLogic.prototype, "basketFrontParent", void 0);
+    __decorate([
+        property(cc.Node)
     ], GameViewLogic.prototype, "linesParent", void 0);
     __decorate([
         property(cc.Prefab)
     ], GameViewLogic.prototype, "enterBallAni", void 0);
+    __decorate([
+        property(cc.Prefab)
+    ], GameViewLogic.prototype, "basket", void 0);
     GameViewLogic = __decorate([
         ccclass
     ], GameViewLogic);
