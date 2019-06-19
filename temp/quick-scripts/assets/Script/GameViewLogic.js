@@ -109,8 +109,10 @@ var GameViewLogic = /** @class */ (function (_super) {
         var arrLenght = this.physicsNodeArr.length;
         this.physicsNodeArr.slice(0, arrLenght - 1);
     };
-    GameViewLogic.prototype.RemoveNode = function (nodeObj) {
-        nodeObj.destroy();
+    //删除节点
+    GameViewLogic.prototype.RemoveBasketNode = function (nodeObj) {
+        var script = nodeObj.getComponent("Basket");
+        script.RemoveBasket();
     };
     __decorate([
         property(cc.Prefab)

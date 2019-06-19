@@ -56,47 +56,16 @@ export default class Basket extends cc.Component {
     onEnter() {
         
     }
-
-    touchStart(event : cc.Event.EventTouch) 
+    
+    public RemoveBasket()
     {
-        
+        this.backSprit.destroy();
+        this.frontSprit.destroy();
+        this.colliderB.destroy();
+        this.colliderL.destroy();
+        this.colliderR.destroy();
+        this.node.destroy();
     }
 
-    touchMove(event : cc.Event.EventTouch) {
-        
-    }
-
-    touchEnd(event : cc.Event.EventTouch) {
-        
-    }
-
-    touchCancel(event : cc.Event.EventTouch) {
-        
-    }
-
-    public instantiateOneBall()
-    {
-      
-      
-    }
-
-    public PlayEnterBallAni(pos:cc.Vec2)
-    {
-       
-    }
-
-    public ProduceOneBasket(pos:cc.Vec2)
-    {
-       
-    }
-
-    public RemaveAllLine()
-    {
-       
-    }
-
-    public RemoveNode(nodeObj:cc.Node)
-    {
-       
-    }
+ 
 }

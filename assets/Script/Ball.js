@@ -56,7 +56,7 @@ cc.Class({
             var script = cc.find("Canvas/Logic").getComponent("GameViewLogic");
 
             script.instantiateOneBall();
-            script.RemoveNode(otherCollider.node.parent);
+            script.RemoveBasketNode(otherCollider.node.parent);
             script.RemaveAllLine(otherCollider.node.parent);
             script.PlayEnterBallAni(otherCollider.node.convertToWorldSpaceAR(cc.v2(0, 0)));
             this.node.destroy();

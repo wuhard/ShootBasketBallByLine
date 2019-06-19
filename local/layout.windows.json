@@ -18,7 +18,7 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 463,
+                "height": 373,
                 "type": "panel",
                 "width": 204
               },
@@ -27,12 +27,12 @@
                 "children": [
                   "assets"
                 ],
-                "height": 463,
+                "height": 373,
                 "type": "panel",
                 "width": 204
               }
             ],
-            "height": 929,
+            "height": 749,
             "type": "dock-v",
             "width": 204
           },
@@ -43,9 +43,9 @@
                 "children": [
                   "scene"
                 ],
-                "height": 463,
+                "height": 373,
                 "type": "panel",
-                "width": 888
+                "width": 637.84375
               },
               {
                 "active": 0,
@@ -53,23 +53,23 @@
                   "console",
                   "timeline"
                 ],
-                "height": 463,
+                "height": 373,
                 "type": "panel",
-                "width": 888
+                "width": 637.84375
               }
             ],
-            "height": 929,
+            "height": 749,
             "type": "dock-v",
-            "width": 888
+            "width": 637.84375
           },
           {
             "active": 0,
             "children": [
               "inspector"
             ],
-            "height": 929,
+            "height": 749,
             "type": "panel",
-            "width": 816
+            "width": 586.140625
           }
         ],
         "type": "dock-h"

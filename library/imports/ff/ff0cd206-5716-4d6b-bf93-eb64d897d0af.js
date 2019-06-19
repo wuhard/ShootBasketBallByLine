@@ -36,23 +36,13 @@ var Basket = /** @class */ (function (_super) {
     };
     Basket.prototype.onEnter = function () {
     };
-    Basket.prototype.touchStart = function (event) {
-    };
-    Basket.prototype.touchMove = function (event) {
-    };
-    Basket.prototype.touchEnd = function (event) {
-    };
-    Basket.prototype.touchCancel = function (event) {
-    };
-    Basket.prototype.instantiateOneBall = function () {
-    };
-    Basket.prototype.PlayEnterBallAni = function (pos) {
-    };
-    Basket.prototype.ProduceOneBasket = function (pos) {
-    };
-    Basket.prototype.RemaveAllLine = function () {
-    };
-    Basket.prototype.RemoveNode = function (nodeObj) {
+    Basket.prototype.RemoveBasket = function () {
+        this.backSprit.destroy();
+        this.frontSprit.destroy();
+        this.colliderB.destroy();
+        this.colliderL.destroy();
+        this.colliderR.destroy();
+        this.node.destroy();
     };
     __decorate([
         property(cc.Node)

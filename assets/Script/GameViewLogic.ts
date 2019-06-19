@@ -159,8 +159,11 @@ export default class GameViewLogic extends cc.Component {
         this.physicsNodeArr.slice(0,arrLenght-1);
     }
 
-    public RemoveNode(nodeObj:cc.Node)
+    //删除节点
+    public RemoveBasketNode(nodeObj:cc.Node)
     {
-        nodeObj.destroy();
+
+        var script = nodeObj.getComponent("Basket");
+        script.RemoveBasket();
     }
 }
