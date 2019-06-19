@@ -1,0 +1,1125 @@
+2019-06-19T10:41:49.778Z - normal: Load ~/.CocosCreator/settings.json
+2019-06-19T10:41:49.782Z - normal: checking language setting...
+2019-06-19T10:41:49.782Z - normal: Language: zh
+2019-06-19T10:41:53.043Z - success: protocol editor-framework registered
+2019-06-19T10:41:53.043Z - success: protocol app registered
+2019-06-19T10:41:53.043Z - success: protocol theme registered
+2019-06-19T10:41:53.043Z - success: protocol packages registered
+2019-06-19T10:41:53.044Z - success: protocol unpack registerred
+2019-06-19T10:41:53.044Z - success: protocol disable-commonjs registerred
+2019-06-19T10:41:53.224Z - normal: connected!
+2019-06-19T10:41:53.226Z - normal: Check project E:\Github\ShootBasketBallByLine
+2019-06-19T10:41:53.228Z - normal: Initializing Cocos2d
+2019-06-19T10:41:55.391Z - normal: Initializing Asset Database
+2019-06-19T10:41:55.472Z - success: protocol uuid registerred
+2019-06-19T10:41:55.472Z - success: protocol db registerred
+2019-06-19T10:41:55.472Z - success: protocol thumbnail registerred
+2019-06-19T10:41:55.472Z - normal: Loading editor/builtin packages
+2019-06-19T10:41:55.581Z - success: anysdk loaded
+2019-06-19T10:41:55.727Z - success: assets loaded
+2019-06-19T10:41:55.729Z - success: builder loaded
+2019-06-19T10:41:55.732Z - success: cocos-analytics loaded
+2019-06-19T10:41:55.735Z - success: console loaded
+2019-06-19T10:41:55.780Z - success: fb-instant-games loaded
+2019-06-19T10:41:55.783Z - success: hierarchy loaded
+2019-06-19T10:41:55.786Z - success: inspector loaded
+2019-06-19T10:41:55.787Z - success: keystore loaded
+2019-06-19T10:41:55.791Z - success: node-library loaded
+2019-06-19T10:41:55.792Z - success: package-asset loaded
+2019-06-19T10:41:55.794Z - success: preferences loaded
+2019-06-19T10:41:55.797Z - success: project-exporter loaded
+2019-06-19T10:41:55.816Z - success: project-importer loaded
+2019-06-19T10:41:55.818Z - success: project-settings loaded
+2019-06-19T10:41:55.820Z - success: ui-kit loaded
+2019-06-19T10:41:55.886Z - success: ui-grid loaded
+2019-06-19T10:41:55.917Z - success: scene loaded
+2019-06-19T10:41:55.918Z - success: sprite-editor loaded
+2019-06-19T10:41:55.921Z - success: store loaded
+2019-06-19T10:41:55.925Z - success: timeline loaded
+2019-06-19T10:41:55.925Z - normal: Loading builtin packages
+2019-06-19T10:41:56.019Z - success: asset-db-debugger loaded
+2019-06-19T10:41:56.044Z - success: code-editor loaded
+2019-06-19T10:41:56.046Z - success: color-picker loaded
+2019-06-19T10:41:56.049Z - success: package-manager loaded
+2019-06-19T10:41:56.050Z - success: qqplay-adapter loaded
+2019-06-19T10:41:56.055Z - success: sdkbox loaded
+2019-06-19T10:41:56.060Z - success: tester loaded
+2019-06-19T10:41:56.062Z - success: ui-kit-preview-extra loaded
+2019-06-19T10:41:56.064Z - success: ui-kit-preview loaded
+2019-06-19T10:41:56.066Z - success: ui-tree loaded
+2019-06-19T10:41:56.066Z - success: weapp-adapter loaded
+2019-06-19T10:41:57.679Z - normal: Initializing project E:\Github\ShootBasketBallByLine
+2019-06-19T10:41:57.681Z - normal: Loading packages
+2019-06-19T10:41:57.686Z - normal: Watching packages
+2019-06-19T10:41:58.294Z - normal: Run Application
+2019-06-19T10:42:00.209Z - warn: [db-task][init] Backup unused meta file: db://assets/Animations.meta
+2019-06-19T10:42:07.987Z - success: preview server running at http://localhost:7456
+2019-06-19T10:42:16.253Z - normal: 1.9.3
+2019-06-19T10:42:16.448Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.448Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.448Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.449Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.449Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.449Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.449Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.450Z - warn: Please specifiy a default value for "basket" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.454Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.454Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.455Z - warn: Please specifiy a default value for "colliderR" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.455Z - warn: Please specifiy a default value for "colliderL" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.455Z - warn: Please specifiy a default value for "colliderB" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:42:16.455Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-19T10:45:17.022Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.024Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.024Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.024Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.024Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.024Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.025Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.025Z - warn: Please specifiy a default value for "basket" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.027Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.028Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.028Z - warn: Please specifiy a default value for "colliderR" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.028Z - warn: Please specifiy a default value for "colliderL" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.028Z - warn: Please specifiy a default value for "colliderB" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:45:17.029Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-19T10:49:19.177Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.179Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.179Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.179Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.179Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.179Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.179Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.179Z - warn: Please specifiy a default value for "basket" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.180Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.180Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.180Z - warn: Please specifiy a default value for "colliderR" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.180Z - warn: Please specifiy a default value for "colliderL" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.180Z - warn: Please specifiy a default value for "colliderB" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:49:19.181Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-19T10:50:30.502Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.503Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.503Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.503Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.503Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.503Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.503Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.503Z - warn: Please specifiy a default value for "basket" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.504Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.504Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.505Z - warn: Please specifiy a default value for "colliderR" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.505Z - warn: Please specifiy a default value for "colliderL" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.505Z - warn: Please specifiy a default value for "colliderB" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:50:30.506Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-19T10:51:28.365Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.366Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.367Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.367Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.367Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.367Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.367Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.367Z - warn: Please specifiy a default value for "basket" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.368Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.368Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.369Z - warn: Please specifiy a default value for "colliderR" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.369Z - warn: Please specifiy a default value for "colliderL" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.369Z - warn: Please specifiy a default value for "colliderB" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:51:28.369Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-19T10:52:51.990Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.993Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.994Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.995Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.995Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.995Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.995Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.995Z - warn: Please specifiy a default value for "basket" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.996Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.996Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.996Z - warn: Please specifiy a default value for "colliderR" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.996Z - warn: Please specifiy a default value for "colliderL" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.996Z - warn: Please specifiy a default value for "colliderB" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T10:52:51.996Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-19T11:04:16.265Z - failed: [db-task][sync-changes] Failed to import asset E:\Github\ShootBasketBallByLine\assets\Script\Ball.js, message: Compile error: SyntaxError: E:/Github/ShootBasketBallByLine/assets/Script/Ball.js: Unexpected token (27:4)
+  25 |     start () {
+  26 |         this.body.
+> 27 |     },
+     |     ^
+  28 | 
+  29 |     onBeginContact(contact, selfCollider, otherCollider) {
+  30 |       
+    at Parser.pp$5.raise (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4454:13)
+    at Parser.pp.unexpected (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:1761:8)
+    at Parser.pp$3.parseIdentifier (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:4332:10)
+    at Parser.pp$3.parseSubscripts (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3517:30)
+    at Parser.pp$3.parseExprSubscripts (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3504:15)
+    at Parser.pp$3.parseMaybeUnary (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3474:19)
+    at Parser.pp$3.parseExprOps (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3404:19)
+    at Parser.pp$3.parseMaybeConditional (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3381:19)
+    at Parser.pp$3.parseMaybeAssign (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3344:19)
+    at Parser.pp$3.parseExpression (D:\CocosCreator\resources\app.asar\node_modules\babylon\lib\index.js:3306:19)
+2019-06-19T11:04:41.047Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.048Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.048Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.048Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.048Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.048Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.048Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.048Z - warn: Please specifiy a default value for "basket" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.051Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.051Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.051Z - warn: Please specifiy a default value for "colliderR" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.051Z - warn: Please specifiy a default value for "colliderL" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.051Z - warn: Please specifiy a default value for "colliderB" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:04:41.052Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-19T11:05:16.956Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.956Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.956Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.957Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.957Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.957Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.957Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.957Z - warn: Please specifiy a default value for "basket" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.959Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.959Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.959Z - warn: Please specifiy a default value for "colliderR" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.959Z - warn: Please specifiy a default value for "colliderL" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.959Z - warn: Please specifiy a default value for "colliderB" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:16.960Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-19T11:05:36.479Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.479Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.479Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.479Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.479Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.479Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.480Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.480Z - warn: Please specifiy a default value for "basket" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.481Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.481Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.481Z - warn: Please specifiy a default value for "colliderR" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.481Z - warn: Please specifiy a default value for "colliderL" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.481Z - warn: Please specifiy a default value for "colliderB" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:36.482Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-06-19T11:05:52.187Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.189Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.189Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.189Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.189Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.190Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.190Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.190Z - warn: Please specifiy a default value for "basket" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.190Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.190Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.190Z - warn: Please specifiy a default value for "colliderR" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.190Z - warn: Please specifiy a default value for "colliderL" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.190Z - warn: Please specifiy a default value for "colliderB" property at its declaration: 😂
+    // Before:
+    @property(...)
+    value;
+
+    // After:
+    @property(...)
+    value = 0;
+2019-06-19T11:05:52.191Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.

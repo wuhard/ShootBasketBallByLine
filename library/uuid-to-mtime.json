@@ -70,8 +70,8 @@
     "relativePath": "resources\\prefab\\physicsNode.prefab"
   },
   "aa031956-af82-4cc1-9cbd-47038a432a40": {
-    "asset": 1560941583665,
-    "meta": 1560941583674,
+    "asset": 1560942409495,
+    "meta": 1560942409512,
     "relativePath": "Scene\\MainScene.fire"
   },
   "40c9ac6b-a8f2-48fe-89ed-e48af884ea31": {
@@ -334,14 +334,14 @@
     "meta": 1560941358910,
     "relativePath": "Script\\Basket.ts"
   },
-  "ada22ce0-4cd6-4ce5-bcbd-a5a3dcfba028": {
-    "asset": 1560941486546,
-    "meta": 1560941488011,
-    "relativePath": "Script\\Ball.js"
-  },
   "56f273f6-8127-46cc-bfda-0bc55729882c": {
     "asset": 1560941568774,
     "meta": 1560941571754,
     "relativePath": "Script\\GameViewLogic.ts"
+  },
+  "ada22ce0-4cd6-4ce5-bcbd-a5a3dcfba028": {
+    "asset": 1560942378052,
+    "meta": 1560942382269,
+    "relativePath": "Script\\Ball.js"
   }
 }
