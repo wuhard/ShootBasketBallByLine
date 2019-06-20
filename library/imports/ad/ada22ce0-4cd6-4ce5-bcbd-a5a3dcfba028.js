@@ -37,7 +37,7 @@ cc.Class({
 
     start: function start() {
         this.body = this.getComponent(cc.RigidBody);
-        this.body.linearVelocity = cc.v2(1000, 2000);
+        //  this.body.linearVelocity = cc.v2(1000,2000);
     },
     onBeginContact: function onBeginContact(contact, selfCollider, otherCollider) {
 
@@ -56,6 +56,12 @@ cc.Class({
             script.RemaveAllLine(otherCollider.node.parent);
             script.PlayEnterBallAni(otherCollider.node.convertToWorldSpaceAR(cc.v2(0, 0)));
             this.node.destroy();
+
+            var basketWorld = otherCollider.node.parent.convertToWorldSpaceAR(cc.v2(0, 0));
+
+            var basketLocalPos = otherCollider.node.parent.parent.convertToNodeSpaceAR(basketWorld);
+
+            script.ProduceBoomBasket(basketLocalPos);
         }
     }
 });

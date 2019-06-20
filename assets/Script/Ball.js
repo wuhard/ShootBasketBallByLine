@@ -24,7 +24,7 @@ cc.Class({
 
     start () {
         this.body = this.getComponent(cc.RigidBody);
-         this.body.linearVelocity = cc.v2(1000,2000);
+       //  this.body.linearVelocity = cc.v2(1000,2000);
     },
 
     onBeginContact(contact, selfCollider, otherCollider) {
@@ -48,6 +48,13 @@ cc.Class({
             script.PlayEnterBallAni(otherCollider.node.convertToWorldSpaceAR(cc.v2(0, 0)));
             this.node.destroy();
             
+            let basketWorld = otherCollider.node.parent.convertToWorldSpaceAR(cc.v2(0, 0));
+
+            let basketLocalPos =  otherCollider.node.parent.parent.convertToNodeSpaceAR(basketWorld);
+
+
+            script.ProduceBoomBasket(basketLocalPos);
+           
         }
       
     }

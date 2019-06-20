@@ -36,16 +36,17 @@ export default class GameViewLogic extends cc.Component {
     enterBallAni:cc.Prefab;
     @property(cc.Prefab)
     basket:cc.Prefab;
-    
+    @property(cc.Prefab)
+    boomBasket:cc.Prefab;
 
     onLoad () {
         cc.director.getPhysicsManager().enabled = true;
-        cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
-        cc.PhysicsManager.DrawBits.e_pairBit |
-        cc.PhysicsManager.DrawBits.e_centerOfMassBit |
-        cc.PhysicsManager.DrawBits.e_jointBit |
-        cc.PhysicsManager.DrawBits.e_shapeBit
-        ;
+        // cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
+        // cc.PhysicsManager.DrawBits.e_pairBit |
+        // cc.PhysicsManager.DrawBits.e_centerOfMassBit |
+        // cc.PhysicsManager.DrawBits.e_jointBit |
+        // cc.PhysicsManager.DrawBits.e_shapeBit
+        // ;
         cc.director.getPhysicsManager().gravity = cc.v2(0, -960);
 
         let self = this;
@@ -135,6 +136,16 @@ export default class GameViewLogic extends cc.Component {
          bottom.position = offsetBottomPos;
         // this.basketParent.addChild(tempbasket);
        
+    }
+
+    public ProduceBoomBasket(pos:cc.Vec2)
+    {
+        cc.log(pos);
+      //  var startPos =  this.node.convertToNodeSpaceAR(pos);
+        let tempbasket= cc.instantiate(this.boomBasket);
+        tempbasket.setPosition(pos);
+        this.basketParent.addChild(tempbasket);
+    
     }
 
     MoveToPos(colliderNode:cc.Node,pos : cc.Vec2){

@@ -25,11 +25,12 @@ var GameViewLogic = /** @class */ (function (_super) {
     }
     GameViewLogic.prototype.onLoad = function () {
         cc.director.getPhysicsManager().enabled = true;
-        cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
-            cc.PhysicsManager.DrawBits.e_pairBit |
-            cc.PhysicsManager.DrawBits.e_centerOfMassBit |
-            cc.PhysicsManager.DrawBits.e_jointBit |
-            cc.PhysicsManager.DrawBits.e_shapeBit;
+        // cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
+        // cc.PhysicsManager.DrawBits.e_pairBit |
+        // cc.PhysicsManager.DrawBits.e_centerOfMassBit |
+        // cc.PhysicsManager.DrawBits.e_jointBit |
+        // cc.PhysicsManager.DrawBits.e_shapeBit
+        // ;
         cc.director.getPhysicsManager().gravity = cc.v2(0, -960);
         var self = this;
         this.instantiateOneBall();
@@ -96,6 +97,13 @@ var GameViewLogic = /** @class */ (function (_super) {
         bottom.position = offsetBottomPos;
         // this.basketParent.addChild(tempbasket);
     };
+    GameViewLogic.prototype.ProduceBoomBasket = function (pos) {
+        cc.log(pos);
+        //  var startPos =  this.node.convertToNodeSpaceAR(pos);
+        var tempbasket = cc.instantiate(this.boomBasket);
+        tempbasket.setPosition(pos);
+        this.basketParent.addChild(tempbasket);
+    };
     GameViewLogic.prototype.MoveToPos = function (colliderNode, pos) {
         this.scheduleOnce(function () {
             colliderNode.position = pos;
@@ -141,6 +149,9 @@ var GameViewLogic = /** @class */ (function (_super) {
     __decorate([
         property(cc.Prefab)
     ], GameViewLogic.prototype, "basket", void 0);
+    __decorate([
+        property(cc.Prefab)
+    ], GameViewLogic.prototype, "boomBasket", void 0);
     GameViewLogic = __decorate([
         ccclass
     ], GameViewLogic);
