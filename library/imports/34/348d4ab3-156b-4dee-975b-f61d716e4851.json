@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "hoot_4",
+    "texture": "6a064286-3ca5-4581-85b0-833b0729f101",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      65,
+      36
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      65,
+      36
+    ]
+  }
+}

@@ -70,8 +70,8 @@
     "relativePath": "resources\\prefab\\physicsNode.prefab"
   },
   "aa031956-af82-4cc1-9cbd-47038a432a40": {
-    "asset": 1560942409495,
-    "meta": 1560942409512,
+    "asset": 1561028390111,
+    "meta": 1561028390218,
     "relativePath": "Scene\\MainScene.fire"
   },
   "40c9ac6b-a8f2-48fe-89ed-e48af884ea31": {
@@ -343,5 +343,25 @@
     "asset": 1560942378052,
     "meta": 1560942382269,
     "relativePath": "Script\\Ball.js"
+  },
+  "5699e8cc-d9aa-4edd-8d20-90ded61f2c24": {
+    "asset": 1559483398000,
+    "meta": 1561027535350,
+    "relativePath": "Texture\\hoot_2.png"
+  },
+  "70499101-6d91-408a-94f3-cbf626cd37e9": {
+    "asset": 1559483470000,
+    "meta": 1561027535352,
+    "relativePath": "Texture\\hoot_3.png"
+  },
+  "da478592-71b4-4631-8b42-02c332a02042": {
+    "asset": 1561027552689,
+    "meta": 1561027552699,
+    "relativePath": "Texture\\hoot_1.png"
+  },
+  "6a064286-3ca5-4581-85b0-833b0729f101": {
+    "asset": 1561027763341,
+    "meta": 1561027763359,
+    "relativePath": "Texture\\hoot_4.png"
   }
 }
