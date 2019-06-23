@@ -23,49 +23,61 @@ export default class Basket extends cc.Component {
     frontSprit: cc.Node;
    
     @property(cc.Node)
-    colliderR: cc.Node;
-    @property(cc.Node)
-    colliderL: cc.Node;
-    @property(cc.Node)
-    colliderB: cc.Node;
+    colliders: cc.Node[] = [];
 
+
+    offsets:cc.Vec2[] = [];
+   
 
 
     onLoad () {
-        
+       for(var i = 0; i < this.colliders.length; i++)
+       {
+           this.offsets.push(this.colliders[i].position);
+       }
     }
 
     start(){
-        var offsetR = this.colliderR.position;
-        var offsetL = this.colliderL.position;
-        var offsetB = this.colliderB.position;
+       
       
-        this.MoveToPos(this.colliderR,offsetR);
-        this.MoveToPos(this.colliderL,offsetL);
-        this.MoveToPos(this.colliderB,offsetB);
+       
     }
     
     MoveToPos(colliderNode:cc.Node,pos : cc.Vec2){
         
         this.scheduleOnce(function(){
                 colliderNode.position = pos;
-            },0);
+            },0.01);
     }
     
 
     onEnter() {
         
     }
+
+    public AdjustColliders()
+    {
+
+        for(var i = 0; i < this.colliders.length; i++)
+        {
+            this.MoveToPos(this.colliders[i],this.offsets[i]);
+        }
+    }
     
     public RemoveBasket()
     {
         this.backSprit.destroy();
         this.frontSprit.destroy();
-        this.colliderB.destroy();
-        this.colliderL.destroy();
-        this.colliderR.destroy();
+        for(var i = 0; i < this.colliders.length; i++)
+        {
+            this.colliders[i].destroy();
+        }
         this.node.destroy();
     }
 
+    public AdJustSprites()
+    {
+
+    }
  
 }

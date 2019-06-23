@@ -62,6 +62,11 @@ cc.Class({
             var basketLocalPos = otherCollider.node.parent.parent.convertToNodeSpaceAR(basketWorld);
 
             script.ProduceBoomBasket(basketLocalPos);
+
+            this.scheduleOnce(function () {
+                // 这里的 this 指向 component
+                script.ProduceOneBasket();
+            }, 2); //2s后执行一次
         }
     }
 });

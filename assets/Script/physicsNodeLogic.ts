@@ -81,10 +81,11 @@ export default class physicsNodeLogic extends cc.Component {
         let lastTouchLoc = this.points[this.points.length - 1];
         this.points.push(cc.p(touchLoc.x, touchLoc.y));
         this.path.lineTo(touchLoc.x, touchLoc.y);
-        cc.log("stroke");
+       // cc.log("stroke");
                 // this.path.moveTo(touchLoc.x, touchLoc.y);
         this.path.stroke();
     }
+
 
     touchEnd(event : cc.Event.EventTouch) {
          this.createRigibody();

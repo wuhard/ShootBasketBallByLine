@@ -1,70 +1,61 @@
 (function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Script/Ball.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
-cc._RF.push(module, 'ada22zgTNZM5by9paPc+6Ao', 'Ball', __filename);
-// Script/Ball.js
+cc._RF.push(module, '38ce1r8aQNPMa1OpEexraNR', 'Ball', __filename);
+// Script/Ball.ts
 
-"use strict";
-
-var _GameViewLogic = require("./GameViewLogic");
-
-var _GameViewLogic2 = _interopRequireDefault(_GameViewLogic);
-
-var _EnterBallAni = require("./EnterBallAni");
-
-var _EnterBallAni2 = _interopRequireDefault(_EnterBallAni);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Learn cc.Class:
-//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/class.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/class.html
+Object.defineProperty(exports, "__esModule", { value: true });
+var GameViewLogic_1 = require("./GameViewLogic");
+// Learn TypeScript:
+//  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
+//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
 // Learn Attribute:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/reference/attributes.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/reference/attributes.html
+//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/reference/attributes.html
 // Learn life-cycle callbacks:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/life-cycle-callbacks.html
-//  - [English] http://www.cocos2d-x.org/docs/creator/en/scripting/life-cycle-callbacks.html
-
-cc.Class({
-    extends: cc.Component,
-
-    properties: {
-        body: cc.RigidBody
-    },
-
+//  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/life-cycle-callbacks.html
+var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
+var Ball = /** @class */ (function (_super) {
+    __extends(Ball, _super);
+    function Ball() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
     // LIFE-CYCLE CALLBACKS:
-
-    // onLoad () {},
-
-    start: function start() {
+    // onLoad () {}
+    Ball.prototype.start = function () {
         this.body = this.getComponent(cc.RigidBody);
-        //  this.body.linearVelocity = cc.v2(1000,2000);
-    },
-    onBeginContact: function onBeginContact(contact, selfCollider, otherCollider) {
-
-        if (otherCollider.node.name == 'ground') {
-            var script = cc.find("Canvas/Logic").getComponent("GameViewLogic");
-
+    };
+    Ball.prototype.onBeginContact = function (contact, selfCollider, otherCollider) {
+        if (otherCollider.body.node.name == 'ground') {
+            GameViewLogic_1.default;
+            script = cc.find("Canvas/Logic").getComponent(GameViewLogic_1.default);
             script.instantiateOneBall();
             script.RemaveAllLine();
             this.node.destroy();
-        } else if (otherCollider.node.name == 'BasketBottom') {
-            cc.log("get one score");
-            var script = cc.find("Canvas/Logic").getComponent("GameViewLogic");
-
-            script.instantiateOneBall();
-            script.RemoveBasketNode(otherCollider.node.parent);
-            script.RemaveAllLine(otherCollider.node.parent);
-            script.PlayEnterBallAni(otherCollider.node.convertToWorldSpaceAR(cc.v2(0, 0)));
-            this.node.destroy();
-
-            var basketWorld = otherCollider.node.parent.convertToWorldSpaceAR(cc.v2(0, 0));
-
-            var basketLocalPos = otherCollider.node.parent.parent.convertToNodeSpaceAR(basketWorld);
-
-            script.ProduceBoomBasket(basketLocalPos);
         }
-    }
-});
+        else if (otherCollider.body.node.name == 'BasketBottom') {
+            cc.log("get one score");
+            this.script = cc.find("Canvas/Logic").getComponent("GameViewLogic");
+            this.script.RemoveBasketNode(otherCollider.body.node.parent);
+            this.script.RemaveAllLine();
+            this.script.PlayEnterBallAni(otherCollider.body.node.convertToWorldSpaceAR(cc.v2(0, 0)));
+            var basketWorld = otherCollider.body.node.parent.convertToWorldSpaceAR(cc.v2(0, 0));
+            var basketLocalPos = otherCollider.body.node.parent.parent.convertToNodeSpaceAR(basketWorld);
+            this.script.ProduceBoomBasket(basketLocalPos);
+            this.ProduceNextBasket();
+            this.node.destroy();
+        }
+    };
+    Ball.prototype.ProduceNextBasket = function () {
+        cc.log("ProduceNextBasket");
+        this.script.ProduceOneBasket(2);
+        //
+    };
+    Ball = __decorate([
+        ccclass
+    ], Ball);
+    return Ball;
+}(cc.Component));
+exports.default = Ball;
 
 cc._RF.pop();
         }

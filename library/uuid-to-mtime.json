@@ -45,12 +45,12 @@
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1561032259894,
+    "asset": 1561201939595,
     "meta": 1560258087698,
     "relativePath": "Script"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
-    "asset": 1561032259909,
+    "asset": 1561189378401,
     "meta": 1560258087705,
     "relativePath": "Texture"
   },
@@ -70,8 +70,8 @@
     "relativePath": "resources\\prefab\\physicsNode.prefab"
   },
   "aa031956-af82-4cc1-9cbd-47038a432a40": {
-    "asset": 1561036677898,
-    "meta": 1561036677913,
+    "asset": 1561204916523,
+    "meta": 1561204916536,
     "relativePath": "Scene\\MainScene.fire"
   },
   "40c9ac6b-a8f2-48fe-89ed-e48af884ea31": {
@@ -80,7 +80,7 @@
     "relativePath": "resources"
   },
   "c7c73f50-4f67-43bd-9c36-c45ce05a2dc9": {
-    "asset": 1560431046934,
+    "asset": 1561201089581,
     "meta": 1560258087713,
     "relativePath": "resources\\prefab"
   },
@@ -95,8 +95,8 @@
     "relativePath": "Texture\\ball.png"
   },
   "05229913-f510-41eb-804d-840796ab433e": {
-    "asset": 1560435163960,
-    "meta": 1561032345896,
+    "asset": 1561261966112,
+    "meta": 1561261966125,
     "relativePath": "resources\\prefab\\ball.prefab"
   },
   "71561142-4c83-4933-afca-cb7a17f67053": {
@@ -294,11 +294,6 @@
     "meta": 1561032346888,
     "relativePath": "Texture\\blue_bg.png"
   },
-  "8facd37b-d27f-4e8a-b04b-7d239b84c356": {
-    "asset": 1560258087703,
-    "meta": 1561032346866,
-    "relativePath": "Script\\physicsNodeLogic.ts"
-  },
   "bf3014c8-40ab-4965-af4d-b5a3a05427b2": {
     "asset": 1560258087712,
     "meta": 1561032346893,
@@ -323,16 +318,6 @@
     "asset": 1560429270232,
     "meta": 1561032345912,
     "relativePath": "resources\\prefab\\EnterBallAni.prefab"
-  },
-  "9691fcb6-3eec-4622-b164-5314bc514b97": {
-    "asset": 1560436518275,
-    "meta": 1561032345903,
-    "relativePath": "resources\\prefab\\Basket.prefab"
-  },
-  "ff0cd206-5716-4d6b-bf93-eb64d897d0af": {
-    "asset": 1561032259894,
-    "meta": 1561032346742,
-    "relativePath": "Script\\Basket.ts"
   },
   "5699e8cc-d9aa-4edd-8d20-90ded61f2c24": {
     "asset": 1561032259909,
@@ -369,14 +354,84 @@
     "meta": 1561035036382,
     "relativePath": "resources\\prefab\\BoomBasket.prefab"
   },
-  "56f273f6-8127-46cc-bfda-0bc55729882c": {
-    "asset": 1561035943513,
-    "meta": 1561035953384,
-    "relativePath": "Script\\GameViewLogic.ts"
+  "4b3f91c0-5e32-4428-af8a-02174f40d988": {
+    "asset": 1561182351235,
+    "meta": 1561182352849,
+    "relativePath": "Texture\\notice_basketball.png"
+  },
+  "b4475965-c070-426d-8bc6-02f2505d2f16": {
+    "asset": 1561186132067,
+    "meta": 1561186666037,
+    "relativePath": "Script\\Singleton.ts"
+  },
+  "552acc46-7827-4168-b99d-64c8dadb8698": {
+    "asset": 1561186712377,
+    "meta": 1561186712397,
+    "relativePath": "resources\\prefab\\NoticeBall.prefab"
+  },
+  "5f0d7bb5-0085-42b4-b5f0-ef17902a66d2": {
+    "asset": 1561189378397,
+    "meta": 1561189378422,
+    "relativePath": "Texture\\board.png"
+  },
+  "0aea5736-8810-4339-98eb-fcbb651f7c70": {
+    "asset": 1561194971071,
+    "meta": 1561200294021,
+    "relativePath": "resources\\prefab\\BigBasketL.prefab"
+  },
+  "b4cb68d3-a43e-4521-8d82-5eefe8da3bf3": {
+    "asset": 1561198863036,
+    "meta": 1561198863042,
+    "relativePath": "resources\\prefab\\SmallBasket.prefab"
+  },
+  "ff0cd206-5716-4d6b-bf93-eb64d897d0af": {
+    "asset": 1561200819274,
+    "meta": 1561200820216,
+    "relativePath": "Script\\Basket.ts"
+  },
+  "ae15e620-75fc-49d9-b055-46a790e79d48": {
+    "asset": 1561201121766,
+    "meta": 1561201121771,
+    "relativePath": "resources\\prefab\\BigBasketR.prefab"
   },
   "ada22ce0-4cd6-4ce5-bcbd-a5a3dcfba028": {
-    "asset": 1561036493782,
-    "meta": 1561036495288,
+    "asset": 1561201895186,
+    "meta": 1561201924499,
     "relativePath": "Script\\Ball.js"
+  },
+  "8facd37b-d27f-4e8a-b04b-7d239b84c356": {
+    "asset": 1561202679405,
+    "meta": 1561202680569,
+    "relativePath": "Script\\physicsNodeLogic.ts"
+  },
+  "abb6d563-49c0-4d35-a3ba-ab45290b93ed": {
+    "asset": 1561204358273,
+    "meta": 1561204360114,
+    "relativePath": "Script\\ProduceBasketManager.ts"
+  },
+  "56f273f6-8127-46cc-bfda-0bc55729882c": {
+    "asset": 1561204793454,
+    "meta": 1561204794761,
+    "relativePath": "Script\\GameViewLogic.ts"
+  },
+  "38ce1afc-6903-4f31-ad4e-a447b1ada351": {
+    "asset": 1561262205894,
+    "meta": 1561262284080,
+    "relativePath": "Script\\Ball.ts"
+  },
+  "d106c7ed-d375-4351-91de-ca674dae8e20": {
+    "asset": 1561262557498,
+    "meta": 1561262562480,
+    "relativePath": "Script\\NoticeAndProduceManager.ts"
+  },
+  "fbdec7bd-25aa-4d69-a7ba-cfdfc93f9373": {
+    "asset": 1561262641206,
+    "meta": 1561262641243,
+    "relativePath": "Texture\\notice_bomb.png"
+  },
+  "26ccb6a6-7727-4f1d-b31f-6ce43f49f810": {
+    "asset": 1561262662038,
+    "meta": 1561262662060,
+    "relativePath": "resources\\prefab\\NoticeBomb.prefab"
   }
 }

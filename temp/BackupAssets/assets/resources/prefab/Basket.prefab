@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "Basket",
+    "_name": "SmallBasket",
     "_objFlags": 0,
     "_parent": null,
     "_children": [
@@ -66,8 +66,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 182,
-      "y": 509
+      "x": 359,
+      "y": 378
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -255,7 +255,7 @@
     "asset": {
       "__uuid__": "9691fcb6-3eec-4622-b164-5314bc514b97"
     },
-    "fileId": "956d7htCtJcZZuBO3+lkzj",
+    "fileId": "eeTq+T4zlOup+bTJbtQkJQ",
     "sync": false
   },
   {

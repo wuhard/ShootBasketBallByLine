@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "notice_basketball",
+    "texture": "4b3f91c0-5e32-4428-af8a-02174f40d988",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      91,
+      104
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      91,
+      104
+    ]
+  }
+}

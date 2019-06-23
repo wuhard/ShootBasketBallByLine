@@ -17,32 +17,40 @@ var talefun = cc.talefun;
 var Basket = /** @class */ (function (_super) {
     __extends(Basket, _super);
     function Basket() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        // LIFE-CYCLE CALLBACKS:
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.colliders = [];
+        _this.offsets = [];
+        return _this;
     }
     Basket.prototype.onLoad = function () {
+        for (var i = 0; i < this.colliders.length; i++) {
+            this.offsets.push(this.colliders[i].position);
+        }
     };
     Basket.prototype.start = function () {
-        var offsetR = this.colliderR.position;
-        var offsetL = this.colliderL.position;
-        var offsetB = this.colliderB.position;
-        this.MoveToPos(this.colliderR, offsetR);
-        this.MoveToPos(this.colliderL, offsetL);
-        this.MoveToPos(this.colliderB, offsetB);
     };
     Basket.prototype.MoveToPos = function (colliderNode, pos) {
         this.scheduleOnce(function () {
             colliderNode.position = pos;
-        }, 0);
+        }, 0.01);
     };
     Basket.prototype.onEnter = function () {
+    };
+    Basket.prototype.AdjustColliders = function () {
+        for (var i = 0; i < this.colliders.length; i++) {
+            this.MoveToPos(this.colliders[i], this.offsets[i]);
+        }
     };
     Basket.prototype.RemoveBasket = function () {
         this.backSprit.destroy();
         this.frontSprit.destroy();
-        this.colliderB.destroy();
-        this.colliderL.destroy();
-        this.colliderR.destroy();
+        for (var i = 0; i < this.colliders.length; i++) {
+            this.colliders[i].destroy();
+        }
         this.node.destroy();
+    };
+    Basket.prototype.AdJustSprites = function () {
     };
     __decorate([
         property(cc.Node)
@@ -52,13 +60,7 @@ var Basket = /** @class */ (function (_super) {
     ], Basket.prototype, "frontSprit", void 0);
     __decorate([
         property(cc.Node)
-    ], Basket.prototype, "colliderR", void 0);
-    __decorate([
-        property(cc.Node)
-    ], Basket.prototype, "colliderL", void 0);
-    __decorate([
-        property(cc.Node)
-    ], Basket.prototype, "colliderB", void 0);
+    ], Basket.prototype, "colliders", void 0);
     Basket = __decorate([
         ccclass
     ], Basket);
