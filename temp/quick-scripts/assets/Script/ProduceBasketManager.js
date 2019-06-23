@@ -4,6 +4,7 @@ cc._RF.push(module, 'abb6dVjScBNNaO6q0UpC5Pt', 'ProduceBasketManager', __filenam
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var Singleton_1 = require("./Singleton");
+var Basket_1 = require("./Basket");
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -24,6 +25,7 @@ var ProduceBasketManager = /** @class */ (function (_super) {
         _this.leftPos = [];
         _this.midPos = [];
         _this.rightPos = [];
+        _this.basketList = [];
         return _this;
     }
     // LIFE-CYCLE CALLBACKS:
@@ -52,17 +54,17 @@ var ProduceBasketManager = /** @class */ (function (_super) {
         switch (this.posType) {
             case -1:
                 posIndex = this.random(0, this.leftPos.length);
-                cc.log(this.leftPos[posIndex].name);
+                //  cc.log(this.leftPos[posIndex].name);
                 return this.leftPos[posIndex].convertToWorldSpaceAR(cc.v2(0, 0));
                 break;
             case 0:
                 posIndex = this.random(0, this.midPos.length);
-                cc.log(this.midPos[posIndex].name);
+                //  cc.log(this.midPos[posIndex].name);
                 return this.midPos[posIndex].convertToWorldSpaceAR(cc.v2(0, 0));
                 break;
             case 1:
                 posIndex = this.random(0, this.rightPos.length);
-                cc.log(this.rightPos[posIndex].name);
+                //   cc.log(this.rightPos[posIndex].name);
                 return this.rightPos[posIndex].convertToWorldSpaceAR(cc.v2(0, 0));
                 break;
         }
@@ -108,7 +110,9 @@ var ProduceBasketManager = /** @class */ (function (_super) {
         this.basketParent.addChild(tempbasket);
         this.basketParent.convertToNodeSpaceAR(startPos);
         tempbasket.position = startPos;
-        tempbasket.getComponent("Basket").AdjustColliders();
+        var basketS = tempbasket.getComponent(Basket_1.default);
+        basketS.AdjustColliders();
+        this.basketList.push(tempbasket);
         var backSp = tempbasket.getChildByName("BackSprite");
         var frontSp = tempbasket.getChildByName("FrontSprite");
         var bottom = tempbasket.getChildByName("BasketBottom");
@@ -149,6 +153,23 @@ var ProduceBasketManager = /** @class */ (function (_super) {
             //                      break;    
             //              }
             //      break;
+        }
+    };
+    //获取篮筐的位置类型（左 中 右）
+    ProduceBasketManager.prototype.GetPosType = function () {
+        return this.posType;
+    };
+    ProduceBasketManager.prototype.RemoveOneBasket = function (basketNode) {
+        var nodeIndex = this.basketList.indexOf(basketNode);
+        var targetBasket = this.basketList[nodeIndex];
+        var script = targetBasket.getComponent(Basket_1.default);
+        script.RemoveBasket();
+        this.basketList.splice(nodeIndex, 1);
+    };
+    ProduceBasketManager.prototype.RemoveAllBaskets = function () {
+        var lenght = this.basketList.length;
+        for (var i = 0; i < lenght; i++) {
+            this.RemoveOneBasket(this.basketList[0]);
         }
     };
     ProduceBasketManager.prototype.random = function (lower, upper) {

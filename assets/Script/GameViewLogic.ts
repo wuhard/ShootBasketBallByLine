@@ -1,6 +1,8 @@
 import EnterBallAni from "./EnterBallAni";
 import ProduceBasketManager from "./ProduceBasketManager";
 import Singleton from "./Singleton";
+import NoticeAndProduceManager from "./NoticeAndProduceManager";
+import EffectPlayManager from "./EffectPlayManager";
 
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
@@ -29,13 +31,24 @@ export default class GameViewLogic extends cc.Component {
     @property(cc.Node)
     linesParent:cc.Node;
     physicsNodeArr: cc.Node[] = [];
-    @property(cc.Prefab)
-    enterBallAni:cc.Prefab;
+ 
 
     @property(cc.Prefab)
     boomBasket:cc.Prefab;
+
+
     @property(ProduceBasketManager)
     produceBasketManager:ProduceBasketManager;
+    @property(NoticeAndProduceManager)
+    noticeAndProduceManager:NoticeAndProduceManager;
+
+    @property(EffectPlayManager)
+    effectPlayManager:EffectPlayManager;
+
+    @property(cc.Node)
+    losePanel:cc.Node;
+
+  
 
     onLoad () {
         cc.director.getPhysicsManager().enabled = true;
@@ -81,10 +94,12 @@ export default class GameViewLogic extends cc.Component {
 
     touchStart(event : cc.Event.EventTouch) 
     {
+      
+       // cc.log("drawLine");
         let physicsNode = cc.instantiate(this.physicsNode);
         this.node.addChild(physicsNode); 
         this.physicsNodeArr.push(physicsNode);
-        cc.log("logicStart");
+     
     }
 
     touchMove(event : cc.Event.EventTouch) {
@@ -101,7 +116,7 @@ export default class GameViewLogic extends cc.Component {
 
     public ProduceOneBasket(delayTime:number = 0)
     {
-        cc.log("one basket");
+      //  cc.log("one basket");
 
         this.scheduleOnce(() => {
             this.produceBasketManager.ProduceOneBasket();
@@ -115,20 +130,16 @@ export default class GameViewLogic extends cc.Component {
 
     public instantiateOneBall()
     {
-        var startPos =  this.node.convertToNodeSpaceAR(cc.v2(600,1155));
-        let tempball = cc.instantiate(this.ball);
-        this.ballParent.addChild(tempball);
-        tempball.setPosition(startPos);
-      
+        this.noticeAndProduceManager.ProduceOneCase(1);
+       
     }
 
-    public PlayEnterBallAni(pos:cc.Vec2)
+    public PlayEnterBallEffect(pos:cc.Vec2)
     {
-        let ani = cc.instantiate(this.enterBallAni);
-       // cc.log("PlayAni");
-        this.node.addChild(ani);
-        ani.setPosition(pos);
+        this.effectPlayManager.PlayEnterBallAni(pos);
+        this.effectPlayManager.PlayScoreAni(pos);
     }
+    
 
     //创建一个篮筐
    
@@ -168,7 +179,22 @@ export default class GameViewLogic extends cc.Component {
     public RemoveBasketNode(nodeObj:cc.Node)
     {
 
-        var script = nodeObj.getComponent("Basket");
-        script.RemoveBasket();
+        this.produceBasketManager.RemoveOneBasket(nodeObj);
+    }
+
+    public ShowLosePanel(flag:boolean)
+    {
+        this.losePanel.active = flag;
+      
+      
+        this.produceBasketManager.RemoveAllBaskets();
+        this.RemaveAllLine();
+    }
+
+    public ReplayGame()
+    {
+        this.ShowLosePanel(false);
+        this.ProduceOneBasket();
+        this.RemaveAllLine();
     }
 }

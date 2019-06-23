@@ -14,7 +14,7 @@ let talefun = (<any>cc).talefun;
 import MyPhysicsCollider = require("./MyPhysicsCollider")
 
 @ccclass
-export default class physicsNodeLogic extends cc.Component {
+export default class PhysicsNodeLogic extends cc.Component {
 
     touchStartHandler: () => void;
     touchMoveHandler: () => void;
@@ -32,6 +32,8 @@ export default class physicsNodeLogic extends cc.Component {
     pathWidth : number = 10;
     @property(cc.color)
     pathColor: cc.Color = cc.color(0,0,0);
+    @property(Number)
+    lineCount:number = 25;
 
     // LIFE-CYCLE CALLBACKS:    
     onLoad () {
@@ -70,24 +72,37 @@ export default class physicsNodeLogic extends cc.Component {
         let touchLoc = event.getLocation();
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
 
-        this.points.push(cc.p(touchLoc.x, touchLoc.y));
-        this.path.moveTo(touchLoc.x, touchLoc.y);
+       this.points.push(cc.p(touchLoc.x, touchLoc.y));
+       this.path.moveTo(touchLoc.x, touchLoc.y);
+
+      // cc.log("start");
+       
         return true;
     }
 
     touchMove(event : cc.Event.EventTouch) {
         let touchLoc = event.getLocation();
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
-        let lastTouchLoc = this.points[this.points.length - 1];
+
+
+        if(this.points.length > this.lineCount)
+        {
+            return;
+        }
+
+
         this.points.push(cc.p(touchLoc.x, touchLoc.y));
+       
+       
         this.path.lineTo(touchLoc.x, touchLoc.y);
-       // cc.log("stroke");
-                // this.path.moveTo(touchLoc.x, touchLoc.y);
+        let lastTouchLoc = this.points[this.points.length - 1];
         this.path.stroke();
+        this.path.moveTo(lastTouchLoc.x,lastTouchLoc.y);
     }
 
 
     touchEnd(event : cc.Event.EventTouch) {
+
          this.createRigibody();
     }
 
@@ -130,7 +145,7 @@ export default class physicsNodeLogic extends cc.Component {
             let angle = Math.atan(k1);
             let sin = Math.sin(angle);
             let cos = Math.cos(angle);
-            cc.log("angle" + angle);
+           // cc.log("angle" + angle);
 
             offX = this.path.lineWidth / 2 * cos;
             offY = this.path.lineWidth / 2 * sin;

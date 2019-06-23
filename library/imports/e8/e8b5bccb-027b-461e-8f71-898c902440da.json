@@ -1,0 +1,51 @@
+{
+  "__type__": "cc.AnimationClip",
+  "_name": "GetScoreAni",
+  "_objFlags": 0,
+  "_rawFiles": null,
+  "_duration": 1.1333333333333333,
+  "sample": 60,
+  "speed": 1,
+  "wrapMode": 1,
+  "curveData": {
+    "paths": {
+      "Score": {
+        "props": {
+          "position": [
+            {
+              "frame": 0,
+              "value": [
+                0,
+                0
+              ],
+              "curve": [
+                0.12426470588235303,
+                0.5838235294117647,
+                0.3564338235294117,
+                0.8251838235294117
+              ]
+            },
+            {
+              "frame": 1,
+              "value": [
+                0,
+                56
+              ]
+            }
+          ],
+          "active": [
+            {
+              "frame": 0,
+              "value": true
+            },
+            {
+              "frame": 1.1333333333333333,
+              "value": false
+            }
+          ]
+        }
+      }
+    }
+  },
+  "events": []
+}

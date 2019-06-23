@@ -1,9 +1,11 @@
 (function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Script/GameViewLogic.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
-cc._RF.push(module, '56f27P2gSdGzL/aC8VXKYgs', 'GameViewLogic', __filename);
+cc._RF.push(module, '0d903qyIspNXLG1hd+Dlfn0', 'GameViewLogic', __filename);
 // Script/GameViewLogic.ts
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var ProduceBasketManager_1 = require("./ProduceBasketManager");
+var NoticeAndProduceManager_1 = require("./NoticeAndProduceManager");
+var EffectPlayManager_1 = require("./EffectPlayManager");
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/editors_and_tools/creator-chapters/scripting/typescript/index.html
@@ -54,10 +56,10 @@ var GameViewLogic = /** @class */ (function (_super) {
     GameViewLogic.prototype.onEnter = function () {
     };
     GameViewLogic.prototype.touchStart = function (event) {
+        // cc.log("drawLine");
         var physicsNode = cc.instantiate(this.physicsNode);
         this.node.addChild(physicsNode);
         this.physicsNodeArr.push(physicsNode);
-        cc.log("logicStart");
     };
     GameViewLogic.prototype.touchMove = function (event) {
     };
@@ -66,9 +68,9 @@ var GameViewLogic = /** @class */ (function (_super) {
     GameViewLogic.prototype.touchCancel = function (event) {
     };
     GameViewLogic.prototype.ProduceOneBasket = function (delayTime) {
+        //  cc.log("one basket");
         var _this = this;
         if (delayTime === void 0) { delayTime = 0; }
-        cc.log("one basket");
         this.scheduleOnce(function () {
             _this.produceBasketManager.ProduceOneBasket();
         }, delayTime); //2s后执行一次
@@ -77,16 +79,11 @@ var GameViewLogic = /** @class */ (function (_super) {
         }, delayTime + 1); //2s后执行一次
     };
     GameViewLogic.prototype.instantiateOneBall = function () {
-        var startPos = this.node.convertToNodeSpaceAR(cc.v2(600, 1155));
-        var tempball = cc.instantiate(this.ball);
-        this.ballParent.addChild(tempball);
-        tempball.setPosition(startPos);
+        this.noticeAndProduceManager.ProduceOneCase(1);
     };
-    GameViewLogic.prototype.PlayEnterBallAni = function (pos) {
-        var ani = cc.instantiate(this.enterBallAni);
-        // cc.log("PlayAni");
-        this.node.addChild(ani);
-        ani.setPosition(pos);
+    GameViewLogic.prototype.PlayEnterBallEffect = function (pos) {
+        this.effectPlayManager.PlayEnterBallAni(pos);
+        this.effectPlayManager.PlayScoreAni(pos);
     };
     //创建一个篮筐
     GameViewLogic.prototype.ProduceBoomBasket = function (pos) {
@@ -110,8 +107,17 @@ var GameViewLogic = /** @class */ (function (_super) {
     };
     //删除节点
     GameViewLogic.prototype.RemoveBasketNode = function (nodeObj) {
-        var script = nodeObj.getComponent("Basket");
-        script.RemoveBasket();
+        this.produceBasketManager.RemoveOneBasket(nodeObj);
+    };
+    GameViewLogic.prototype.ShowLosePanel = function (flag) {
+        this.losePanel.active = flag;
+        this.produceBasketManager.RemoveAllBaskets();
+        this.RemaveAllLine();
+    };
+    GameViewLogic.prototype.ReplayGame = function () {
+        this.ShowLosePanel(false);
+        this.ProduceOneBasket();
+        this.RemaveAllLine();
     };
     __decorate([
         property(cc.Prefab)
@@ -127,13 +133,19 @@ var GameViewLogic = /** @class */ (function (_super) {
     ], GameViewLogic.prototype, "linesParent", void 0);
     __decorate([
         property(cc.Prefab)
-    ], GameViewLogic.prototype, "enterBallAni", void 0);
-    __decorate([
-        property(cc.Prefab)
     ], GameViewLogic.prototype, "boomBasket", void 0);
     __decorate([
         property(ProduceBasketManager_1.default)
     ], GameViewLogic.prototype, "produceBasketManager", void 0);
+    __decorate([
+        property(NoticeAndProduceManager_1.default)
+    ], GameViewLogic.prototype, "noticeAndProduceManager", void 0);
+    __decorate([
+        property(EffectPlayManager_1.default)
+    ], GameViewLogic.prototype, "effectPlayManager", void 0);
+    __decorate([
+        property(cc.Node)
+    ], GameViewLogic.prototype, "losePanel", void 0);
     GameViewLogic = __decorate([
         ccclass
     ], GameViewLogic);

@@ -1,4 +1,5 @@
 import Singleton from "./Singleton";
+import Basket from "./Basket";
 
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
@@ -54,7 +55,8 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
     @property(cc.Node)
     rightPos:cc.Node[]= [];
 
-  
+    basketList:cc.Node[] = [];
+     
     // LIFE-CYCLE CALLBACKS:
 
      onLoad () {
@@ -94,17 +96,17 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
         {
             case -1:
                     posIndex = this.random(0,this.leftPos.length);
-                    cc.log(this.leftPos[posIndex].name);
+                  //  cc.log(this.leftPos[posIndex].name);
                     return this.leftPos[posIndex].convertToWorldSpaceAR(cc.v2(0,0));
                 break;
             case 0:
                     posIndex = this.random(0,this.midPos.length);
-                    cc.log(this.midPos[posIndex].name);
+                  //  cc.log(this.midPos[posIndex].name);
                     return this.midPos[posIndex].convertToWorldSpaceAR(cc.v2(0,0));
                 break;
             case 1:
                     posIndex = this.random(0,this.rightPos.length);
-                    cc.log(this.rightPos[posIndex].name);
+                 //   cc.log(this.rightPos[posIndex].name);
                     return this.rightPos[posIndex].convertToWorldSpaceAR(cc.v2(0,0));
                 break;
     
@@ -120,7 +122,7 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
         this.posType = this.random(-1,2);
         this.sizeType = this.random(0,2);
 
-   
+
         let pos = this.GetPos();
        
 
@@ -174,12 +176,15 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
       
 
         this.basketParent.addChild(tempbasket);
-
+   
         this.basketParent.convertToNodeSpaceAR(startPos);
 
         tempbasket.position = startPos;
 
-        tempbasket.getComponent("Basket").AdjustColliders();
+        var basketS =  tempbasket.getComponent<Basket>(Basket);
+        basketS.AdjustColliders();
+        this.basketList.push(tempbasket);
+
         let backSp = tempbasket.getChildByName("BackSprite");
         let frontSp = tempbasket.getChildByName("FrontSprite");
         let bottom = tempbasket.getChildByName("BasketBottom");
@@ -246,7 +251,32 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
        
     }
 
+    //获取篮筐的位置类型（左 中 右）
+    public GetPosType():number
+    {
+        return this.posType;
+    }
 
+    public RemoveOneBasket(basketNode:cc.Node)
+    {
+        var nodeIndex = this.basketList.indexOf(basketNode);
+        var targetBasket = this.basketList[nodeIndex];
+        var script = targetBasket.getComponent<Basket>(Basket);
+        script.RemoveBasket();
+        this.basketList.splice(nodeIndex,1);
+    }
+
+    public RemoveAllBaskets()
+    {
+        var lenght = this.basketList.length;
+        
+        for(var i = 0; i < lenght; i++)
+        {
+            this.RemoveOneBasket(this.basketList[0]);
+        }
+
+       
+    }
 
     random(lower, upper) {
 

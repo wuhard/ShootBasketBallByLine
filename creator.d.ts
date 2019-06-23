@@ -4414,7 +4414,7 @@ declare module cc {
 		var newVec2 = node.convertToNodeSpaceAR(cc.v2(100, 100));
 		``` 
 		*/
-		convertToNodeSpaceAR(worldPoint: Vec2): Vec2;		
+			convertToNodeSpaceAR(worldPoint: Vec2): Vec2;		
 		/**
 		!#en
 		Converts a local Point to world space coordinates.The result is in Points.<br/>

@@ -26,28 +26,27 @@ var Ball = /** @class */ (function (_super) {
     };
     Ball.prototype.onBeginContact = function (contact, selfCollider, otherCollider) {
         if (otherCollider.body.node.name == 'ground') {
-            GameViewLogic_1.default;
-            script = cc.find("Canvas/Logic").getComponent(GameViewLogic_1.default);
-            script.instantiateOneBall();
-            script.RemaveAllLine();
+            this.gameViewLogic = cc.find("Canvas/Logic").getComponent(GameViewLogic_1.default);
+            this.gameViewLogic.RemaveAllLine();
             this.node.destroy();
+            this.gameViewLogic.ShowLosePanel(true);
         }
         else if (otherCollider.body.node.name == 'BasketBottom') {
-            cc.log("get one score");
-            this.script = cc.find("Canvas/Logic").getComponent("GameViewLogic");
-            this.script.RemoveBasketNode(otherCollider.body.node.parent);
-            this.script.RemaveAllLine();
-            this.script.PlayEnterBallAni(otherCollider.body.node.convertToWorldSpaceAR(cc.v2(0, 0)));
+            // cc.log("get one score");
+            this.gameViewLogic = cc.find("Canvas/Logic").getComponent(GameViewLogic_1.default);
+            this.gameViewLogic.RemoveBasketNode(otherCollider.body.node.parent);
+            this.gameViewLogic.RemaveAllLine();
+            this.gameViewLogic.PlayEnterBallEffect(otherCollider.body.node.convertToWorldSpaceAR(cc.v2(0, 0)));
             var basketWorld = otherCollider.body.node.parent.convertToWorldSpaceAR(cc.v2(0, 0));
             var basketLocalPos = otherCollider.body.node.parent.parent.convertToNodeSpaceAR(basketWorld);
-            this.script.ProduceBoomBasket(basketLocalPos);
+            this.gameViewLogic.ProduceBoomBasket(basketLocalPos);
             this.ProduceNextBasket();
             this.node.destroy();
         }
     };
     Ball.prototype.ProduceNextBasket = function () {
-        cc.log("ProduceNextBasket");
-        this.script.ProduceOneBasket(2);
+        // cc.log("ProduceNextBasket");
+        this.gameViewLogic.ProduceOneBasket(2);
         //
     };
     Ball = __decorate([

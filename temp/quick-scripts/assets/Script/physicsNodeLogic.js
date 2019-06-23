@@ -1,6 +1,6 @@
-(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Script/physicsNodeLogic.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
-cc._RF.push(module, '8facdN70n9OirBLfSObhMNW', 'physicsNodeLogic', __filename);
-// Script/physicsNodeLogic.ts
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Script/PhysicsNodeLogic.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+cc._RF.push(module, '8facdN70n9OirBLfSObhMNW', 'PhysicsNodeLogic', __filename);
+// Script/PhysicsNodeLogic.ts
 
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
@@ -15,9 +15,9 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var _a = cc._decorator, ccclass = _a.ccclass, property = _a.property;
 var talefun = cc.talefun;
 var MyPhysicsCollider = require("./MyPhysicsCollider");
-var physicsNodeLogic = /** @class */ (function (_super) {
-    __extends(physicsNodeLogic, _super);
-    function physicsNodeLogic() {
+var PhysicsNodeLogic = /** @class */ (function (_super) {
+    __extends(PhysicsNodeLogic, _super);
+    function PhysicsNodeLogic() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.path = null;
         _this.points = [];
@@ -25,10 +25,11 @@ var physicsNodeLogic = /** @class */ (function (_super) {
         _this.rigibodyLogic = null;
         _this.pathWidth = 10;
         _this.pathColor = cc.color(0, 0, 0);
+        _this.lineCount = 25;
         return _this;
     }
     // LIFE-CYCLE CALLBACKS:    
-    physicsNodeLogic.prototype.onLoad = function () {
+    PhysicsNodeLogic.prototype.onLoad = function () {
         this.path = this.addComponent(cc.Graphics);
         this.path.strokeColor = this.pathColor;
         this.path.lineWidth = this.pathWidth;
@@ -38,53 +39,56 @@ var physicsNodeLogic = /** @class */ (function (_super) {
         this.touchCancelHandler = this.touchCancel.bind(this);
         this.addTouch();
     };
-    physicsNodeLogic.prototype.onDestroy = function () {
+    PhysicsNodeLogic.prototype.onDestroy = function () {
         this.removeTouch();
     };
-    physicsNodeLogic.prototype.addTouch = function () {
+    PhysicsNodeLogic.prototype.addTouch = function () {
         this.node.on(cc.Node.EventType.TOUCH_START, this.touchStartHandler);
         this.node.on(cc.Node.EventType.TOUCH_MOVE, this.touchMoveHandler);
         this.node.on(cc.Node.EventType.TOUCH_END, this.touchEndHandler);
         this.node.on(cc.Node.EventType.TOUCH_CANCEL, this.touchCancelHandler);
     };
-    physicsNodeLogic.prototype.removeTouch = function () {
+    PhysicsNodeLogic.prototype.removeTouch = function () {
         this.node.off(cc.Node.EventType.TOUCH_START, this.touchStartHandler);
         this.node.off(cc.Node.EventType.TOUCH_MOVE, this.touchMoveHandler);
         this.node.off(cc.Node.EventType.TOUCH_END, this.touchEndHandler);
         this.node.off(cc.Node.EventType.TOUCH_CANCEL, this.touchCancelHandler);
     };
-    physicsNodeLogic.prototype.touchStart = function (event) {
+    PhysicsNodeLogic.prototype.touchStart = function (event) {
         var touchLoc = event.getLocation();
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
         this.points.push(cc.p(touchLoc.x, touchLoc.y));
         this.path.moveTo(touchLoc.x, touchLoc.y);
+        // cc.log("start");
         return true;
     };
-    physicsNodeLogic.prototype.touchMove = function (event) {
+    PhysicsNodeLogic.prototype.touchMove = function (event) {
         var touchLoc = event.getLocation();
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
-        var lastTouchLoc = this.points[this.points.length - 1];
+        if (this.points.length > this.lineCount) {
+            return;
+        }
         this.points.push(cc.p(touchLoc.x, touchLoc.y));
         this.path.lineTo(touchLoc.x, touchLoc.y);
-        // cc.log("stroke");
-        // this.path.moveTo(touchLoc.x, touchLoc.y);
+        var lastTouchLoc = this.points[this.points.length - 1];
         this.path.stroke();
+        this.path.moveTo(lastTouchLoc.x, lastTouchLoc.y);
     };
-    physicsNodeLogic.prototype.touchEnd = function (event) {
+    PhysicsNodeLogic.prototype.touchEnd = function (event) {
         this.createRigibody();
     };
-    physicsNodeLogic.prototype.touchCancel = function (event) {
+    PhysicsNodeLogic.prototype.touchCancel = function (event) {
         this.createRigibody();
     };
-    physicsNodeLogic.prototype.checkIsCanDraw = function (lastPoint, nowPoint) {
+    PhysicsNodeLogic.prototype.checkIsCanDraw = function (lastPoint, nowPoint) {
         return cc.pDistance(lastPoint, nowPoint) >= 20;
     };
-    physicsNodeLogic.prototype.createRigibody = function () {
+    PhysicsNodeLogic.prototype.createRigibody = function () {
         this.physicsLine.lineWidth = this.path.lineWidth;
         this.physicsLine.points = this.points;
         this.physicsLine.apply();
     };
-    physicsNodeLogic.prototype.getSegmenPos = function (beginPos, endPos) {
+    PhysicsNodeLogic.prototype.getSegmenPos = function (beginPos, endPos) {
         var k = (endPos.y - beginPos.y) / (endPos.x - beginPos.x);
         var offX = 0;
         var offY = 0;
@@ -105,7 +109,7 @@ var physicsNodeLogic = /** @class */ (function (_super) {
             var angle = Math.atan(k1);
             var sin = Math.sin(angle);
             var cos = Math.cos(angle);
-            cc.log("angle" + angle);
+            // cc.log("angle" + angle);
             offX = this.path.lineWidth / 2 * cos;
             offY = this.path.lineWidth / 2 * sin;
         }
@@ -122,22 +126,25 @@ var physicsNodeLogic = /** @class */ (function (_super) {
     };
     __decorate([
         property(MyPhysicsCollider)
-    ], physicsNodeLogic.prototype, "physicsLine", void 0);
+    ], PhysicsNodeLogic.prototype, "physicsLine", void 0);
     __decorate([
         property(cc.RigidBody)
-    ], physicsNodeLogic.prototype, "rigibodyLogic", void 0);
+    ], PhysicsNodeLogic.prototype, "rigibodyLogic", void 0);
     __decorate([
         property(Number)
-    ], physicsNodeLogic.prototype, "pathWidth", void 0);
+    ], PhysicsNodeLogic.prototype, "pathWidth", void 0);
     __decorate([
         property(cc.color)
-    ], physicsNodeLogic.prototype, "pathColor", void 0);
-    physicsNodeLogic = __decorate([
+    ], PhysicsNodeLogic.prototype, "pathColor", void 0);
+    __decorate([
+        property(Number)
+    ], PhysicsNodeLogic.prototype, "lineCount", void 0);
+    PhysicsNodeLogic = __decorate([
         ccclass
-    ], physicsNodeLogic);
-    return physicsNodeLogic;
+    ], PhysicsNodeLogic);
+    return PhysicsNodeLogic;
 }(cc.Component));
-exports.default = physicsNodeLogic;
+exports.default = PhysicsNodeLogic;
 
 cc._RF.pop();
         }
@@ -150,5 +157,5 @@ cc._RF.pop();
             });
         }
         })();
-        //# sourceMappingURL=physicsNodeLogic.js.map
+        //# sourceMappingURL=PhysicsNodeLogic.js.map
         

@@ -1,0 +1,22 @@
+{
+  "__type__": "cc.SpriteFrame",
+  "content": {
+    "name": "gravity_line",
+    "texture": "44bce0f5-d1b1-45de-8f82-af4cff7e61f6",
+    "atlas": "",
+    "rect": [
+      0,
+      0,
+      373,
+      188
+    ],
+    "offset": [
+      0,
+      0
+    ],
+    "originalSize": [
+      373,
+      188
+    ]
+  }
+}
