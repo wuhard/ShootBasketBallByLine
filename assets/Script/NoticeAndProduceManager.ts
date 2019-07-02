@@ -70,6 +70,17 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
       //  cc.log("BornPosLength" + this.bornPos.length);
     }
 
+    ///设置生成位置数据
+    public SetBornType(pos:number[])
+    {
+        //清空
+        this.bornPos.splice(0,this.bornPos.length);
+        for(var i = 0; i < pos.length; i++)
+        {
+            this.bornType.push(pos[i]);
+        }
+    }
+
     ///获取创建的位置信息
     CreatBornPos(num:number)
     {

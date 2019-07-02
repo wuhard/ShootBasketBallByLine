@@ -134,6 +134,8 @@ export default class GameViewLogic extends cc.Component {
        
     }
 
+    
+
     public PlayEnterBallEffect(pos:cc.Vec2)
     {
         this.effectPlayManager.PlayEnterBallAni(pos);

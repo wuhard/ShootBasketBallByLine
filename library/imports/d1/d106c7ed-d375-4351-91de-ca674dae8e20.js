@@ -45,6 +45,14 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         }
         //  cc.log("BornPosLength" + this.bornPos.length);
     };
+    ///设置生成位置数据
+    NoticeAndProduceManager.prototype.SetBornType = function (pos) {
+        //清空
+        this.bornPos.splice(0, this.bornPos.length);
+        for (var i = 0; i < pos.length; i++) {
+            this.bornType.push(pos[i]);
+        }
+    };
     ///获取创建的位置信息
     NoticeAndProduceManager.prototype.CreatBornPos = function (num) {
         this.bornPos.splice(0, this.bornPos.length);
