@@ -3,6 +3,7 @@ import ProduceBasketManager from "./ProduceBasketManager";
 import Singleton from "./Singleton";
 import NoticeAndProduceManager from "./NoticeAndProduceManager";
 import EffectPlayManager from "./EffectPlayManager";
+import LevelDataManager from "./LevelDataManager";
 
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
@@ -45,8 +46,13 @@ export default class GameViewLogic extends cc.Component {
     @property(EffectPlayManager)
     effectPlayManager:EffectPlayManager;
 
+    @property(LevelDataManager)
+    levelDataManager:LevelDataManager;
+
     @property(cc.Node)
     losePanel:cc.Node;
+
+
 
   
 
@@ -83,7 +89,7 @@ export default class GameViewLogic extends cc.Component {
 
     start()
     {
-        this.ProduceOneBasket();
+        this.ProduceOneBasket(1);
     }
 
 
@@ -119,7 +125,10 @@ export default class GameViewLogic extends cc.Component {
       //  cc.log("one basket");
 
         this.scheduleOnce(() => {
-            this.produceBasketManager.ProduceOneBasket();
+           
+
+            var basketBornPos : number[] = this.levelDataManager.GetBasketPos(0);
+            this.produceBasketManager.ProduceOneBasketByPos(basketBornPos);
          }, delayTime);//2s后执行一次
 
          this.scheduleOnce(() => {

@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var ProduceBasketManager_1 = require("./ProduceBasketManager");
 var NoticeAndProduceManager_1 = require("./NoticeAndProduceManager");
 var EffectPlayManager_1 = require("./EffectPlayManager");
+var LevelDataManager_1 = require("./LevelDataManager");
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/editors_and_tools/creator-chapters/scripting/typescript/index.html
@@ -51,7 +52,7 @@ var GameViewLogic = /** @class */ (function (_super) {
         // }, 5); //5s执行一次
     };
     GameViewLogic.prototype.start = function () {
-        this.ProduceOneBasket();
+        this.ProduceOneBasket(1);
     };
     GameViewLogic.prototype.onEnter = function () {
     };
@@ -72,7 +73,8 @@ var GameViewLogic = /** @class */ (function (_super) {
         var _this = this;
         if (delayTime === void 0) { delayTime = 0; }
         this.scheduleOnce(function () {
-            _this.produceBasketManager.ProduceOneBasket();
+            var basketBornPos = _this.levelDataManager.GetBasketPos(0);
+            _this.produceBasketManager.ProduceOneBasketByPos(basketBornPos);
         }, delayTime); //2s后执行一次
         this.scheduleOnce(function () {
             _this.instantiateOneBall();
@@ -143,6 +145,9 @@ var GameViewLogic = /** @class */ (function (_super) {
     __decorate([
         property(EffectPlayManager_1.default)
     ], GameViewLogic.prototype, "effectPlayManager", void 0);
+    __decorate([
+        property(LevelDataManager_1.default)
+    ], GameViewLogic.prototype, "levelDataManager", void 0);
     __decorate([
         property(cc.Node)
     ], GameViewLogic.prototype, "losePanel", void 0);

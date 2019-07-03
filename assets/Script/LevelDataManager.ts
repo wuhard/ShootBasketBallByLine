@@ -18,7 +18,7 @@ let talefun = (<any>cc).talefun;
 @ccclass
 export default class LevelDataManager extends Singleton<LevelDataManager> {
 
-    levelData:SceneLevelData[] = [];
+   public levelData:SceneLevelData[] = [];
 
 
     start () {
@@ -33,20 +33,26 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
                     reject(err);
                 } else {
                     this.levelData = object;
-                    this.StringToNumberArray(this.levelData[0].basketPos);
+                   // this.StringToNumberArray(this.levelData[0].basketPos);
                 }
             });
         });
     }
     
+    public GetBasketPos(levelIndex:number):number[]
+    {
+        return this.StringToNumberArray(this.levelData[levelIndex].basketPos);
+    }
 
-    StringToNumberArray(str:string):number[]
+
+    //字符串转换成数组
+    public StringToNumberArray(str:string):number[]
     {
         var num : number[] = [];
         for(var i = 0; i < str.length; i++)
         {
             num.push(Number(str.substr(i,1)));
-            cc.log(Number(str.substr(i,1)));
+           cc.log(Number(str.substr(i,1)));
         }
 
         return num;

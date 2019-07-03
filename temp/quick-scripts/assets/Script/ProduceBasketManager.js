@@ -22,9 +22,7 @@ var ProduceBasketManager = /** @class */ (function (_super) {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.sizeType = 0; // 代表不带板，1代表有板子
         _this.posType = -1; // -1代表左边，0代表中间，1代表右边
-        _this.leftPos = [];
-        _this.midPos = [];
-        _this.rightPos = [];
+        _this.basketBornPos = [];
         _this.basketList = [];
         return _this;
     }
@@ -49,30 +47,101 @@ var ProduceBasketManager = /** @class */ (function (_super) {
     ProduceBasketManager.prototype.start = function () {
     };
     ///获取位置信息
-    ProduceBasketManager.prototype.GetPos = function () {
-        var posIndex = 0;
-        switch (this.posType) {
-            case -1:
-                posIndex = this.random(0, this.leftPos.length);
-                //  cc.log(this.leftPos[posIndex].name);
-                return this.leftPos[posIndex].convertToWorldSpaceAR(cc.v2(0, 0));
-                break;
-            case 0:
-                posIndex = this.random(0, this.midPos.length);
-                //  cc.log(this.midPos[posIndex].name);
-                return this.midPos[posIndex].convertToWorldSpaceAR(cc.v2(0, 0));
-                break;
-            case 1:
-                posIndex = this.random(0, this.rightPos.length);
-                //   cc.log(this.rightPos[posIndex].name);
-                return this.rightPos[posIndex].convertToWorldSpaceAR(cc.v2(0, 0));
-                break;
+    ProduceBasketManager.prototype.GetPos = function (index) {
+        return this.basketBornPos[index].convertToWorldSpaceAR(cc.v2(0, 0));
+    };
+    ProduceBasketManager.prototype.ProduceOneBasketByPos = function (basketPos) {
+        this.sizeType = this.random(0, 2);
+        var pos;
+        var startPos;
+        for (var i = 0; i < basketPos.length; i++) {
+            if (basketPos[i] != 0) {
+                pos = this.GetPos(i);
+                startPos = this.node.convertToNodeSpaceAR(pos);
+                var tempbasket = void 0;
+                if (i < 2) {
+                    this.posType = -1;
+                }
+                else if (i < 4) {
+                    this.posType = 0;
+                }
+                else {
+                    this.posType = 1;
+                }
+                switch (this.sizeType) {
+                    case 0:
+                        tempbasket = cc.instantiate(this.smallBasket);
+                        switch (this.posType) {
+                            case -1:
+                                tempbasket.rotation = 30;
+                                break;
+                            case 0:
+                                tempbasket.rotation = 0;
+                                break;
+                            case 1:
+                                tempbasket.rotation = -30;
+                                break;
+                        }
+                        break;
+                    case 1:
+                        if (this.posType != 0) {
+                            switch (this.posType) {
+                                case -1:
+                                    tempbasket = cc.instantiate(this.bigBasketL);
+                                    break;
+                                case 1:
+                                    tempbasket = cc.instantiate(this.bigBasketR);
+                                    cc.log(tempbasket.scaleX);
+                                    break;
+                            }
+                        }
+                        else {
+                            tempbasket = cc.instantiate(this.smallBasket);
+                        }
+                        break;
+                }
+                this.basketParent.addChild(tempbasket);
+                this.basketParent.convertToNodeSpaceAR(startPos);
+                tempbasket.position = startPos;
+                var basketS = tempbasket.getComponent(Basket_1.default);
+                basketS.AdjustColliders();
+                this.basketList.push(tempbasket);
+                var backSp = tempbasket.getChildByName("BackSprite");
+                var frontSp = tempbasket.getChildByName("FrontSprite");
+                var bottom = tempbasket.getChildByName("BasketBottom");
+                var frontSpWorldPos = tempbasket.convertToWorldSpaceAR(frontSp.getPosition());
+                var frontTargetPos = this.basketFrontParent.convertToNodeSpaceAR(frontSpWorldPos);
+                frontSp.parent = this.basketFrontParent;
+                frontSp.position = frontTargetPos;
+                var backSpWorldPos = tempbasket.convertToWorldSpaceAR(backSp.getPosition());
+                var backTargetPos = this.basketBackParent.convertToNodeSpaceAR(backSpWorldPos);
+                backSp.parent = this.basketBackParent;
+                backSp.position = backTargetPos;
+                switch (this.sizeType) {
+                    case 0:
+                        switch (this.posType) {
+                            case -1:
+                                backSp.rotation = 30;
+                                frontSp.rotation = 30;
+                                break;
+                            case 0:
+                                backSp.rotation = 0;
+                                frontSp.rotation = 0;
+                                break;
+                            case 1:
+                                backSp.rotation = -30;
+                                frontSp.rotation = -30;
+                                break;
+                        }
+                        break;
+                }
+            }
         }
     };
     ProduceBasketManager.prototype.ProduceOneBasket = function () {
         this.posType = this.random(-1, 2);
         this.sizeType = this.random(0, 2);
-        var pos = this.GetPos();
+        var pos = this.GetPos(0);
         var startPos = this.node.convertToNodeSpaceAR(pos);
         var tempbasket;
         switch (this.sizeType) {
@@ -186,15 +255,6 @@ var ProduceBasketManager = /** @class */ (function (_super) {
     ], ProduceBasketManager.prototype, "bigBasketR", void 0);
     __decorate([
         property(cc.Node)
-    ], ProduceBasketManager.prototype, "pos0", void 0);
-    __decorate([
-        property(cc.Node)
-    ], ProduceBasketManager.prototype, "pos1", void 0);
-    __decorate([
-        property(cc.Node)
-    ], ProduceBasketManager.prototype, "pos2", void 0);
-    __decorate([
-        property(cc.Node)
     ], ProduceBasketManager.prototype, "basketBackParent", void 0);
     __decorate([
         property(cc.Node)
@@ -204,13 +264,7 @@ var ProduceBasketManager = /** @class */ (function (_super) {
     ], ProduceBasketManager.prototype, "basketParent", void 0);
     __decorate([
         property(cc.Node)
-    ], ProduceBasketManager.prototype, "leftPos", void 0);
-    __decorate([
-        property(cc.Node)
-    ], ProduceBasketManager.prototype, "midPos", void 0);
-    __decorate([
-        property(cc.Node)
-    ], ProduceBasketManager.prototype, "rightPos", void 0);
+    ], ProduceBasketManager.prototype, "basketBornPos", void 0);
     ProduceBasketManager = __decorate([
         ccclass
     ], ProduceBasketManager);

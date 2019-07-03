@@ -35,11 +35,15 @@ var LevelDataManager = /** @class */ (function (_super) {
                 }
                 else {
                     _this.levelData = object;
-                    _this.StringToNumberArray(_this.levelData[0].basketPos);
+                    // this.StringToNumberArray(this.levelData[0].basketPos);
                 }
             });
         });
     };
+    LevelDataManager.prototype.GetBasketPos = function (levelIndex) {
+        return this.StringToNumberArray(this.levelData[levelIndex].basketPos);
+    };
+    //字符串转换成数组
     LevelDataManager.prototype.StringToNumberArray = function (str) {
         var num = [];
         for (var i = 0; i < str.length; i++) {
