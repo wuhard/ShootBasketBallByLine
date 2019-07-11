@@ -25,6 +25,7 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
         this.LoadJson("LevelData");
     }
 
+    //读取关卡数据
     LoadJson(json_name:string) {
         let json_url = 'json/' + json_name;
         return new Promise((resolve, reject) => {
@@ -42,6 +43,12 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
     public GetBasketPos(levelIndex:number):number[]
     {
         return this.StringToNumberArray(this.levelData[levelIndex].basketPos);
+    }
+
+    ///获取球射击的位置
+    public GetBallAndBombPos(levelIndex:number):number[]
+    {
+        return this.StringToNumberArray(this.levelData[levelIndex].shootPos);
     }
 
 

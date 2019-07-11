@@ -1844,9 +1844,6 @@
     "ballGuide": {
       "__uuid__": "552acc46-7827-4168-b99d-64c8dadb8698"
     },
-    "boomGuide": {
-      "__uuid__": "26ccb6a6-7727-4f1d-b31f-6ce43f49f810"
-    },
     "ball": {
       "__uuid__": "05229913-f510-41eb-804d-840796ab433e"
     },

@@ -10,7 +10,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "physicsNode",
+    "_name": "PhysicsNode",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -59,8 +59,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": 0
+      "x": -360,
+      "y": -640
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -116,7 +116,9 @@
       "g": 255,
       "b": 255,
       "a": 249
-    }
+    },
+    "lineCount": 25,
+    "limitLineLength": 500
   },
   {
     "__type__": "6bdc0/NV6tM94FPmvzf7E7r",

@@ -126,7 +126,6 @@ export default class GameViewLogic extends cc.Component {
 
         this.scheduleOnce(() => {
            
-
             var basketBornPos : number[] = this.levelDataManager.GetBasketPos(0);
             this.produceBasketManager.ProduceOneBasketByPos(basketBornPos);
          }, delayTime);//2s后执行一次

@@ -35,7 +35,7 @@ export default class PhysicsNodeLogic extends cc.Component {
     @property(Number)
     lineCount:number = 25;
     @property(Number)
-    lineLength:number = 125;
+    limitLineLength:number = 125;
 
     // LIFE-CYCLE CALLBACKS:    
     onLoad () {
@@ -90,7 +90,7 @@ export default class PhysicsNodeLogic extends cc.Component {
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
 
 
-        if(this.points.length > this.lineCount)
+        if(!this.checkIsCanDraw(this.points))
         {
             return;
         }
@@ -117,9 +117,7 @@ export default class PhysicsNodeLogic extends cc.Component {
         this.createRigibody();
     }
 
-    checkIsCanDraw(lastPoint: cc.Vec2, nowPoint: cc.Vec2) {
-        return cc.pDistance(lastPoint, nowPoint) >= 20;
-    }
+  
 
     
     createRigibody()
@@ -128,6 +126,17 @@ export default class PhysicsNodeLogic extends cc.Component {
         this.physicsLine.points = this.points;
         this.physicsLine.apply();
         
+    }
+
+    checkIsCanDraw(points:cc.Vec2[]) : boolean
+    {
+        var lineLenght = 0;
+        for(var i = 0; i < points.length-1; i++)
+        {
+            lineLenght += cc.pDistance(points[i], points[i+1]) 
+        }
+
+        return lineLenght < this.limitLineLength;
     }
 
     getSegmenPos(beginPos: cc.Vec2, endPos: cc.Vec2) {

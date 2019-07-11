@@ -23,12 +23,8 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
     @property(cc.Prefab)
     bigBasketL:cc.Prefab;
 
-    
     @property(cc.Prefab)
     bigBasketR:cc.Prefab;
-
-
-   
 
     @property(cc.Node)
     basketBackParent:cc.Node;//篮球背面图片
@@ -77,8 +73,7 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
 
     ///获取位置信息
     GetPos(index:number):cc.Vec2
-    {
-       
+    {    
         return this.basketBornPos[index].convertToWorldSpaceAR(cc.v2(0,0));
     }
 
@@ -135,9 +130,7 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
                             {
                                 case -1:
                                         tempbasket = cc.instantiate(this.bigBasketL);
-                                    break;
-                                
-                            
+                                    break;         
                                 case 1:
                                         tempbasket = cc.instantiate(this.bigBasketR);
                                         cc.log(tempbasket.scaleX);

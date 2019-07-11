@@ -1,6 +1,6 @@
-(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Script/physicsNodeLogic.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
-cc._RF.push(module, '8facdN70n9OirBLfSObhMNW', 'physicsNodeLogic', __filename);
-// Script/physicsNodeLogic.ts
+(function() {"use strict";var __module = CC_EDITOR ? module : {exports:{}};var __filename = 'preview-scripts/assets/Script/PhysicsNodeLogic.js';var __require = CC_EDITOR ? function (request) {return cc.require(request, require);} : function (request) {return cc.require(request, __filename);};function __define (exports, require, module) {"use strict";
+cc._RF.push(module, '8facdN70n9OirBLfSObhMNW', 'PhysicsNodeLogic', __filename);
+// Script/PhysicsNodeLogic.ts
 
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
@@ -26,7 +26,7 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
         _this.pathWidth = 10;
         _this.pathColor = cc.color(0, 0, 0);
         _this.lineCount = 25;
-        _this.lineLength = 125;
+        _this.limitLineLength = 125;
         return _this;
     }
     // LIFE-CYCLE CALLBACKS:    
@@ -68,7 +68,7 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
     PhysicsNodeLogic.prototype.touchMove = function (event) {
         var touchLoc = event.getLocation();
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
-        if (this.points.length > this.lineCount) {
+        if (!this.checkIsCanDraw(this.points)) {
             return;
         }
         this.points.push(cc.p(touchLoc.x, touchLoc.y));
@@ -84,13 +84,17 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
     PhysicsNodeLogic.prototype.touchCancel = function (event) {
         this.createRigibody();
     };
-    PhysicsNodeLogic.prototype.checkIsCanDraw = function (lastPoint, nowPoint) {
-        return cc.pDistance(lastPoint, nowPoint) >= 20;
-    };
     PhysicsNodeLogic.prototype.createRigibody = function () {
         this.physicsLine.lineWidth = this.path.lineWidth;
         this.physicsLine.points = this.points;
         this.physicsLine.apply();
+    };
+    PhysicsNodeLogic.prototype.checkIsCanDraw = function (points) {
+        var lineLenght = 0;
+        for (var i = 0; i < points.length - 1; i++) {
+            lineLenght += cc.pDistance(points[i], points[i + 1]);
+        }
+        return lineLenght < this.limitLineLength;
     };
     PhysicsNodeLogic.prototype.getSegmenPos = function (beginPos, endPos) {
         var k = (endPos.y - beginPos.y) / (endPos.x - beginPos.x);
@@ -145,7 +149,7 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
     ], PhysicsNodeLogic.prototype, "lineCount", void 0);
     __decorate([
         property(Number)
-    ], PhysicsNodeLogic.prototype, "lineLength", void 0);
+    ], PhysicsNodeLogic.prototype, "limitLineLength", void 0);
     PhysicsNodeLogic = __decorate([
         ccclass
     ], PhysicsNodeLogic);
@@ -164,5 +168,5 @@ cc._RF.pop();
             });
         }
         })();
-        //# sourceMappingURL=physicsNodeLogic.js.map
+        //# sourceMappingURL=PhysicsNodeLogic.js.map
         

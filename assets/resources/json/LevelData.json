@@ -1,14 +1,14 @@
   [
         {
-            "basketPos":"001010",
-            "shootPos":"0120",
+            "basketPos":"001000",
+            "shootPos":"0100",
             "shootAngle":"0_45_90_0",
             "shootSeq":"0_300_300_0"
         },
         {
             "basketPos":"001000",
-            "shootPos":"0120",
-            "shootAngle":"0_45_90_0",
-            "shootSeq":"0_300_300_0"
+            "shootPos":"0100",
+            "shootAngle":"0_145_0_0",
+            "shootSeq":"0_300_0_0"
         }
     ]

@@ -25,6 +25,7 @@ var LevelDataManager = /** @class */ (function (_super) {
     LevelDataManager.prototype.start = function () {
         this.LoadJson("LevelData");
     };
+    //读取关卡数据
     LevelDataManager.prototype.LoadJson = function (json_name) {
         var _this = this;
         var json_url = 'json/' + json_name;
@@ -42,6 +43,10 @@ var LevelDataManager = /** @class */ (function (_super) {
     };
     LevelDataManager.prototype.GetBasketPos = function (levelIndex) {
         return this.StringToNumberArray(this.levelData[levelIndex].basketPos);
+    };
+    ///获取球射击的位置
+    LevelDataManager.prototype.GetBallAndBombPos = function (levelIndex) {
+        return this.StringToNumberArray(this.levelData[levelIndex].shootPos);
     };
     //字符串转换成数组
     LevelDataManager.prototype.StringToNumberArray = function (str) {

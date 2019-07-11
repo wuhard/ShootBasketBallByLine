@@ -1,5 +1,6 @@
 import Singleton from "./Singleton";
 import ProduceBasketManager from "./ProduceBasketManager";
+import LevelDataManager from "./LevelDataManager";
 
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
@@ -24,22 +25,27 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
     ballGuide:cc.Prefab;
 
     @property(cc.Prefab)
-    boomGuide:cc.Prefab;
+    bombGuide:cc.Prefab;
 
     @property(cc.Prefab)
     ball:cc.Prefab;
 
     @property(cc.Prefab)
-    boom:cc.Prefab;
+    bomb:cc.Prefab;
 
     @property(cc.Node)
     guidePos:cc.Node[] = [];
 
     bornPos : cc.Node[] = [];
 
-    bornType: number[] = []; // 0代表篮球 -1代表炸弹
+    shootPos: number[] = []; // 1代表篮球 2代表炸弹 0代表没有
+
+    bornSeq: number[] = []; //实例化延迟时间
 
     velocity: cc.Vec2[] = [cc.v2(0,2000),cc.v2(0,2500)];
+
+    ballGuideArray: cc.Node[] = [];
+    bombGuideArray: cc.Node[] = [];
     
     @property(ProduceBasketManager)
     produceBasketManager:ProduceBasketManager;
@@ -50,6 +56,33 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
 
     start () {
       
+    }
+
+    //创建球和炸弹的提示
+    CreatBallAndBombNotice(shootPos:number[],shootSeq:number[])
+    {
+        this.bornPos.splice(0,this.bornPos.length);
+        this.ballGuideArray.splice(0,this.ballGuideArray.length);
+        this.bombGuideArray.splice(0,this.bombGuideArray.length);
+
+        for(var i = 0; i < shootPos.length; i++)
+        {
+            if(shootPos[i] == 1)
+            {
+                var oneBallGuide = this.ProduceOneBallGuide(this.bornPos[i]);  
+                this.ballGuideArray.push(oneBallGuide);
+                this.scheduleOnce(() => {
+                    // 这里的 this 指向 component
+                    this.ProduceBallAction(oneBallGuide);
+                }, shootSeq[i]/1000);//2s后执行一次
+
+            }
+            else if(shootPos[i] == 2)
+            {
+                var oneBombGuide = this.ProduceOneBoomGuide(this.bornPos[i]);
+                this.bombGuideArray.push(oneBombGuide);
+            }
+        }
     }
 
     CreatBornPosByType(posType:number)
@@ -131,19 +164,20 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
     }
 
     
-     ProduceOneBoomGuide():cc.Node
+    ProduceOneBoomGuide(posNode:cc.Node):cc.Node
     {
-        let bornNode = this.guidePos[this.random(0,this.guidePos.length)];
+        let bornNode = posNode;
 
-        let tempball = cc.instantiate(this.ballGuide);
-        this.node.addChild(tempball);
-        tempball.setPosition(bornNode.position);
-        return tempball;
+        let tempbomb = cc.instantiate(this.bombGuide);
+        this.node.addChild(tempbomb);
+        tempbomb.setPosition(bornNode.position);
+        return tempbomb;
     }
 
-    //创建一次用例
-    public ProduceOneCase(num:number)
+    //创建一次球和炸弹的用例
+    public ProduceOneBallAndBombCase(shootPos:number[],shootSeq:number[])
     {
+        this.shootPos = 
         // this.CreatBornPos(num);
         // this.CreatBornTypeOrde();
         var posType = this.produceBasketManager.GetPosType();
@@ -171,6 +205,15 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
       
     }
 
+
+    ProduceBombAction(guidBall:cc.Node)
+    {
+       // cc.log("Destory");
+        this.ProduceOneBall(guidBall,cc.v2(0,2000));
+        guidBall.destroy();
+      
+    }
+
     //创建一个球的
     ProduceOneBall(posNode:cc.Node,velocity:cc.Vec2)
     {
@@ -182,6 +225,19 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         tempball.position = this.ballParent.convertToNodeSpaceAR(startPos);
         tempball.getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity = velocity;
     }
+
+
+    ProduceOneBomb(posNode:cc.Node,velocity:cc.Vec2)
+    {
+      
+        var startPos =  posNode.convertToWorldSpaceAR(cc.v2(0,0));
+      
+        let tempball = cc.instantiate(this.boom);
+        tempball.parent = this.ballParent;
+        tempball.position = this.ballParent.convertToNodeSpaceAR(startPos);
+        tempball.getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity = velocity;
+    }
+
 
     random(lower, upper) {
 
