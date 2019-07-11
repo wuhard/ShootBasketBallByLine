@@ -2,6 +2,10 @@
   "item-states": [
     {
       "folded": false,
+      "id": "56lFieJWtHbLNkexB9GPsN"
+    },
+    {
+      "folded": false,
       "id": "83ldPIGB5Kq53ZJU6YnSHu"
     },
     {
@@ -17,11 +21,11 @@
       "id": "48RqshemBKYbYasrg449q/"
     },
     {
-      "folded": false,
+      "folded": true,
       "id": "f35pMMhxVJbatuofzlE6aE"
     },
     {
-      "folded": false,
+      "folded": true,
       "id": "10KiAltFNDoZniukHGrBPU"
     },
     {
@@ -29,7 +33,7 @@
       "id": "03k2DgB1BGrJ4Mi5OAAYaW"
     },
     {
-      "folded": false,
+      "folded": true,
       "id": "e9AWgtyS1OcbaYuNxfLwfi"
     },
     {
@@ -41,7 +45,7 @@
       "id": "06gg1KnA5HJbfOA13mgtrA"
     },
     {
-      "folded": false,
+      "folded": true,
       "id": "fdKbJzjh5F/KEArpGoJLui"
     },
     {
@@ -49,27 +53,23 @@
       "id": "72Fcy/YWBPy4F9EwwgiHWO"
     },
     {
-      "folded": false,
+      "folded": true,
       "id": "f2+oo9PwxKWp7ZowRGPnTv"
     },
     {
-      "folded": false,
+      "folded": true,
       "id": "91oo+Gbn9HPqfM5jYme74z"
     },
     {
-      "folded": false,
+      "folded": true,
       "id": "8bozEo1PhAIaBXXGSHtmxR"
     },
     {
-      "folded": false,
+      "folded": true,
       "id": "72pYbyrS1NzoZDEPhHgVXl"
     },
     {
-      "folded": false,
-      "id": "56lFieJWtHbLNkexB9GPsN"
-    },
-    {
-      "folded": false,
+      "folded": true,
       "id": "92+LTSf9FGgoJ8zwUHqJn3"
     }
   ]

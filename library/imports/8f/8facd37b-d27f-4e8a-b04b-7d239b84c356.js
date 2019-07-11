@@ -26,6 +26,7 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
         _this.pathWidth = 10;
         _this.pathColor = cc.color(0, 0, 0);
         _this.lineCount = 25;
+        _this.lineLength = 125;
         return _this;
     }
     // LIFE-CYCLE CALLBACKS:    
@@ -33,6 +34,8 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
         this.path = this.addComponent(cc.Graphics);
         this.path.strokeColor = this.pathColor;
         this.path.lineWidth = this.pathWidth;
+        this.path.lineCap = cc.Graphics.LineCap.ROUND;
+        this.path.lineJoin = cc.Graphics.LineJoin.ROUND;
         this.touchStartHandler = this.touchStart.bind(this);
         this.touchMoveHandler = this.touchMove.bind(this);
         this.touchEndHandler = this.touchEnd.bind(this);
@@ -73,6 +76,7 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
         var lastTouchLoc = this.points[this.points.length - 1];
         this.path.stroke();
         this.path.moveTo(lastTouchLoc.x, lastTouchLoc.y);
+        this.createRigibody();
     };
     PhysicsNodeLogic.prototype.touchEnd = function (event) {
         this.createRigibody();
@@ -139,6 +143,9 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
     __decorate([
         property(Number)
     ], PhysicsNodeLogic.prototype, "lineCount", void 0);
+    __decorate([
+        property(Number)
+    ], PhysicsNodeLogic.prototype, "lineLength", void 0);
     PhysicsNodeLogic = __decorate([
         ccclass
     ], PhysicsNodeLogic);

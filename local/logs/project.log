@@ -1,60 +1,60 @@
-2019-07-03T11:17:56.447Z - normal: Load ~/.CocosCreator/settings.json
-2019-07-03T11:17:56.451Z - normal: checking language setting...
-2019-07-03T11:17:56.451Z - normal: Language: zh
-2019-07-03T11:17:58.221Z - success: protocol editor-framework registered
-2019-07-03T11:17:58.221Z - success: protocol app registered
-2019-07-03T11:17:58.221Z - success: protocol theme registered
-2019-07-03T11:17:58.221Z - success: protocol packages registered
-2019-07-03T11:17:58.221Z - success: protocol unpack registerred
-2019-07-03T11:17:58.222Z - success: protocol disable-commonjs registerred
-2019-07-03T11:17:58.400Z - normal: connected!
-2019-07-03T11:17:58.402Z - normal: Check project E:\Github\ShootBasketBallByLine
-2019-07-03T11:17:58.405Z - normal: Initializing Cocos2d
-2019-07-03T11:17:58.614Z - normal: Initializing Asset Database
-2019-07-03T11:17:58.646Z - success: protocol uuid registerred
-2019-07-03T11:17:58.646Z - success: protocol db registerred
-2019-07-03T11:17:58.647Z - success: protocol thumbnail registerred
-2019-07-03T11:17:58.647Z - normal: Loading editor/builtin packages
-2019-07-03T11:17:58.666Z - success: anysdk loaded
-2019-07-03T11:17:58.779Z - success: assets loaded
-2019-07-03T11:17:58.780Z - success: builder loaded
-2019-07-03T11:17:58.782Z - success: cocos-analytics loaded
-2019-07-03T11:17:58.785Z - success: console loaded
-2019-07-03T11:17:58.829Z - success: fb-instant-games loaded
-2019-07-03T11:17:58.831Z - success: hierarchy loaded
-2019-07-03T11:17:58.833Z - success: inspector loaded
-2019-07-03T11:17:58.834Z - success: keystore loaded
-2019-07-03T11:17:58.836Z - success: node-library loaded
-2019-07-03T11:17:58.838Z - success: package-asset loaded
-2019-07-03T11:17:58.840Z - success: preferences loaded
-2019-07-03T11:17:58.842Z - success: project-exporter loaded
-2019-07-03T11:17:58.856Z - success: project-importer loaded
-2019-07-03T11:17:58.858Z - success: project-settings loaded
-2019-07-03T11:17:58.860Z - success: ui-kit loaded
-2019-07-03T11:17:58.861Z - success: ui-grid loaded
-2019-07-03T11:17:58.863Z - success: scene loaded
-2019-07-03T11:17:58.864Z - success: sprite-editor loaded
-2019-07-03T11:17:58.866Z - success: store loaded
-2019-07-03T11:17:58.870Z - success: timeline loaded
-2019-07-03T11:17:58.870Z - normal: Loading builtin packages
-2019-07-03T11:17:58.872Z - success: asset-db-debugger loaded
-2019-07-03T11:17:58.873Z - success: code-editor loaded
-2019-07-03T11:17:58.874Z - success: color-picker loaded
-2019-07-03T11:17:58.875Z - success: package-manager loaded
-2019-07-03T11:17:58.877Z - success: qqplay-adapter loaded
-2019-07-03T11:17:58.880Z - success: sdkbox loaded
-2019-07-03T11:17:58.882Z - success: tester loaded
-2019-07-03T11:17:58.884Z - success: ui-kit-preview-extra loaded
-2019-07-03T11:17:58.886Z - success: ui-kit-preview loaded
-2019-07-03T11:17:58.887Z - success: ui-tree loaded
-2019-07-03T11:17:58.888Z - success: weapp-adapter loaded
-2019-07-03T11:17:59.989Z - normal: Initializing project E:\Github\ShootBasketBallByLine
-2019-07-03T11:17:59.991Z - normal: Loading packages
-2019-07-03T11:17:59.995Z - normal: Watching packages
-2019-07-03T11:18:00.218Z - normal: Run Application
-2019-07-03T11:18:00.605Z - success: preview server running at http://localhost:7456
-2019-07-03T11:18:05.007Z - normal: 1.9.3
-2019-07-03T11:18:05.125Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+2019-07-11T08:19:28.828Z - normal: Load ~/.CocosCreator/settings.json
+2019-07-11T08:19:28.832Z - normal: checking language setting...
+2019-07-11T08:19:28.832Z - normal: Language: zh
+2019-07-11T08:19:30.595Z - success: protocol editor-framework registered
+2019-07-11T08:19:30.595Z - success: protocol app registered
+2019-07-11T08:19:30.595Z - success: protocol theme registered
+2019-07-11T08:19:30.595Z - success: protocol packages registered
+2019-07-11T08:19:30.595Z - success: protocol unpack registerred
+2019-07-11T08:19:30.595Z - success: protocol disable-commonjs registerred
+2019-07-11T08:19:30.762Z - normal: connected!
+2019-07-11T08:19:30.765Z - normal: Check project E:\Github\ShootBasketBallByLine
+2019-07-11T08:19:30.766Z - normal: Initializing Cocos2d
+2019-07-11T08:19:30.971Z - normal: Initializing Asset Database
+2019-07-11T08:19:31.003Z - success: protocol uuid registerred
+2019-07-11T08:19:31.003Z - success: protocol db registerred
+2019-07-11T08:19:31.003Z - success: protocol thumbnail registerred
+2019-07-11T08:19:31.003Z - normal: Loading editor/builtin packages
+2019-07-11T08:19:31.022Z - success: anysdk loaded
+2019-07-11T08:19:31.137Z - success: assets loaded
+2019-07-11T08:19:31.139Z - success: builder loaded
+2019-07-11T08:19:31.141Z - success: cocos-analytics loaded
+2019-07-11T08:19:31.144Z - success: console loaded
+2019-07-11T08:19:31.189Z - success: fb-instant-games loaded
+2019-07-11T08:19:31.192Z - success: hierarchy loaded
+2019-07-11T08:19:31.194Z - success: inspector loaded
+2019-07-11T08:19:31.195Z - success: keystore loaded
+2019-07-11T08:19:31.198Z - success: node-library loaded
+2019-07-11T08:19:31.200Z - success: package-asset loaded
+2019-07-11T08:19:31.202Z - success: preferences loaded
+2019-07-11T08:19:31.204Z - success: project-exporter loaded
+2019-07-11T08:19:31.219Z - success: project-importer loaded
+2019-07-11T08:19:31.220Z - success: project-settings loaded
+2019-07-11T08:19:31.222Z - success: ui-kit loaded
+2019-07-11T08:19:31.224Z - success: ui-grid loaded
+2019-07-11T08:19:31.226Z - success: scene loaded
+2019-07-11T08:19:31.227Z - success: sprite-editor loaded
+2019-07-11T08:19:31.229Z - success: store loaded
+2019-07-11T08:19:31.233Z - success: timeline loaded
+2019-07-11T08:19:31.233Z - normal: Loading builtin packages
+2019-07-11T08:19:31.235Z - success: asset-db-debugger loaded
+2019-07-11T08:19:31.236Z - success: code-editor loaded
+2019-07-11T08:19:31.237Z - success: color-picker loaded
+2019-07-11T08:19:31.238Z - success: package-manager loaded
+2019-07-11T08:19:31.240Z - success: qqplay-adapter loaded
+2019-07-11T08:19:31.245Z - success: sdkbox loaded
+2019-07-11T08:19:31.247Z - success: tester loaded
+2019-07-11T08:19:31.248Z - success: ui-kit-preview-extra loaded
+2019-07-11T08:19:31.249Z - success: ui-kit-preview loaded
+2019-07-11T08:19:31.251Z - success: ui-tree loaded
+2019-07-11T08:19:31.251Z - success: weapp-adapter loaded
+2019-07-11T08:19:32.354Z - normal: Initializing project E:\Github\ShootBasketBallByLine
+2019-07-11T08:19:32.355Z - normal: Loading packages
+2019-07-11T08:19:32.360Z - normal: Watching packages
+2019-07-11T08:19:32.568Z - normal: Run Application
+2019-07-11T08:19:33.150Z - success: preview server running at http://localhost:7456
+2019-07-11T08:19:38.695Z - normal: 1.9.3
+2019-07-11T08:19:39.069Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -62,7 +62,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.126Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+2019-07-11T08:19:39.069Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -70,7 +70,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.126Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
+2019-07-11T08:19:39.070Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -78,7 +78,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.126Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
+2019-07-11T08:19:39.070Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -86,7 +86,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.126Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
+2019-07-11T08:19:39.070Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -94,7 +94,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.126Z - warn: Please specifiy a default value for "pos0" property at its declaration: 😂
+2019-07-11T08:19:39.070Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -102,7 +102,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.126Z - warn: Please specifiy a default value for "pos1" property at its declaration: 😂
+2019-07-11T08:19:39.070Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -110,7 +110,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.127Z - warn: Please specifiy a default value for "pos2" property at its declaration: 😂
+2019-07-11T08:19:39.071Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -118,7 +118,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.127Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+2019-07-11T08:19:39.074Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -126,7 +126,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.127Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+2019-07-11T08:19:39.074Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -134,7 +134,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.128Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+2019-07-11T08:19:39.075Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -142,7 +142,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.130Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-07-11T08:19:39.075Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -150,7 +150,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.131Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
+2019-07-11T08:19:39.075Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -158,7 +158,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.131Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
+2019-07-11T08:19:39.075Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -166,7 +166,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.131Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
+2019-07-11T08:19:39.076Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -174,7 +174,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.131Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
+2019-07-11T08:19:39.076Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -182,7 +182,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.132Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
+2019-07-11T08:19:39.077Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -190,7 +190,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.132Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+2019-07-11T08:19:39.077Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -198,7 +198,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.133Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
+2019-07-11T08:19:39.077Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -206,7 +206,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.134Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-07-11T08:19:39.077Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -214,7 +214,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.134Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-07-11T08:19:39.078Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -222,7 +222,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.134Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-07-11T08:19:39.078Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -230,7 +230,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.134Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
+2019-07-11T08:19:39.078Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -238,7 +238,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.135Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
+2019-07-11T08:19:39.078Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -246,7 +246,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.135Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
+2019-07-11T08:19:39.078Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -254,7 +254,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.135Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
+2019-07-11T08:19:39.079Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -262,7 +262,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.135Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
+2019-07-11T08:19:39.080Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -270,7 +270,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.135Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
+2019-07-11T08:19:39.080Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -278,7 +278,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.137Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
+2019-07-11T08:19:39.080Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -286,7 +286,12 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.137Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
+2019-07-11T08:19:39.082Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-07-11T08:19:39.132Z - normal: No need to specify the "type" of "R.path._scale" because cc.Vec2 is a child class of ValueType.
+2019-07-11T08:19:39.132Z - normal: No need to specify the "type" of "R.path._position" because cc.Vec2 is a child class of ValueType.
+2019-07-11T08:19:39.235Z - normal: No need to specify the "type" of "R.group._scale" because cc.Vec2 is a child class of ValueType.
+2019-07-11T08:19:39.236Z - normal: No need to specify the "type" of "R.group._position" because cc.Vec2 is a child class of ValueType.
+2019-07-11T08:29:11.771Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -294,7 +299,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.137Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
+2019-07-11T08:29:11.773Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -302,7 +307,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.138Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
+2019-07-11T08:29:11.773Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -310,8 +315,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:05.139Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:18:18.495Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+2019-07-11T08:29:11.773Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -319,7 +323,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.495Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+2019-07-11T08:29:11.773Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -327,7 +331,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.496Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
+2019-07-11T08:29:11.773Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -335,7 +339,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.496Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
+2019-07-11T08:29:11.773Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -343,7 +347,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.496Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
+2019-07-11T08:29:11.773Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -351,7 +355,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.496Z - warn: Please specifiy a default value for "pos0" property at its declaration: 😂
+2019-07-11T08:29:11.775Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -359,7 +363,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.496Z - warn: Please specifiy a default value for "pos1" property at its declaration: 😂
+2019-07-11T08:29:11.775Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -367,7 +371,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.496Z - warn: Please specifiy a default value for "pos2" property at its declaration: 😂
+2019-07-11T08:29:11.775Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -375,7 +379,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.496Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+2019-07-11T08:29:11.775Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -383,7 +387,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.496Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+2019-07-11T08:29:11.775Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -391,7 +395,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.497Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+2019-07-11T08:29:11.775Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -399,7 +403,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.499Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-07-11T08:29:11.777Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -407,7 +411,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.499Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
+2019-07-11T08:29:11.777Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -415,7 +419,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.499Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
+2019-07-11T08:29:11.778Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -423,7 +427,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.499Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
+2019-07-11T08:29:11.778Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -431,7 +435,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.499Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
+2019-07-11T08:29:11.778Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -439,7 +443,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.499Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
+2019-07-11T08:29:11.779Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -447,7 +451,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.499Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+2019-07-11T08:29:11.779Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -455,7 +459,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.500Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
+2019-07-11T08:29:11.779Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -463,7 +467,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.500Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-07-11T08:29:11.779Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -471,7 +475,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.500Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-07-11T08:29:11.779Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -479,7 +483,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.500Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-07-11T08:29:11.779Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -487,7 +491,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.500Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
+2019-07-11T08:29:11.781Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -495,7 +499,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.587Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
+2019-07-11T08:29:11.781Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -503,7 +507,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.590Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
+2019-07-11T08:29:11.781Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -511,7 +515,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.590Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
+2019-07-11T08:29:11.781Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -519,7 +523,12 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.590Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
+2019-07-11T08:29:11.784Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-07-11T08:29:11.837Z - normal: No need to specify the "type" of "R.path._scale" because cc.Vec2 is a child class of ValueType.
+2019-07-11T08:29:11.838Z - normal: No need to specify the "type" of "R.path._position" because cc.Vec2 is a child class of ValueType.
+2019-07-11T08:29:11.841Z - normal: No need to specify the "type" of "R.group._scale" because cc.Vec2 is a child class of ValueType.
+2019-07-11T08:29:11.841Z - normal: No need to specify the "type" of "R.group._position" because cc.Vec2 is a child class of ValueType.
+2019-07-11T08:34:19.207Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -527,7 +536,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.590Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
+2019-07-11T08:34:19.208Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -535,7 +544,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.590Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
+2019-07-11T08:34:19.208Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -543,7 +552,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.590Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
+2019-07-11T08:34:19.209Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -551,7 +560,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.591Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
+2019-07-11T08:34:19.209Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -559,7 +568,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.591Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
+2019-07-11T08:34:19.209Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -567,8 +576,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:18:18.591Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:19:06.966Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
+2019-07-11T08:34:19.209Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -576,7 +584,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.968Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
+2019-07-11T08:34:19.209Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -584,7 +592,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.969Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
+2019-07-11T08:34:19.211Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -592,7 +600,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.969Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
+2019-07-11T08:34:19.211Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -600,7 +608,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.969Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
+2019-07-11T08:34:19.211Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -608,7 +616,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.969Z - warn: Please specifiy a default value for "pos0" property at its declaration: 😂
+2019-07-11T08:34:19.211Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -616,7 +624,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.969Z - warn: Please specifiy a default value for "pos1" property at its declaration: 😂
+2019-07-11T08:34:19.211Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -624,7 +632,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.969Z - warn: Please specifiy a default value for "pos2" property at its declaration: 😂
+2019-07-11T08:34:19.211Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -632,7 +640,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.969Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
+2019-07-11T08:34:19.212Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -640,7 +648,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.969Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
+2019-07-11T08:34:19.212Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -648,7 +656,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.970Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
+2019-07-11T08:34:19.214Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -656,7 +664,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.970Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-07-11T08:34:19.214Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -664,7 +672,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.970Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
+2019-07-11T08:34:19.214Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -672,7 +680,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.970Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
+2019-07-11T08:34:19.214Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -680,7 +688,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.970Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
+2019-07-11T08:34:19.214Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -688,7 +696,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.970Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
+2019-07-11T08:34:19.214Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -696,7 +704,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.970Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
+2019-07-11T08:34:19.214Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -704,7 +712,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.970Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
+2019-07-11T08:34:19.214Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -712,7 +720,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.970Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
+2019-07-11T08:34:19.215Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -720,7 +728,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.970Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
+2019-07-11T08:34:19.216Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -728,7 +736,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.971Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
+2019-07-11T08:34:19.217Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -736,7 +744,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.971Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
+2019-07-11T08:34:19.217Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -744,7 +752,7 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.971Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
+2019-07-11T08:34:19.217Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
     // Before:
     @property(...)
     value;
@@ -752,2575 +760,8 @@
     // After:
     @property(...)
     value = 0;
-2019-07-03T11:19:06.971Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:19:06.971Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:19:06.971Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:19:06.971Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:19:06.971Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:19:06.971Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:19:06.972Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:19:06.972Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:19:06.972Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:19:06.972Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:20:20.379Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.379Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.379Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.379Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.380Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.380Z - warn: Please specifiy a default value for "pos0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.380Z - warn: Please specifiy a default value for "pos1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.380Z - warn: Please specifiy a default value for "pos2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.380Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.380Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.380Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.381Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.381Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.381Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.381Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.381Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.381Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.382Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.382Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.383Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.383Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.383Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.383Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.383Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.383Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.383Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.383Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.383Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.384Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.384Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.384Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.384Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:20:20.385Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:21:17.451Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.451Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.451Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.452Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.452Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.452Z - warn: Please specifiy a default value for "pos0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.452Z - warn: Please specifiy a default value for "pos1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.452Z - warn: Please specifiy a default value for "pos2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.452Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.452Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.452Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.454Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.454Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.454Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.454Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.454Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.454Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.455Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.455Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.457Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.457Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.457Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.457Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.458Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.458Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.459Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.459Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.459Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.460Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.460Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.460Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.461Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:21:17.461Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:24:15.910Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.912Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.912Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.912Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.913Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.913Z - warn: Please specifiy a default value for "pos0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.913Z - warn: Please specifiy a default value for "pos1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.913Z - warn: Please specifiy a default value for "pos2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.913Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.913Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.914Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.914Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.914Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.914Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.914Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.914Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.914Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.914Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.915Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.915Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.915Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.915Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.915Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.915Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.915Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.915Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.915Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.915Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.916Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.916Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.916Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.916Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:24:15.916Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:25:07.073Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.074Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.074Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.075Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.075Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.075Z - warn: Please specifiy a default value for "pos0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.075Z - warn: Please specifiy a default value for "pos1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.075Z - warn: Please specifiy a default value for "pos2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.075Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.075Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.075Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.099Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.100Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.100Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.100Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.100Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.100Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.100Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.100Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.100Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.100Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.101Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.101Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.102Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.102Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.102Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.102Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.102Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.102Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.102Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.102Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.103Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:25:07.103Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:26:31.333Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.333Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.334Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.334Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.334Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.334Z - warn: Please specifiy a default value for "pos0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.334Z - warn: Please specifiy a default value for "pos1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.334Z - warn: Please specifiy a default value for "pos2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.334Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.335Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.335Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.335Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.335Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.336Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.336Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.336Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.336Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.336Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.336Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.337Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.337Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.337Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.337Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.337Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.338Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.338Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.338Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.338Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.339Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.339Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.339Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.339Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:26:31.340Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:34:25.846Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.847Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.848Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.848Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.848Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.848Z - warn: Please specifiy a default value for "pos0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.849Z - warn: Please specifiy a default value for "pos1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.849Z - warn: Please specifiy a default value for "pos2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.849Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.849Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.849Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.849Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.849Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.850Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.850Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.850Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.850Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.851Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.851Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.852Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.852Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.853Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.853Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.853Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.853Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.853Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.853Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.853Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.855Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.855Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.855Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.855Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:34:25.857Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:35:57.125Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.127Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.127Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.127Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.127Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.128Z - warn: Please specifiy a default value for "pos0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.128Z - warn: Please specifiy a default value for "pos1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.128Z - warn: Please specifiy a default value for "pos2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.128Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.128Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.129Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.129Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.129Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.129Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.129Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.129Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.129Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.129Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.129Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.129Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.129Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.130Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.130Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.130Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.130Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.130Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.130Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.130Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.131Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.131Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.131Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.131Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:35:57.131Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:36:59.951Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.952Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.952Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.952Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.952Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.953Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.953Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.953Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.954Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.955Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.955Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.955Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.955Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.955Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.956Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.956Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.957Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.958Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.958Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.958Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.958Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.958Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.958Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.958Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.958Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.960Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.960Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.960Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.960Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:36:59.962Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:38:32.757Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.757Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.757Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.760Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.760Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.761Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.761Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.761Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.761Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.761Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.761Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.761Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.761Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.762Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.762Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.762Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.762Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.762Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.762Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.762Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.762Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.762Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.762Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.762Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.763Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.763Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.763Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.763Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.763Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:38:32.763Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:39:54.289Z - warn: Please specifiy a default value for "backSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.289Z - warn: Please specifiy a default value for "frontSprit" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.289Z - warn: Please specifiy a default value for "smallBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.290Z - warn: Please specifiy a default value for "bigBasketL" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.290Z - warn: Please specifiy a default value for "bigBasketR" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.290Z - warn: Please specifiy a default value for "basketBackParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.290Z - warn: Please specifiy a default value for "basketFrontParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.290Z - warn: Please specifiy a default value for "basketParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.291Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.291Z - warn: Please specifiy a default value for "ballGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.291Z - warn: Please specifiy a default value for "boomGuide" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.291Z - warn: Please specifiy a default value for "ball" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.291Z - warn: Please specifiy a default value for "boom" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.292Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.292Z - warn: Please specifiy a default value for "enterBallAni" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.292Z - warn: Please specifiy a default value for "score" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.293Z - warn: Please specifiy a default value for "physicsNode" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.293Z - warn: Please specifiy a default value for "ballParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.293Z - warn: Please specifiy a default value for "linesParent" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.293Z - warn: Please specifiy a default value for "boomBasket" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.293Z - warn: Please specifiy a default value for "produceBasketManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.293Z - warn: Please specifiy a default value for "noticeAndProduceManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.293Z - warn: Please specifiy a default value for "effectPlayManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.294Z - warn: Please specifiy a default value for "levelDataManager" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.294Z - warn: Please specifiy a default value for "losePanel" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.294Z - warn: Please specifiy a default value for "boom0" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.294Z - warn: Please specifiy a default value for "boom1" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.294Z - warn: Please specifiy a default value for "boom2" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.295Z - warn: Please specifiy a default value for "boom3" property at its declaration: 😂
-    // Before:
-    @property(...)
-    value;
-
-    // After:
-    @property(...)
-    value = 0;
-2019-07-03T11:39:54.296Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
-2019-07-03T11:41:25.357Z - info: shutdown preview server
+2019-07-11T08:34:19.219Z - warn: Should not specify class name MyPhysicsCollider for Component which defines in project.
+2019-07-11T08:34:19.277Z - normal: No need to specify the "type" of "R.path._scale" because cc.Vec2 is a child class of ValueType.
+2019-07-11T08:34:19.277Z - normal: No need to specify the "type" of "R.path._position" because cc.Vec2 is a child class of ValueType.
+2019-07-11T08:34:19.282Z - normal: No need to specify the "type" of "R.group._scale" because cc.Vec2 is a child class of ValueType.
+2019-07-11T08:34:19.283Z - normal: No need to specify the "type" of "R.group._position" because cc.Vec2 is a child class of ValueType.

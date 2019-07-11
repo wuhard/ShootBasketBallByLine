@@ -34,12 +34,17 @@ export default class PhysicsNodeLogic extends cc.Component {
     pathColor: cc.Color = cc.color(0,0,0);
     @property(Number)
     lineCount:number = 25;
+    @property(Number)
+    lineLength:number = 125;
 
     // LIFE-CYCLE CALLBACKS:    
     onLoad () {
         this.path = this.addComponent(cc.Graphics);
         this.path.strokeColor = this.pathColor;
         this.path.lineWidth = this.pathWidth;
+        this.path.lineCap = cc.Graphics.LineCap.ROUND;
+        this.path.lineJoin = cc.Graphics.LineJoin.ROUND;
+
 
         this.touchStartHandler = this.touchStart.bind(this);
         this.touchMoveHandler = this.touchMove.bind(this);
@@ -98,8 +103,10 @@ export default class PhysicsNodeLogic extends cc.Component {
         let lastTouchLoc = this.points[this.points.length - 1];
         this.path.stroke();
         this.path.moveTo(lastTouchLoc.x,lastTouchLoc.y);
+        this.createRigibody();
     }
 
+   
 
     touchEnd(event : cc.Event.EventTouch) {
 
