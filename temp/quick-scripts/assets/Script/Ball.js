@@ -39,14 +39,14 @@ var Ball = /** @class */ (function (_super) {
             this.gameViewLogic.PlayEnterBallEffect(otherCollider.body.node.convertToWorldSpaceAR(cc.v2(0, 0)));
             var basketWorld = otherCollider.body.node.parent.convertToWorldSpaceAR(cc.v2(0, 0));
             var basketLocalPos = otherCollider.body.node.parent.parent.convertToNodeSpaceAR(basketWorld);
-            this.gameViewLogic.ProduceBoomBasket(basketLocalPos);
+            //this.gameViewLogic.ProduceBoomBasket(basketLocalPos);
             this.ProduceNextBasket();
             this.node.destroy();
         }
     };
     Ball.prototype.ProduceNextBasket = function () {
         // cc.log("ProduceNextBasket");
-        this.gameViewLogic.ProduceOneBasket(2);
+        this.gameViewLogic.ProduceNextLevelBasketCase(2);
         //
     };
     Ball = __decorate([

@@ -27,32 +27,12 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         _this.velocity = [cc.v2(0, 2000), cc.v2(0, 2500)];
         _this.ballGuideArray = [];
         _this.bombGuideArray = [];
+        _this.veloctiyY = 2000;
         return _this;
     }
     // LIFE-CYCLE CALLBACKS:
     // onLoad () {}
     NoticeAndProduceManager.prototype.start = function () {
-    };
-    //创建球和炸弹的提示
-    NoticeAndProduceManager.prototype.CreatBallAndBombNotice = function (shootPos, shootSeq) {
-        var _this = this;
-        this.bornPos.splice(0, this.bornPos.length);
-        this.ballGuideArray.splice(0, this.ballGuideArray.length);
-        this.bombGuideArray.splice(0, this.bombGuideArray.length);
-        for (var i = 0; i < shootPos.length; i++) {
-            if (shootPos[i] == 1) {
-                var oneBallGuide = this.ProduceOneBallGuide(this.bornPos[i]);
-                this.ballGuideArray.push(oneBallGuide);
-                this.scheduleOnce(function () {
-                    // 这里的 this 指向 component
-                    _this.ProduceBallAction(oneBallGuide);
-                }, shootSeq[i] / 1000); //2s后执行一次
-            }
-            else if (shootPos[i] == 2) {
-                var oneBombGuide = this.ProduceOneBoomGuide(this.bornPos[i]);
-                this.bombGuideArray.push(oneBombGuide);
-            }
-        }
     };
     NoticeAndProduceManager.prototype.CreatBornPosByType = function (posType) {
         this.bornPos.splice(0, this.bornPos.length);
@@ -74,32 +54,36 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         //清空
         this.bornPos.splice(0, this.bornPos.length);
         for (var i = 0; i < pos.length; i++) {
-            this.bornType.push(pos[i]);
+            this.shootPos.push(pos[i]);
         }
     };
     ///获取创建的位置信息
     NoticeAndProduceManager.prototype.CreatBornPos = function (num) {
-        this.bornPos.splice(0, this.bornPos.length);
-        var randomPos = [];
-        for (var i = 0; i < this.guidePos.length; i++) {
-            randomPos.push(i);
-        }
-        for (var j = 0; j < num; j++) {
-            var randomValue = this.random(0, randomPos.length);
-            var posIndex = randomPos[randomValue];
-            this.bornPos.push(this.guidePos[posIndex]);
-            randomPos.slice(randomValue, 1);
-        }
+        // this.bornPos.splice(0,this.bornPos.length);
+        // var randomPos:number[] = [];
+        // for(var i = 0; i < this.guidePos.length; i++)
+        // {
+        //     randomPos.push(i);
+        // }
+        // for(var j = 0; j < num; j++)
+        // {
+        //     var randomValue =  this.random(0,randomPos.length);
+        //     var posIndex:number = randomPos[randomValue];
+        //     this.bornPos.push(this.guidePos[posIndex]);
+        //     randomPos.slice(randomValue,1);
+        // }
     };
     ///获取出场顺序
     NoticeAndProduceManager.prototype.CreatBornTypeOrde = function () {
-        this.bornType.slice(0, this.bornType.length);
-        for (var i = 0; i < this.bornPos.length; i++) {
-            this.bornType.push(this.random(-1, 1));
-        }
-        var ballOrder = this.random(0, this.bornType.length);
-        this.bornType[ballOrder] = 0;
+        // this.bornType.slice(0,this.bornType.length);
+        // for(var i = 0; i < this.bornPos.length; i++)
+        // {
+        //     this.bornType.push(this.random(-1,1));
+        // }
+        // var ballOrder = this.random(0,this.bornType.length);
+        // this.bornType[ballOrder] = 0;
     };
+    //创建一个球的发射提示
     NoticeAndProduceManager.prototype.ProduceOneBallGuide = function (posNode) {
         var bornNode = posNode;
         var tempball = cc.instantiate(this.ballGuide);
@@ -107,6 +91,11 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         tempball.setPosition(bornNode.position);
         return tempball;
     };
+    NoticeAndProduceManager.prototype.GetShootVelority = function (angle) {
+        var anglePI = Math.PI / 180 * angle;
+        return cc.v2(this.veloctiyY / Math.tan(anglePI), this.veloctiyY);
+    };
+    //创建一个炸弹的发射提示
     NoticeAndProduceManager.prototype.ProduceOneBoomGuide = function (posNode) {
         var bornNode = posNode;
         var tempbomb = cc.instantiate(this.bombGuide);
@@ -115,31 +104,60 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         return tempbomb;
     };
     //创建一次球和炸弹的用例
-    NoticeAndProduceManager.prototype.ProduceOneBallAndBombCase = function (shootPos, shootSeq) {
+    NoticeAndProduceManager.prototype.ProduceOneBallAndBombCase = function (shootPos, shootSeq, shootAngel) {
         var _this = this;
-        this.shootPos =
-        ;
-        // this.CreatBornPos(num);
-        // this.CreatBornTypeOrde();
-        var posType = this.produceBasketManager.GetPosType();
-        this.CreatBornPosByType(posType);
-        for (var i = 0; i < this.bornPos.length; i++) {
-            var tempball = this.ProduceOneBallGuide(this.bornPos[i]);
-            this.scheduleOnce(function () {
-                // 这里的 this 指向 component
-                _this.ProduceBallAction(tempball);
-            }, 0.5); //2s后执行一次
+        this.bornPos.splice(0, this.bornPos.length);
+        this.ballGuideArray.splice(0, this.ballGuideArray.length);
+        this.bombGuideArray.splice(0, this.bombGuideArray.length);
+        var _loop_1 = function () {
+            if (shootPos[i] == 1) {
+                var oneBallGuide_1 = this_1.ProduceOneBallGuide(this_1.guidePos[i]);
+                var vel_1 = this_1.GetShootVelority(shootAngel[i]); //获取射击速度
+                this_1.ballGuideArray.push(oneBallGuide_1);
+                this_1.scheduleOnce(function () {
+                    // 这里的 this 指向 component
+                    _this.ProduceOneShootBallAction(oneBallGuide_1, vel_1);
+                }, shootSeq[i] / 1000.0 + 0.5); //2s后执行一次
+            }
+            else if (shootPos[i] == 2) {
+                var oneBombGuide_1 = this_1.ProduceOneBoomGuide(this_1.guidePos[i]);
+                var vel_2 = this_1.GetShootVelority(shootAngel[i]); //获取射击速度
+                this_1.bombGuideArray.push(oneBombGuide_1);
+                this_1.scheduleOnce(function () {
+                    // 这里的 this 指向 component
+                    _this.ProduceOneShootBombAction(oneBombGuide_1, vel_2);
+                }, shootSeq[i] / 1000.0 + 0.5); //2s后执行一次
+            }
+        };
+        var this_1 = this;
+        for (var i = 0; i < shootPos.length; i++) {
+            _loop_1();
         }
+        // this.shootPos = 
+        // // this.CreatBornPos(num);
+        // // this.CreatBornTypeOrde();
+        // var posType = this.produceBasketManager.GetPosType();
+        // this.CreatBornPosByType(posType);
+        // for(var i = 0; i < this.bornPos.length; i++)
+        // {
+        //     var tempball = this.ProduceOneBallGuide(this.bornPos[i]);
+        //     this.scheduleOnce(() => {
+        //         // 这里的 this 指向 component
+        //         this.ProduceBallAction(tempball);
+        //     }, 0.5);//2s后执行一次
+        // } 
         //  this.ProduceOneBall(this.bornPos[0],cc.v2(0,2000));
     };
-    NoticeAndProduceManager.prototype.ProduceBallAction = function (guidBall) {
+    //创建一次射球动作
+    //velocity表示射球角度
+    NoticeAndProduceManager.prototype.ProduceOneShootBallAction = function (guidBall, velocity) {
         // cc.log("Destory");
-        this.ProduceOneBall(guidBall, cc.v2(0, 2000));
+        this.ProduceOneBall(guidBall, velocity);
         guidBall.destroy();
     };
-    NoticeAndProduceManager.prototype.ProduceBombAction = function (guidBall) {
+    NoticeAndProduceManager.prototype.ProduceOneShootBombAction = function (guidBall, velocity) {
         // cc.log("Destory");
-        this.ProduceOneBall(guidBall, cc.v2(0, 2000));
+        this.ProduceOneBomb(guidBall, velocity);
         guidBall.destroy();
     };
     //创建一个球的
@@ -152,7 +170,7 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
     };
     NoticeAndProduceManager.prototype.ProduceOneBomb = function (posNode, velocity) {
         var startPos = posNode.convertToWorldSpaceAR(cc.v2(0, 0));
-        var tempball = cc.instantiate(this.boom);
+        var tempball = cc.instantiate(this.bomb);
         tempball.parent = this.ballParent;
         tempball.position = this.ballParent.convertToNodeSpaceAR(startPos);
         tempball.getComponent(cc.RigidBody).linearVelocity = velocity;

@@ -1,14 +1,38 @@
   [
         {
-            "basketPos":"001000",
-            "shootPos":"0100",
-            "shootAngle":"0_45_90_0",
+            "basketPos":"0_0_0_1_0_0",
+            "shootPos":"1_0_0_0",
+            "shootAngle":"90_45_90_0",
             "shootSeq":"0_300_300_0"
         },
         {
-            "basketPos":"001000",
-            "shootPos":"0100",
-            "shootAngle":"0_145_0_0",
+            "basketPos":"0_0_0_1_0_0",
+            "shootPos":"1_0_0_0",
+            "shootAngle":"120_145_0_0",
             "shootSeq":"0_300_0_0"
+        },
+        {
+            "basketPos":"1_0_0_0_0_0",
+            "shootPos":"0_1_0_0",
+            "shootAngle":"90_90_90_90",
+            "shootSeq":"0_0_0_0"
+        },
+        {
+            "basketPos":"0_0_1_0_0_0",
+            "shootPos":"1_0_0_2",
+            "shootAngle":"110_90_90_70",
+            "shootSeq":"1000_0_0_0"
+        },
+	    {
+            "basketPos":"0_0_0_0_1_0",
+            "shootPos":"1_2_0_0",
+            "shootAngle":"85_85_90_70",
+            "shootSeq":"1000_0_0_0"
+        },
+		{
+            "basketPos":"1_0_0_0_0_0",
+            "shootPos":"1_2_0_0",
+            "shootAngle":"85_85_90_70",
+            "shootSeq":"1000_0_0_0"
         }
     ]

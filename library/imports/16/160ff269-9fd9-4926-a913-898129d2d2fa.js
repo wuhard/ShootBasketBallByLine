@@ -36,12 +36,21 @@ var EffectPlayManager = /** @class */ (function (_super) {
         score.parent = this.node;
         score.setPosition(pos);
     };
+    EffectPlayManager.prototype.PlayBombBasketAni = function (pos) {
+        var bombBasket = cc.instantiate(this.bombBasket);
+        // cc.log("PlayAni");
+        bombBasket.parent = this.node;
+        bombBasket.setPosition(pos);
+    };
     __decorate([
         property(cc.Prefab)
     ], EffectPlayManager.prototype, "enterBallAni", void 0);
     __decorate([
         property(cc.Prefab)
     ], EffectPlayManager.prototype, "score", void 0);
+    __decorate([
+        property(cc.Prefab)
+    ], EffectPlayManager.prototype, "bombBasket", void 0);
     EffectPlayManager = __decorate([
         ccclass
     ], EffectPlayManager);

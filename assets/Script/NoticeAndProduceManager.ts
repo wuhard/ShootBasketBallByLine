@@ -46,7 +46,8 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
 
     ballGuideArray: cc.Node[] = [];
     bombGuideArray: cc.Node[] = [];
-    
+    veloctiyY:number = 2000;
+
     @property(ProduceBasketManager)
     produceBasketManager:ProduceBasketManager;
 
@@ -58,32 +59,6 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
       
     }
 
-    //创建球和炸弹的提示
-    CreatBallAndBombNotice(shootPos:number[],shootSeq:number[])
-    {
-        this.bornPos.splice(0,this.bornPos.length);
-        this.ballGuideArray.splice(0,this.ballGuideArray.length);
-        this.bombGuideArray.splice(0,this.bombGuideArray.length);
-
-        for(var i = 0; i < shootPos.length; i++)
-        {
-            if(shootPos[i] == 1)
-            {
-                var oneBallGuide = this.ProduceOneBallGuide(this.bornPos[i]);  
-                this.ballGuideArray.push(oneBallGuide);
-                this.scheduleOnce(() => {
-                    // 这里的 this 指向 component
-                    this.ProduceBallAction(oneBallGuide);
-                }, shootSeq[i]/1000);//2s后执行一次
-
-            }
-            else if(shootPos[i] == 2)
-            {
-                var oneBombGuide = this.ProduceOneBoomGuide(this.bornPos[i]);
-                this.bombGuideArray.push(oneBombGuide);
-            }
-        }
-    }
 
     CreatBornPosByType(posType:number)
     {
@@ -110,48 +85,48 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         this.bornPos.splice(0,this.bornPos.length);
         for(var i = 0; i < pos.length; i++)
         {
-            this.bornType.push(pos[i]);
+            this.shootPos.push(pos[i]);
         }
     }
 
     ///获取创建的位置信息
     CreatBornPos(num:number)
     {
-        this.bornPos.splice(0,this.bornPos.length);
+        // this.bornPos.splice(0,this.bornPos.length);
 
-        var randomPos:number[] = [];
-        for(var i = 0; i < this.guidePos.length; i++)
-        {
-            randomPos.push(i);
+        // var randomPos:number[] = [];
+        // for(var i = 0; i < this.guidePos.length; i++)
+        // {
+        //     randomPos.push(i);
            
-        }
-        for(var j = 0; j < num; j++)
-        {
-            var randomValue =  this.random(0,randomPos.length);
-            var posIndex:number = randomPos[randomValue];
+        // }
+        // for(var j = 0; j < num; j++)
+        // {
+        //     var randomValue =  this.random(0,randomPos.length);
+        //     var posIndex:number = randomPos[randomValue];
            
            
-            this.bornPos.push(this.guidePos[posIndex]);
-            randomPos.slice(randomValue,1);
-        }
+        //     this.bornPos.push(this.guidePos[posIndex]);
+        //     randomPos.slice(randomValue,1);
+        // }
      
     }
 
     ///获取出场顺序
     CreatBornTypeOrde()
     {
-        this.bornType.slice(0,this.bornType.length);
+        // this.bornType.slice(0,this.bornType.length);
 
-        for(var i = 0; i < this.bornPos.length; i++)
-        {
-            this.bornType.push(this.random(-1,1));
-        }
+        // for(var i = 0; i < this.bornPos.length; i++)
+        // {
+        //     this.bornType.push(this.random(-1,1));
+        // }
 
-        var ballOrder = this.random(0,this.bornType.length);
-        this.bornType[ballOrder] = 0;
+        // var ballOrder = this.random(0,this.bornType.length);
+        // this.bornType[ballOrder] = 0;
     }
     
-
+    //创建一个球的发射提示
     ProduceOneBallGuide(posNode:cc.Node):cc.Node
     {
         let bornNode = posNode;
@@ -163,7 +138,15 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
 
     }
 
-    
+    GetShootVelority(angle:number):cc.Vec2
+    {
+        var anglePI = Math.PI/180 * angle
+       
+        return cc.v2(this.veloctiyY/Math.tan(anglePI),this.veloctiyY);
+    }
+
+
+    //创建一个炸弹的发射提示
     ProduceOneBoomGuide(posNode:cc.Node):cc.Node
     {
         let bornNode = posNode;
@@ -175,21 +158,53 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
     }
 
     //创建一次球和炸弹的用例
-    public ProduceOneBallAndBombCase(shootPos:number[],shootSeq:number[])
+    public ProduceOneBallAndBombCase(shootPos:number[],shootSeq:number[],shootAngel:number [])
     {
-        this.shootPos = 
-        // this.CreatBornPos(num);
-        // this.CreatBornTypeOrde();
-        var posType = this.produceBasketManager.GetPosType();
-        this.CreatBornPosByType(posType);
-        for(var i = 0; i < this.bornPos.length; i++)
+
+        this.bornPos.splice(0,this.bornPos.length);
+        this.ballGuideArray.splice(0,this.ballGuideArray.length);
+        this.bombGuideArray.splice(0,this.bombGuideArray.length);
+
+        for(var i = 0; i < shootPos.length; i++)
         {
-            var tempball = this.ProduceOneBallGuide(this.bornPos[i]);
-            this.scheduleOnce(() => {
-                // 这里的 this 指向 component
-                this.ProduceBallAction(tempball);
-            }, 0.5);//2s后执行一次
-        } 
+            if(shootPos[i] == 1)
+            {
+                let oneBallGuide = this.ProduceOneBallGuide(this.guidePos[i]);  
+                let vel = this.GetShootVelority(shootAngel[i]);//获取射击速度
+                this.ballGuideArray.push(oneBallGuide);
+               
+                this.scheduleOnce(() => {
+                    // 这里的 this 指向 component
+                    this.ProduceOneShootBallAction(oneBallGuide,vel);
+                   
+                }, shootSeq[i]/1000.0 + 0.5);//2s后执行一次
+
+            }
+            else if(shootPos[i] == 2)
+            {
+                let oneBombGuide = this.ProduceOneBoomGuide(this.guidePos[i]);
+                let vel = this.GetShootVelority(shootAngel[i]);//获取射击速度
+                this.bombGuideArray.push(oneBombGuide);
+                this.scheduleOnce(() => {
+                    // 这里的 this 指向 component
+                    this.ProduceOneShootBombAction(oneBombGuide,vel);
+                   
+                }, shootSeq[i]/1000.0 + 0.5);//2s后执行一次
+            }
+        }
+        // this.shootPos = 
+        // // this.CreatBornPos(num);
+        // // this.CreatBornTypeOrde();
+        // var posType = this.produceBasketManager.GetPosType();
+        // this.CreatBornPosByType(posType);
+        // for(var i = 0; i < this.bornPos.length; i++)
+        // {
+        //     var tempball = this.ProduceOneBallGuide(this.bornPos[i]);
+        //     this.scheduleOnce(() => {
+        //         // 这里的 this 指向 component
+        //         this.ProduceBallAction(tempball);
+        //     }, 0.5);//2s后执行一次
+        // } 
 
         
 
@@ -197,19 +212,21 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
       //  this.ProduceOneBall(this.bornPos[0],cc.v2(0,2000));
     }
 
-    ProduceBallAction(guidBall:cc.Node)
+    //创建一次射球动作
+    //velocity表示射球角度
+    ProduceOneShootBallAction(guidBall:cc.Node,velocity:cc.Vec2)
     {
        // cc.log("Destory");
-        this.ProduceOneBall(guidBall,cc.v2(0,2000));
+        this.ProduceOneBall(guidBall,velocity);
         guidBall.destroy();
       
     }
 
 
-    ProduceBombAction(guidBall:cc.Node)
+    ProduceOneShootBombAction(guidBall:cc.Node,velocity:cc.Vec2)
     {
        // cc.log("Destory");
-        this.ProduceOneBall(guidBall,cc.v2(0,2000));
+        this.ProduceOneBomb(guidBall,velocity);
         guidBall.destroy();
       
     }
@@ -232,7 +249,7 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
       
         var startPos =  posNode.convertToWorldSpaceAR(cc.v2(0,0));
       
-        let tempball = cc.instantiate(this.boom);
+        let tempball = cc.instantiate(this.bomb);
         tempball.parent = this.ballParent;
         tempball.position = this.ballParent.convertToNodeSpaceAR(startPos);
         tempball.getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity = velocity;
@@ -244,7 +261,6 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         return Math.floor(Math.random() * (upper - lower)) + lower;
         
     }
-    
-    
+ 
 
 }

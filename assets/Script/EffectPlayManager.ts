@@ -20,12 +20,13 @@ export default class EffectPlayManager extends Singleton<EffectPlayManager> {
     enterBallAni:cc.Prefab;
 
    
+    
     @property(cc.Prefab)
     score:cc.Prefab;
 
-  
+    @property(cc.Prefab)
+    bombBasket:cc.Prefab;
 
-  
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
@@ -44,11 +45,19 @@ export default class EffectPlayManager extends Singleton<EffectPlayManager> {
 
     public PlayScoreAni(pos:cc.Vec2)
     {
-        let score = cc.instantiate(this.score);
+       let score = cc.instantiate(this.score);
        // cc.log("PlayAni");
        score.parent = this.node;
        score.setPosition(pos);
     }
     
+    public PlayBombBasketAni(pos:cc.Vec2)
+    {  
+        let bombBasket = cc.instantiate(this.bombBasket);
+        // cc.log("PlayAni");
+        bombBasket.parent = this.node;
+        bombBasket.setPosition(pos);
+
+    }
 
 }

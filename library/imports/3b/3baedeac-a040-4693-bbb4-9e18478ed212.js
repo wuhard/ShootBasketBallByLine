@@ -44,16 +44,25 @@ var LevelDataManager = /** @class */ (function (_super) {
     LevelDataManager.prototype.GetBasketPos = function (levelIndex) {
         return this.StringToNumberArray(this.levelData[levelIndex].basketPos);
     };
+    LevelDataManager.prototype.GetLevelLength = function () {
+        return this.levelData.length;
+    };
     ///获取球射击的位置
     LevelDataManager.prototype.GetBallAndBombPos = function (levelIndex) {
         return this.StringToNumberArray(this.levelData[levelIndex].shootPos);
     };
+    LevelDataManager.prototype.GetBallAndBombShootSeq = function (levelIndex) {
+        return this.StringToNumberArray(this.levelData[levelIndex].shootSeq);
+    };
+    LevelDataManager.prototype.GetBallAndBombShootAngle = function (levelIndex) {
+        return this.StringToNumberArray(this.levelData[levelIndex].shootAngle);
+    };
     //字符串转换成数组
     LevelDataManager.prototype.StringToNumberArray = function (str) {
         var num = [];
-        for (var i = 0; i < str.length; i++) {
-            num.push(Number(str.substr(i, 1)));
-            cc.log(Number(str.substr(i, 1)));
+        var numStr = str.split('_');
+        for (var i = 0; i < numStr.length; i++) {
+            num.push(Number(numStr[i]));
         }
         return num;
     };

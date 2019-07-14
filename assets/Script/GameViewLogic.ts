@@ -52,8 +52,9 @@ export default class GameViewLogic extends cc.Component {
     @property(cc.Node)
     losePanel:cc.Node;
 
+    currentLevelIndex:number = 0;
 
-
+    maxLevelCount:number = 0;
   
 
     onLoad () {
@@ -89,7 +90,8 @@ export default class GameViewLogic extends cc.Component {
 
     start()
     {
-        this.ProduceOneBasket(1);
+     
+        this.ProduceOneBasketCase(4,1);
     }
 
 
@@ -120,25 +122,41 @@ export default class GameViewLogic extends cc.Component {
         
     }
 
-    public ProduceOneBasket(delayTime:number = 0)
+    public ProduceNextLevelBasketCase(delayTime:number = 0)
+    {
+        if(this.currentLevelIndex + 1 < this.maxLevelCount)
+        {
+            this.currentLevelIndex++;
+        }  
+        this.ProduceOneBasketCase(this.currentLevelIndex,delayTime);
+    }
+
+    ///创建一个篮球用例
+    public ProduceOneBasketCase(levelIndex:number,delayTime:number = 0)
     {
       //  cc.log("one basket");
-
+        this.currentLevelIndex = levelIndex;
         this.scheduleOnce(() => {
            
-            var basketBornPos : number[] = this.levelDataManager.GetBasketPos(0);
+            var basketBornPos : number[] = this.levelDataManager.GetBasketPos(levelIndex);
             this.produceBasketManager.ProduceOneBasketByPos(basketBornPos);
+            this.maxLevelCount = this.levelDataManager.GetLevelLength();
+
          }, delayTime);//2s后执行一次
 
          this.scheduleOnce(() => {
-            this.instantiateOneBall();
+            this.ProduceOneShootCase(levelIndex);
          }, delayTime+1);//2s后执行一次
 
     }
 
-    public instantiateOneBall()
+    ///创建一个球和炸弹的射击案例
+    public ProduceOneShootCase(levelIndex:number)
     {
-        this.noticeAndProduceManager.ProduceOneCase(1);
+        var guidePos : number[] = this.levelDataManager.GetBallAndBombPos(levelIndex);
+        var shootSeq : number[] = this.levelDataManager.GetBallAndBombShootSeq(levelIndex);
+        var shootAngel:number[] = this.levelDataManager.GetBallAndBombShootAngle(levelIndex);
+        this.noticeAndProduceManager.ProduceOneBallAndBombCase(guidePos,shootSeq,shootAngel);
        
     }
 
@@ -155,11 +173,12 @@ export default class GameViewLogic extends cc.Component {
    
     public ProduceBoomBasket(pos:cc.Vec2)
     {
+        this.effectPlayManager.PlayBombBasketAni(pos);
      
-      //  var startPos =  this.node.convertToNodeSpaceAR(pos);
-        let tempbasket= cc.instantiate(this.boomBasket);
-        tempbasket.setPosition(pos);
-      //  this.basketParent.addChild(tempbasket);
+    //   //  var startPos =  this.node.convertToNodeSpaceAR(pos);
+    //     let tempbasket= cc.instantiate(this.boomBasket);
+    //     tempbasket.setPosition(pos);
+    //   //  this.basketParent.addChild(tempbasket);
     
     }
 
@@ -204,7 +223,7 @@ export default class GameViewLogic extends cc.Component {
     public ReplayGame()
     {
         this.ShowLosePanel(false);
-        this.ProduceOneBasket();
+        this.ProduceOneBasketCase(0);
         this.RemaveAllLine();
     }
 }

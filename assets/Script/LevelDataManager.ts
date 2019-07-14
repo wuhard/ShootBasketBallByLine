@@ -45,6 +45,11 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
         return this.StringToNumberArray(this.levelData[levelIndex].basketPos);
     }
 
+    public GetLevelLength():number
+    {
+        return this.levelData.length;
+    }
+
     ///获取球射击的位置
     public GetBallAndBombPos(levelIndex:number):number[]
     {
@@ -52,14 +57,26 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
     }
 
 
+    public GetBallAndBombShootSeq(levelIndex:number):number[]
+    {
+        return this.StringToNumberArray(this.levelData[levelIndex].shootSeq);
+    }
+
+
+    public GetBallAndBombShootAngle(levelIndex:number):number[]
+    {
+        return this.StringToNumberArray(this.levelData[levelIndex].shootAngle);
+    }
+
+
     //字符串转换成数组
     public StringToNumberArray(str:string):number[]
     {
         var num : number[] = [];
-        for(var i = 0; i < str.length; i++)
+        var numStr = str.split('_');
+        for(var i = 0; i < numStr.length; i++)
         {
-            num.push(Number(str.substr(i,1)));
-           cc.log(Number(str.substr(i,1)));
+            num.push(Number(numStr[i]));      
         }
 
         return num;

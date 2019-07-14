@@ -45,7 +45,7 @@
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1562239795527,
+    "asset": 1562841606611,
     "meta": 1560940805815,
     "relativePath": "Script"
   },
@@ -75,7 +75,7 @@
     "relativePath": "resources"
   },
   "c7c73f50-4f67-43bd-9c36-c45ce05a2dc9": {
-    "asset": 1562064509867,
+    "asset": 1562842242174,
     "meta": 1560940805838,
     "relativePath": "resources\\prefab"
   },
@@ -90,8 +90,8 @@
     "relativePath": "Texture\\ball.png"
   },
   "05229913-f510-41eb-804d-840796ab433e": {
-    "asset": 1562064509867,
-    "meta": 1562064653649,
+    "asset": 1563092353446,
+    "meta": 1563092353450,
     "relativePath": "resources\\prefab\\ball.prefab"
   },
   "ff6e0d25-2e4b-4d62-9f7d-947b8a9970da": {
@@ -249,11 +249,6 @@
     "meta": 1562064653647,
     "relativePath": "Animations\\GetScoreAni.anim"
   },
-  "160ff269-9fd9-4926-a913-898129d2d2fa": {
-    "asset": 1562064509857,
-    "meta": 1562064654066,
-    "relativePath": "Script\\EffectPlayManager.ts"
-  },
   "a72e4b6a-102e-4791-9723-1b6ddb633ff0": {
     "asset": 1562064509866,
     "meta": 1562064653656,
@@ -273,11 +268,6 @@
     "asset": 1562064509864,
     "meta": 1562064653650,
     "relativePath": "resources\\prefab\\BigBasketL.prefab"
-  },
-  "38ce1afc-6903-4f31-ad4e-a447b1ada351": {
-    "asset": 1562064509844,
-    "meta": 1562064653893,
-    "relativePath": "Script\\Ball.ts"
   },
   "850ba1cf-00e4-45fb-960b-5ccac5f6d260": {
     "asset": 1562066233240,
@@ -420,8 +410,8 @@
     "relativePath": "Scene\\Test.fire"
   },
   "aa031956-af82-4cc1-9cbd-47038a432a40": {
-    "asset": 1562844914097,
-    "meta": 1562844914131,
+    "asset": 1563096531855,
+    "meta": 1563096531906,
     "relativePath": "Scene\\MainScene.fire"
   },
   "e851e89b-faa2-4484-bea6-5c01dd9f06e2": {
@@ -615,14 +605,9 @@
     "relativePath": "Script\\simplify.js"
   },
   "8facd37b-d27f-4e8a-b04b-7d239b84c356": {
-    "asset": 1562842130429,
-    "meta": 1562842131816,
+    "asset": 1563081772434,
+    "meta": 1563081787495,
     "relativePath": "Script\\PhysicsNodeLogic.ts"
-  },
-  "01e40fe4-f616-4ba4-9752-b2cbdea62431": {
-    "asset": 1562842872864,
-    "meta": 1562066233241,
-    "relativePath": "resources\\json\\LevelData.json"
   },
   "abb6d563-49c0-4d35-a3ba-ab45290b93ed": {
     "asset": 1562843136436,
@@ -630,18 +615,58 @@
     "relativePath": "Script\\ProduceBasketManager.ts"
   },
   "3baedeac-a040-4693-bbb4-9e18478ed212": {
-    "asset": 1562843368110,
-    "meta": 1562843443184,
+    "asset": 1563087924088,
+    "meta": 1563087979853,
     "relativePath": "Script\\LevelDataManager.ts"
   },
-  "0d903ab2-22ca-4d5c-b1b5-85df8395f9f4": {
-    "asset": 1562844358783,
-    "meta": 1562844914021,
-    "relativePath": "Script\\GameViewLogic.ts"
+  "316ffbdb-b1c7-49f8-9875-fc57581deb37": {
+    "asset": 1563091124325,
+    "meta": 1563091124397,
+    "relativePath": "Texture\\bomb_2.png"
+  },
+  "3e1df7ca-c11f-4aac-adcd-fe8aaa2ac54a": {
+    "asset": 1563091124325,
+    "meta": 1563091124399,
+    "relativePath": "Texture\\bomb_1.png"
+  },
+  "7fb0ba25-1edf-4a3d-812f-d7d0aef21d4b": {
+    "asset": 1563092264616,
+    "meta": 1563092264632,
+    "relativePath": "Animations\\BombAin.anim"
+  },
+  "ba5f51d1-854a-43f9-807f-cdcc6dfb5ba4": {
+    "asset": 1563092470664,
+    "meta": 1563092470668,
+    "relativePath": "resources\\prefab\\Bomb.prefab"
   },
   "d106c7ed-d375-4351-91de-ca674dae8e20": {
-    "asset": 1562844906847,
-    "meta": 1562844914021,
+    "asset": 1563092379266,
+    "meta": 1563092381666,
     "relativePath": "Script\\NoticeAndProduceManager.ts"
+  },
+  "38ce1afc-6903-4f31-ad4e-a447b1ada351": {
+    "asset": 1563094296403,
+    "meta": 1563094304163,
+    "relativePath": "Script\\Ball.ts"
+  },
+  "160ff269-9fd9-4926-a913-898129d2d2fa": {
+    "asset": 1563094229298,
+    "meta": 1563094304164,
+    "relativePath": "Script\\EffectPlayManager.ts"
+  },
+  "8ff742c8-947a-4bd1-804d-4a5ac6d333f9": {
+    "asset": 1563094798994,
+    "meta": 1563094828419,
+    "relativePath": "Script\\Bomb.ts"
+  },
+  "0d903ab2-22ca-4d5c-b1b5-85df8395f9f4": {
+    "asset": 1563095695415,
+    "meta": 1563095699462,
+    "relativePath": "Script\\GameViewLogic.ts"
+  },
+  "01e40fe4-f616-4ba4-9752-b2cbdea62431": {
+    "asset": 1563096043786,
+    "meta": 1562066233241,
+    "relativePath": "resources\\json\\LevelData.json"
   }
 }

@@ -178,6 +178,6 @@ export default class PhysicsNodeLogic extends cc.Component {
         return {
             beginPosArr : beingPosArr,
             endPosArr : endPosArr
-        };
+        }
     }
 }

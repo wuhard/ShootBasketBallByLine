@@ -14,7 +14,7 @@ import EffectPlayManager from "./EffectPlayManager";
 const {ccclass, property} = cc._decorator;
 
 @ccclass
-export default class Ball extends cc.Component {
+export default class Bomb extends cc.Component {
 
     body:cc.RigidBody;
 
@@ -33,11 +33,7 @@ export default class Ball extends cc.Component {
         if (otherCollider.body.node.name == 'ground') {
             this.gameViewLogic = cc.find("Canvas/Logic").getComponent<GameViewLogic>(GameViewLogic);
  
-           
-            this.gameViewLogic.RemaveAllLine();
             this.node.destroy();
-            this.gameViewLogic.ShowLosePanel(true);
- 
          } 
          else if(otherCollider.body.node.name == 'BasketBottom')
          {
@@ -48,17 +44,11 @@ export default class Ball extends cc.Component {
              this.gameViewLogic.RemoveBasketNode(otherCollider.body.node.parent);
              this.gameViewLogic.RemaveAllLine();
             
-             this.gameViewLogic.PlayEnterBallEffect(otherCollider.body.node.convertToWorldSpaceAR(cc.v2(0, 0)));
-             
-             
+            // this.gameViewLogic.ShowLosePanel(true);
              let basketWorld = otherCollider.body.node.parent.convertToWorldSpaceAR(cc.v2(0, 0));
- 
              let basketLocalPos =  otherCollider.body.node.parent.parent.convertToNodeSpaceAR(basketWorld);
- 
- 
-             //this.gameViewLogic.ProduceBoomBasket(basketLocalPos);
-
-             this.ProduceNextBasket();
+             this.gameViewLogic.ProduceBoomBasket(basketLocalPos);
+  
              this.node.destroy();
 
          
