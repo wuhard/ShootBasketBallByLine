@@ -36,6 +36,8 @@ var LevelDataManager = /** @class */ (function (_super) {
                 }
                 else {
                     _this.levelData = object;
+                    cc.log(_this.levelData[0].basketInfors[0].baksetPos);
+                    cc.log(_this.levelData.length);
                     // this.StringToNumberArray(this.levelData[0].basketPos);
                 }
             });

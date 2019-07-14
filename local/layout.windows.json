@@ -5,10 +5,10 @@
       "main": true,
       "url": "app://editor/index.html",
       "windowType": "dockable",
-      "x": 1432,
+      "x": -8,
       "y": -8,
-      "width": 1456,
-      "height": 916,
+      "width": 1936,
+      "height": 1056,
       "layout": {
         "children": [
           {
@@ -18,7 +18,7 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 399.984375,
+                "height": 399.484375,
                 "type": "panel",
                 "width": 233
               },
@@ -27,12 +27,12 @@
                 "children": [
                   "assets"
                 ],
-                "height": 386,
+                "height": 385.5,
                 "type": "panel",
                 "width": 233
               }
             ],
-            "height": 789,
+            "height": 788,
             "type": "dock-v",
             "width": 233
           },
@@ -45,7 +45,7 @@
                     "children": [
                       "scene"
                     ],
-                    "height": 519.984375,
+                    "height": 518.984375,
                     "type": "panel",
                     "width": 338.984375
                   },
@@ -54,12 +54,12 @@
                     "children": [
                       "node-library"
                     ],
-                    "height": 519.984375,
+                    "height": 518.984375,
                     "type": "panel",
                     "width": 233
                   }
                 ],
-                "height": 519.984375,
+                "height": 518.984375,
                 "type": "dock-h",
                 "width": 575
               },
@@ -74,7 +74,7 @@
                 "width": 575
               }
             ],
-            "height": 789,
+            "height": 788,
             "type": "dock-v",
             "width": 575
           },
@@ -83,7 +83,7 @@
             "children": [
               "inspector"
             ],
-            "height": 789,
+            "height": 788,
             "type": "panel",
             "width": 620
           }
@@ -101,5 +101,12 @@
       ]
     }
   },
-  "panels": {}
+  "panels": {
+    "preferences": {
+      "x": 672,
+      "y": 240,
+      "width": 580,
+      "height": 565
+    }
+  }
 }

@@ -23,6 +23,7 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
 
     start () {
         this.LoadJson("LevelData");
+      
     }
 
     //读取关卡数据
@@ -34,6 +35,8 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
                     reject(err);
                 } else {
                     this.levelData = object;
+                    cc.log(this.levelData[0].basketInfors[0].baksetPos);
+                    cc.log(this.levelData.length);
                    // this.StringToNumberArray(this.levelData[0].basketPos);
                 }
             });

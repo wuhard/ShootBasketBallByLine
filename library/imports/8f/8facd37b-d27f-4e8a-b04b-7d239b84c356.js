@@ -1,6 +1,6 @@
 "use strict";
-cc._RF.push(module, '8facdN70n9OirBLfSObhMNW', 'PhysicsNodeLogic');
-// Script/PhysicsNodeLogic.ts
+cc._RF.push(module, '8facdN70n9OirBLfSObhMNW', 'physicsNodeLogic');
+// Script/physicsNodeLogic.ts
 
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html

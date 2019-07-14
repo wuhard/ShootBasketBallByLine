@@ -3,7 +3,41 @@
             "basketPos":"0_0_0_1_0_0",
             "shootPos":"1_0_0_0",
             "shootAngle":"90_45_90_0",
-            "shootSeq":"0_300_300_0"
+            "shootSeq":"0_300_300_0",
+            "basketInfors":
+            [
+                {
+                    "baksetPos":"100_100",
+                    "moveEndPos":"100_100",
+                    "basketType":1,
+                    "moveDuringTime":1000
+                },
+                {
+                    "baksetPos":"100_100",
+                    "moveEndPos":"100_100",
+                    "basketType":1,
+                    "moveDuringTime":1000
+                }
+            ],
+
+            "shootInfors":
+            [
+                {
+                    "shootType":0,
+                    "shootPos": 100,
+                    "velocity":"100_100",
+                    "shootDelayTime":1000
+                    
+                },
+                {
+                    "shootType":0,
+                    "shootPos": 100,
+                    "velocity":"100_100",
+                    "shootDelayTime":1000
+                    
+                }
+
+            ]
         },
         {
             "basketPos":"0_0_0_1_0_0",

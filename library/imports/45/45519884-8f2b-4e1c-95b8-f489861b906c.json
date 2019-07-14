@@ -1,7 +1,7 @@
 [
   {
     "__type__": "cc.Prefab",
-    "_name": "PhysicsNode",
+    "_name": "physicsNode",
     "_objFlags": 0,
     "_rawFiles": null,
     "data": {

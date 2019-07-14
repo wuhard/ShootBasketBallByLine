@@ -1,7 +1,7 @@
 {
   "item-states": [
     {
-      "folded": false,
+      "folded": true,
       "id": "83ldPIGB5Kq53ZJU6YnSHu"
     },
     {
@@ -21,28 +21,16 @@
       "id": "f35pMMhxVJbatuofzlE6aE"
     },
     {
-      "folded": true,
-      "id": "10KiAltFNDoZniukHGrBPU"
-    },
-    {
       "folded": false,
-      "id": "56lFieJWtHbLNkexB9GPsN"
-    },
-    {
-      "folded": true,
-      "id": "63NhUJcpJHwYv7EztKGg+c"
-    },
-    {
-      "folded": true,
-      "id": "32TTEnmopM1bdScMr0qzkM"
+      "id": "10KiAltFNDoZniukHGrBPU"
     },
     {
       "folded": false,
       "id": "ffhzzSGUVKib1pt7Go609U"
     },
     {
-      "folded": true,
-      "id": "39upF+uwpCqbbYzdINcKwn"
+      "folded": false,
+      "id": "32TTEnmopM1bdScMr0qzkM"
     },
     {
       "folded": false,
@@ -53,8 +41,20 @@
       "id": "edCm3Dmu9BMaUuBC/azv4A"
     },
     {
+      "folded": false,
+      "id": "39upF+uwpCqbbYzdINcKwn"
+    },
+    {
       "folded": true,
+      "id": "63NhUJcpJHwYv7EztKGg+c"
+    },
+    {
+      "folded": false,
       "id": "68fWkzp9ZOYLTmrBR56SCH"
+    },
+    {
+      "folded": false,
+      "id": "56lFieJWtHbLNkexB9GPsN"
     }
   ]
 }
