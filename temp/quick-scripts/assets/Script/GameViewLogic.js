@@ -54,7 +54,7 @@ var GameViewLogic = /** @class */ (function (_super) {
         // }, 5); //5s执行一次
     };
     GameViewLogic.prototype.start = function () {
-        this.ProduceOneBasketCase(4, 1);
+        this.ProduceOneBasketCase(0, 1);
     };
     GameViewLogic.prototype.onEnter = function () {
     };
@@ -84,8 +84,8 @@ var GameViewLogic = /** @class */ (function (_super) {
         //  cc.log("one basket");
         this.currentLevelIndex = levelIndex;
         this.scheduleOnce(function () {
-            var basketBornPos = _this.levelDataManager.GetBasketPos(levelIndex);
-            _this.produceBasketManager.ProduceOneBasketByPos(basketBornPos);
+            var basketInfor = _this.levelDataManager.GetBasketInforsByLevel(levelIndex);
+            _this.produceBasketManager.ProduceOneBasketCase(basketInfor);
             _this.maxLevelCount = _this.levelDataManager.GetLevelLength();
         }, delayTime); //2s后执行一次
         this.scheduleOnce(function () {

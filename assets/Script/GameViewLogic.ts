@@ -4,6 +4,7 @@ import Singleton from "./Singleton";
 import NoticeAndProduceManager from "./NoticeAndProduceManager";
 import EffectPlayManager from "./EffectPlayManager";
 import LevelDataManager from "./LevelDataManager";
+import { BasketInfor } from "./SceneLevelData";
 
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
@@ -91,7 +92,7 @@ export default class GameViewLogic extends cc.Component {
     start()
     {
      
-        this.ProduceOneBasketCase(4,1);
+        this.ProduceOneBasketCase(0,1);
     }
 
 
@@ -138,8 +139,8 @@ export default class GameViewLogic extends cc.Component {
         this.currentLevelIndex = levelIndex;
         this.scheduleOnce(() => {
            
-            var basketBornPos : number[] = this.levelDataManager.GetBasketPos(levelIndex);
-            this.produceBasketManager.ProduceOneBasketByPos(basketBornPos);
+            var basketInfor : BasketInfor[] = this.levelDataManager.GetBasketInforsByLevel(levelIndex);
+            this.produceBasketManager.ProduceOneBasketCase(basketInfor);
             this.maxLevelCount = this.levelDataManager.GetLevelLength();
 
          }, delayTime);//2s后执行一次

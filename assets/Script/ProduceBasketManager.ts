@@ -1,6 +1,6 @@
 import Singleton from "./Singleton";
 import Basket from "./Basket";
-
+import {BasketInfor} from "./SceneLevelData";
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -77,6 +77,60 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
         return this.basketBornPos[index].convertToWorldSpaceAR(cc.v2(0,0));
     }
 
+    public ProduceOneBasketCase(basketInfors: BasketInfor[])
+    {
+        let tempbasket:cc.Node;
+        let basketCount = basketInfors.length;
+        let startPos:cc.Vec2;
+        for(var i = 0; i < basketCount; i++)
+        {
+            startPos = basketInfors[i].basketPos;
+            switch(basketInfors[i].basketType)
+            {
+                case 0:
+                    break;
+                case  1:
+                     break;
+                case 2:
+                     tempbasket = cc.instantiate(this.smallBasket);
+                     break;
+                case  3:
+                    break;
+                case 4:
+                    break;                              
+            }
+
+            this.basketParent.addChild(tempbasket);
+   
+            this.basketParent.convertToNodeSpaceAR(startPos);
+    
+            tempbasket.position = startPos;
+    
+            var basketS =  tempbasket.getComponent<Basket>(Basket);
+            basketS.AdjustColliders();
+            this.basketList.push(tempbasket);
+    
+            let backSp = tempbasket.getChildByName("BackSprite");
+            let frontSp = tempbasket.getChildByName("FrontSprite");
+            let bottom = tempbasket.getChildByName("BasketBottom");
+
+            var frontSpWorldPos = tempbasket.convertToWorldSpaceAR(frontSp.getPosition());
+        
+            var frontTargetPos =  this.basketFrontParent.convertToNodeSpaceAR(frontSpWorldPos);
+    
+            frontSp.parent = this.basketFrontParent;
+    
+            frontSp.position = frontTargetPos;
+            
+            var backSpWorldPos = tempbasket.convertToWorldSpaceAR(backSp.getPosition());
+
+            var backTargetPos =  this.basketBackParent.convertToNodeSpaceAR(backSpWorldPos);
+
+            backSp.parent = this.basketBackParent;
+            backSp.position = backTargetPos;
+        }
+
+    }
 
    public ProduceOneBasketByPos(basketPos:number[])
    {
@@ -203,9 +257,7 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
               
             }
         }
-
-        
-       
+    
    }
 
 

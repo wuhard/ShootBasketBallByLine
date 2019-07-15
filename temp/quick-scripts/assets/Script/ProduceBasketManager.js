@@ -50,6 +50,44 @@ var ProduceBasketManager = /** @class */ (function (_super) {
     ProduceBasketManager.prototype.GetPos = function (index) {
         return this.basketBornPos[index].convertToWorldSpaceAR(cc.v2(0, 0));
     };
+    ProduceBasketManager.prototype.ProduceOneBasketCase = function (basketInfors) {
+        var tempbasket;
+        var basketCount = basketInfors.length;
+        var startPos;
+        for (var i = 0; i < basketCount; i++) {
+            startPos = basketInfors[i].basketPos;
+            switch (basketInfors[i].basketType) {
+                case 0:
+                    break;
+                case 1:
+                    break;
+                case 2:
+                    tempbasket = cc.instantiate(this.smallBasket);
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+            }
+            this.basketParent.addChild(tempbasket);
+            this.basketParent.convertToNodeSpaceAR(startPos);
+            tempbasket.position = startPos;
+            var basketS = tempbasket.getComponent(Basket_1.default);
+            basketS.AdjustColliders();
+            this.basketList.push(tempbasket);
+            var backSp = tempbasket.getChildByName("BackSprite");
+            var frontSp = tempbasket.getChildByName("FrontSprite");
+            var bottom = tempbasket.getChildByName("BasketBottom");
+            var frontSpWorldPos = tempbasket.convertToWorldSpaceAR(frontSp.getPosition());
+            var frontTargetPos = this.basketFrontParent.convertToNodeSpaceAR(frontSpWorldPos);
+            frontSp.parent = this.basketFrontParent;
+            frontSp.position = frontTargetPos;
+            var backSpWorldPos = tempbasket.convertToWorldSpaceAR(backSp.getPosition());
+            var backTargetPos = this.basketBackParent.convertToNodeSpaceAR(backSpWorldPos);
+            backSp.parent = this.basketBackParent;
+            backSp.position = backTargetPos;
+        }
+    };
     ProduceBasketManager.prototype.ProduceOneBasketByPos = function (basketPos) {
         this.sizeType = this.random(0, 2);
         var pos;

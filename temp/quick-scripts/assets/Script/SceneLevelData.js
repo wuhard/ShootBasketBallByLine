@@ -29,23 +29,33 @@ var SceneLevelData = /** @class */ (function () {
     return SceneLevelData;
 }());
 exports.default = SceneLevelData;
+var BasketInforJson = /** @class */ (function () {
+    function BasketInforJson() {
+        this.basketPos = "78_200"; //篮球位置 78（左边x坐标） 350中间坐标  630右边坐标
+        this.moveEndPos = "100_100"; //移动终点坐标
+        this.basketType = 0; //篮筐类型 0是左边带板，1 左边不呆板， 2中间， 3右边带板， 4 右边不带板
+        this.moveDuringTime = 0; //移动时间
+    }
+    return BasketInforJson;
+}());
+exports.BasketInforJson = BasketInforJson;
 var BasketInfor = /** @class */ (function () {
     function BasketInfor() {
-        this.baksetPos = "1000_200"; //篮球位置
-        this.moveEndPos = "100_100"; //移动终点坐标
-        this.basketType = 0; //篮筐类型
+        this.basketPos = cc.v2(0, 0);
+        this.basketType = 0; //篮筐类型 0是左边带板，1 左边不呆板， 2中间， 3右边带板， 4 右边不带板
         this.moveDuringTime = 0; //移动时间
     }
     return BasketInfor;
 }());
-var ShootInfor = /** @class */ (function () {
-    function ShootInfor() {
+exports.BasketInfor = BasketInfor;
+var ShootInforJson = /** @class */ (function () {
+    function ShootInforJson() {
         this.shootType = 0; //0代表篮球 1代表炸弹
         this.shootPos = 0; //射击点的横坐标0-720
         this.velocity = "1000_2000"; //初始速度x_y
         this.shootDelayTime = 1000; //射击延迟时间
     }
-    return ShootInfor;
+    return ShootInforJson;
 }());
 
 cc._RF.pop();

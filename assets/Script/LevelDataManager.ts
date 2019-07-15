@@ -1,6 +1,7 @@
 import Singleton from "./Singleton";
 import ProduceBasketManager from "./ProduceBasketManager";
-import SceneLevelData from "./SceneLevelData";
+import SceneLevelData, { BasketInforJson } from "./SceneLevelData";
+import {BasketInfor} from "./SceneLevelData";
 
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
@@ -35,7 +36,7 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
                     reject(err);
                 } else {
                     this.levelData = object;
-                    cc.log(this.levelData[0].basketInfors[0].baksetPos);
+                    cc.log(this.levelData[0].basketInfors[0].basketPos);
                     cc.log(this.levelData.length);
                    // this.StringToNumberArray(this.levelData[0].basketPos);
                 }
@@ -43,8 +44,27 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
         });
     }
     
+    ///获取某一个关卡的篮筐信息
+    public GetBasketInforsByLevel(levelIndex:number):BasketInfor[]
+    {
+        let infors:BasketInfor[] = [];
+        for(var i = 0; i < this.levelData[levelIndex].basketInfors.length; i++)
+        {
+            let oneInfor = new BasketInfor();
+            cc.log(this.StringToVec2(this.levelData[levelIndex].basketInfors[i].basketPos));
+            oneInfor.basketPos = this.StringToVec2(this.levelData[levelIndex].basketInfors[i].basketPos);
+            oneInfor.basketType = this.levelData[levelIndex].basketInfors[i].basketType;
+            oneInfor.moveEndPos = this.StringToVec2(this.levelData[levelIndex].basketInfors[i].moveEndPos)
+            oneInfor.moveDuringTime =  this.levelData[levelIndex].basketInfors[i].moveDuringTime;
+            infors.push(oneInfor);
+        }
+        return infors;
+    }
+
+
     public GetBasketPos(levelIndex:number):number[]
     {
+    
         return this.StringToNumberArray(this.levelData[levelIndex].basketPos);
     }
 
@@ -71,6 +91,12 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
         return this.StringToNumberArray(this.levelData[levelIndex].shootAngle);
     }
 
+    ///字符串转vec2
+    public StringToVec2(str:string):cc.Vec2
+    {
+        let vecNum = this.StringToNumberArray(str);
+        return cc.v2(vecNum[0],vecNum[1]);
+    }
 
     //字符串转换成数组
     public StringToNumberArray(str:string):number[]

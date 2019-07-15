@@ -7,16 +7,10 @@
             "basketInfors":
             [
                 {
-                    "baksetPos":"100_100",
-                    "moveEndPos":"100_100",
-                    "basketType":1,
-                    "moveDuringTime":1000
-                },
-                {
-                    "baksetPos":"100_100",
-                    "moveEndPos":"100_100",
-                    "basketType":1,
-                    "moveDuringTime":1000
+                    "basketPos":"350_500",
+                    "moveEndPos":"350_500",
+                    "basketType":2,
+                    "moveDuringTime":0
                 }
             ],
 

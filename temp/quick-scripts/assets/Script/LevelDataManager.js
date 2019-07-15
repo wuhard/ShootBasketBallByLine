@@ -4,6 +4,7 @@ cc._RF.push(module, '3baed6soEBGk7u0nhhHjtIS', 'LevelDataManager', __filename);
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var Singleton_1 = require("./Singleton");
+var SceneLevelData_1 = require("./SceneLevelData");
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -36,12 +37,26 @@ var LevelDataManager = /** @class */ (function (_super) {
                 }
                 else {
                     _this.levelData = object;
-                    cc.log(_this.levelData[0].basketInfors[0].baksetPos);
+                    cc.log(_this.levelData[0].basketInfors[0].basketPos);
                     cc.log(_this.levelData.length);
                     // this.StringToNumberArray(this.levelData[0].basketPos);
                 }
             });
         });
+    };
+    ///获取某一个关卡的篮筐信息
+    LevelDataManager.prototype.GetBasketInforsByLevel = function (levelIndex) {
+        var infors = [];
+        for (var i = 0; i < this.levelData[levelIndex].basketInfors.length; i++) {
+            var oneInfor = new SceneLevelData_1.BasketInfor();
+            cc.log(this.StringToVec2(this.levelData[levelIndex].basketInfors[i].basketPos));
+            oneInfor.basketPos = this.StringToVec2(this.levelData[levelIndex].basketInfors[i].basketPos);
+            oneInfor.basketType = this.levelData[levelIndex].basketInfors[i].basketType;
+            oneInfor.moveEndPos = this.StringToVec2(this.levelData[levelIndex].basketInfors[i].moveEndPos);
+            oneInfor.moveDuringTime = this.levelData[levelIndex].basketInfors[i].moveDuringTime;
+            infors.push(oneInfor);
+        }
+        return infors;
     };
     LevelDataManager.prototype.GetBasketPos = function (levelIndex) {
         return this.StringToNumberArray(this.levelData[levelIndex].basketPos);
@@ -58,6 +73,11 @@ var LevelDataManager = /** @class */ (function (_super) {
     };
     LevelDataManager.prototype.GetBallAndBombShootAngle = function (levelIndex) {
         return this.StringToNumberArray(this.levelData[levelIndex].shootAngle);
+    };
+    ///字符串转vec2
+    LevelDataManager.prototype.StringToVec2 = function (str) {
+        var vecNum = this.StringToNumberArray(str);
+        return cc.v2(vecNum[0], vecNum[1]);
     };
     //字符串转换成数组
     LevelDataManager.prototype.StringToNumberArray = function (str) {

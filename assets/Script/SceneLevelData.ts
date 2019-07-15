@@ -19,19 +19,31 @@ export default class SceneLevelData
     public shootAngle = "0_45_90_0";//射击角度;
     public shootSeq: string  = "0_300_300_0";//每个位置的射击延迟时间毫秒。   
 
-    public  basketInfors:BasketInfor[] = [];
-    public  shootInfors: ShootInfor[] = [];
+    public  basketInfors:BasketInforJson[] = [];
+    public  shootInfors: ShootInforJson[] = [];
 }
 
-class BasketInfor
+export class BasketInforJson
 {
-    public baksetPos:string = "1000_200"; //篮球位置
+    public basketPos:string = "78_200"; //篮球位置 78（左边x坐标） 350中间坐标  630右边坐标
     public moveEndPos: string = "100_100"; //移动终点坐标
-    public basketType: number = 0; //篮筐类型
+    public basketType: number = 0; //篮筐类型 0是左边带板，1 左边不呆板， 2中间， 3右边带板， 4 右边不带板
     public moveDuringTime:number = 0; //移动时间
 }
 
-class ShootInfor
+export class BasketInfor
+{
+    public basketPos:cc.Vec2 = cc.v2(0,0) ;
+    public moveEndPos: cc.Vec2 ;//移动终点坐标
+    public basketType: number = 0; //篮筐类型 0是左边带板，1 左边不呆板， 2中间， 3右边带板， 4 右边不带板
+    public moveDuringTime:number = 0; //移动时间
+    constructor()
+    {
+        
+    }
+}
+
+ class ShootInforJson
 {
     public shootType :number = 0; //0代表篮球 1代表炸弹
     public shootPos : number = 0; //射击点的横坐标0-720
