@@ -58,15 +58,21 @@ var ProduceBasketManager = /** @class */ (function (_super) {
             startPos = basketInfors[i].basketPos;
             switch (basketInfors[i].basketType) {
                 case 0:
+                    tempbasket = cc.instantiate(this.bigBasketL);
                     break;
                 case 1:
+                    tempbasket = cc.instantiate(this.smallBasket);
+                    tempbasket.rotation = 30;
                     break;
                 case 2:
                     tempbasket = cc.instantiate(this.smallBasket);
                     break;
                 case 3:
+                    tempbasket = cc.instantiate(this.bigBasketR);
                     break;
                 case 4:
+                    tempbasket = cc.instantiate(this.smallBasket);
+                    tempbasket.rotation = -30;
                     break;
             }
             this.basketParent.addChild(tempbasket);
@@ -86,6 +92,16 @@ var ProduceBasketManager = /** @class */ (function (_super) {
             var backTargetPos = this.basketBackParent.convertToNodeSpaceAR(backSpWorldPos);
             backSp.parent = this.basketBackParent;
             backSp.position = backTargetPos;
+            switch (basketInfors[i].basketType) {
+                case 1:
+                    backSp.rotation = 30;
+                    frontSp.rotation = 30;
+                    break;
+                case 4:
+                    backSp.rotation = -30;
+                    frontSp.rotation = -30;
+                    break;
+            }
         }
     };
     ProduceBasketManager.prototype.ProduceOneBasketByPos = function (basketPos) {

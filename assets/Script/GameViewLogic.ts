@@ -4,7 +4,7 @@ import Singleton from "./Singleton";
 import NoticeAndProduceManager from "./NoticeAndProduceManager";
 import EffectPlayManager from "./EffectPlayManager";
 import LevelDataManager from "./LevelDataManager";
-import { BasketInfor } from "./SceneLevelData";
+import { BasketInfor, ShootInfor } from "./SceneLevelData";
 
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
@@ -92,7 +92,7 @@ export default class GameViewLogic extends cc.Component {
     start()
     {
      
-        this.ProduceOneBasketCase(0,1);
+        this.ProduceOneBasketCase(5,1);
     }
 
 
@@ -154,10 +154,8 @@ export default class GameViewLogic extends cc.Component {
     ///创建一个球和炸弹的射击案例
     public ProduceOneShootCase(levelIndex:number)
     {
-        var guidePos : number[] = this.levelDataManager.GetBallAndBombPos(levelIndex);
-        var shootSeq : number[] = this.levelDataManager.GetBallAndBombShootSeq(levelIndex);
-        var shootAngel:number[] = this.levelDataManager.GetBallAndBombShootAngle(levelIndex);
-        this.noticeAndProduceManager.ProduceOneBallAndBombCase(guidePos,shootSeq,shootAngel);
+        var shootInfors: ShootInfor[] = this.levelDataManager.GetShootInforByLevel(levelIndex);
+        this.noticeAndProduceManager.ProduceOneShootCase(shootInfors);
        
     }
 

@@ -91,6 +91,13 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         tempball.setPosition(bornNode.position);
         return tempball;
     };
+    ///根据位置创建一个提示
+    NoticeAndProduceManager.prototype.ProduceOneBallGuideByPos = function (guidePos) {
+        var tempball = cc.instantiate(this.ballGuide);
+        this.node.addChild(tempball);
+        tempball.setPosition(guidePos);
+        return tempball;
+    };
     NoticeAndProduceManager.prototype.GetShootVelority = function (angle) {
         var anglePI = Math.PI / 180 * angle;
         return cc.v2(this.veloctiyY / Math.tan(anglePI), this.veloctiyY);
@@ -103,50 +110,78 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         tempbomb.setPosition(bornNode.position);
         return tempbomb;
     };
+    NoticeAndProduceManager.prototype.ProduceOneBoomGuideByPos = function (guidePos) {
+        var tempball = cc.instantiate(this.bombGuide);
+        this.node.addChild(tempball);
+        tempball.setPosition(guidePos);
+        return tempball;
+    };
+    ///创建一次射击用例
+    NoticeAndProduceManager.prototype.ProduceOneShootCase = function (shootInfors) {
+        var _this = this;
+        this.bornPos.splice(0, this.bornPos.length);
+        this.ballGuideArray.splice(0, this.ballGuideArray.length);
+        this.bombGuideArray.splice(0, this.bombGuideArray.length);
+        cc.log(shootInfors.length);
+        var _loop_1 = function () {
+            switch (shootInfors[i].shootType) {
+                case 0:
+                    var oneBallGuide_1 = this_1.ProduceOneBallGuideByPos(shootInfors[i].shootPos);
+                    var vel_1 = shootInfors[i].velocity; //获取射击速度
+                    var delayTime = shootInfors[i].shootDelayTime;
+                    this_1.ballGuideArray.push(oneBallGuide_1);
+                    this_1.scheduleOnce(function () {
+                        // 这里的 this 指向 component
+                        _this.ProduceOneShootBallAction(oneBallGuide_1, vel_1);
+                    }, delayTime / 1000.0 + 0.5); //2s后执行一次
+                    break;
+                case 1:
+                    var oneBombGuide_1 = this_1.ProduceOneBoomGuideByPos(shootInfors[i].shootPos);
+                    var bombVel_1 = shootInfors[i].velocity; //获取射击速度
+                    var bombDelayTime = shootInfors[i].shootDelayTime;
+                    this_1.bombGuideArray.push(oneBombGuide_1);
+                    this_1.scheduleOnce(function () {
+                        // 这里的 this 指向 component
+                        _this.ProduceOneShootBombAction(oneBombGuide_1, bombVel_1);
+                    }, bombDelayTime / 1000.0 + 0.5); //2s后执行一次
+                    break;
+            }
+        };
+        var this_1 = this;
+        for (var i = 0; i < shootInfors.length; i++) {
+            _loop_1();
+        }
+    };
     //创建一次球和炸弹的用例
     NoticeAndProduceManager.prototype.ProduceOneBallAndBombCase = function (shootPos, shootSeq, shootAngel) {
         var _this = this;
         this.bornPos.splice(0, this.bornPos.length);
         this.ballGuideArray.splice(0, this.ballGuideArray.length);
         this.bombGuideArray.splice(0, this.bombGuideArray.length);
-        var _loop_1 = function () {
+        var _loop_2 = function () {
             if (shootPos[i] == 1) {
-                var oneBallGuide_1 = this_1.ProduceOneBallGuide(this_1.guidePos[i]);
-                var vel_1 = this_1.GetShootVelority(shootAngel[i]); //获取射击速度
-                this_1.ballGuideArray.push(oneBallGuide_1);
-                this_1.scheduleOnce(function () {
+                var oneBallGuide_2 = this_2.ProduceOneBallGuide(this_2.guidePos[i]);
+                var vel_2 = this_2.GetShootVelority(shootAngel[i]); //获取射击速度
+                this_2.ballGuideArray.push(oneBallGuide_2);
+                this_2.scheduleOnce(function () {
                     // 这里的 this 指向 component
-                    _this.ProduceOneShootBallAction(oneBallGuide_1, vel_1);
+                    _this.ProduceOneShootBallAction(oneBallGuide_2, vel_2);
                 }, shootSeq[i] / 1000.0 + 0.5); //2s后执行一次
             }
             else if (shootPos[i] == 2) {
-                var oneBombGuide_1 = this_1.ProduceOneBoomGuide(this_1.guidePos[i]);
-                var vel_2 = this_1.GetShootVelority(shootAngel[i]); //获取射击速度
-                this_1.bombGuideArray.push(oneBombGuide_1);
-                this_1.scheduleOnce(function () {
+                var oneBombGuide_2 = this_2.ProduceOneBoomGuide(this_2.guidePos[i]);
+                var vel_3 = this_2.GetShootVelority(shootAngel[i]); //获取射击速度
+                this_2.bombGuideArray.push(oneBombGuide_2);
+                this_2.scheduleOnce(function () {
                     // 这里的 this 指向 component
-                    _this.ProduceOneShootBombAction(oneBombGuide_1, vel_2);
+                    _this.ProduceOneShootBombAction(oneBombGuide_2, vel_3);
                 }, shootSeq[i] / 1000.0 + 0.5); //2s后执行一次
             }
         };
-        var this_1 = this;
+        var this_2 = this;
         for (var i = 0; i < shootPos.length; i++) {
-            _loop_1();
+            _loop_2();
         }
-        // this.shootPos = 
-        // // this.CreatBornPos(num);
-        // // this.CreatBornTypeOrde();
-        // var posType = this.produceBasketManager.GetPosType();
-        // this.CreatBornPosByType(posType);
-        // for(var i = 0; i < this.bornPos.length; i++)
-        // {
-        //     var tempball = this.ProduceOneBallGuide(this.bornPos[i]);
-        //     this.scheduleOnce(() => {
-        //         // 这里的 this 指向 component
-        //         this.ProduceBallAction(tempball);
-        //     }, 0.5);//2s后执行一次
-        // } 
-        //  this.ProduceOneBall(this.bornPos[0],cc.v2(0,2000));
     };
     //创建一次射球动作
     //velocity表示射球角度

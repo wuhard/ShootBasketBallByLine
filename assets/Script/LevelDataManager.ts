@@ -2,7 +2,7 @@ import Singleton from "./Singleton";
 import ProduceBasketManager from "./ProduceBasketManager";
 import SceneLevelData, { BasketInforJson } from "./SceneLevelData";
 import {BasketInfor} from "./SceneLevelData";
-
+import {ShootInfor} from "./SceneLevelData";
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -61,35 +61,29 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
         return infors;
     }
 
-
-    public GetBasketPos(levelIndex:number):number[]
+    ///获取某一关卡的射击信息
+    public GetShootInforByLevel(levelIndex:number):ShootInfor[]
     {
-    
-        return this.StringToNumberArray(this.levelData[levelIndex].basketPos);
+        let infors:ShootInfor[] = [];
+        for(var i = 0; i < this.levelData[levelIndex].shootInfors.length; i++)
+        {
+            let oneInfor = new ShootInfor();
+         
+            oneInfor.shootType = this.levelData[levelIndex].shootInfors[i].shootType;
+            oneInfor.shootPos = this.StringToVec2(this.levelData[levelIndex].shootInfors[i].shootPos);
+            oneInfor.velocity = this.StringToVec2(this.levelData[levelIndex].shootInfors[i].velocity)
+            oneInfor.shootDelayTime =  this.levelData[levelIndex].shootInfors[i].shootDelayTime;
+            infors.push(oneInfor);
+        }
+        return infors;
     }
+
 
     public GetLevelLength():number
     {
         return this.levelData.length;
     }
 
-    ///获取球射击的位置
-    public GetBallAndBombPos(levelIndex:number):number[]
-    {
-        return this.StringToNumberArray(this.levelData[levelIndex].shootPos);
-    }
-
-
-    public GetBallAndBombShootSeq(levelIndex:number):number[]
-    {
-        return this.StringToNumberArray(this.levelData[levelIndex].shootSeq);
-    }
-
-
-    public GetBallAndBombShootAngle(levelIndex:number):number[]
-    {
-        return this.StringToNumberArray(this.levelData[levelIndex].shootAngle);
-    }
 
     ///字符串转vec2
     public StringToVec2(str:string):cc.Vec2

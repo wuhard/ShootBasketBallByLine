@@ -1,6 +1,7 @@
 import Singleton from "./Singleton";
 import ProduceBasketManager from "./ProduceBasketManager";
 import LevelDataManager from "./LevelDataManager";
+import { ShootInfor } from "./SceneLevelData";
 
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
@@ -138,6 +139,18 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
 
     }
 
+    ///根据位置创建一个提示
+    ProduceOneBallGuideByPos(guidePos:cc.Vec2):cc.Node
+    {
+      
+        let tempball = cc.instantiate(this.ballGuide);
+        this.node.addChild(tempball);
+        tempball.setPosition(guidePos);
+        return tempball;
+
+    }
+
+
     GetShootVelority(angle:number):cc.Vec2
     {
         var anglePI = Math.PI/180 * angle
@@ -156,6 +169,55 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         tempbomb.setPosition(bornNode.position);
         return tempbomb;
     }
+
+    ProduceOneBoomGuideByPos(guidePos:cc.Vec2):cc.Node
+    {
+      
+        let tempball = cc.instantiate(this.bombGuide);
+        this.node.addChild(tempball);
+        tempball.setPosition(guidePos);
+        return tempball;
+
+    }
+
+    ///创建一次射击用例
+    public ProduceOneShootCase(shootInfors:ShootInfor[])
+    {
+        this.bornPos.splice(0,this.bornPos.length);
+        this.ballGuideArray.splice(0,this.ballGuideArray.length);
+        this.bombGuideArray.splice(0,this.bombGuideArray.length);
+        cc.log(shootInfors.length);
+        for(var i = 0; i < shootInfors.length; i++)
+        {
+            switch(shootInfors[i].shootType)
+            {
+                case 0:
+                    let oneBallGuide = this.ProduceOneBallGuideByPos(shootInfors[i].shootPos);  
+                    let vel = shootInfors[i].velocity;//获取射击速度
+                    let delayTime = shootInfors[i].shootDelayTime;
+                    this.ballGuideArray.push(oneBallGuide);
+                    
+                    this.scheduleOnce(() => {
+                        // 这里的 this 指向 component
+                        this.ProduceOneShootBallAction(oneBallGuide,vel);
+                        
+                    }, delayTime/1000.0 + 0.5);//2s后执行一次
+                    break;
+                case 1:
+                        let oneBombGuide = this.ProduceOneBoomGuideByPos(shootInfors[i].shootPos);
+                        let bombVel = shootInfors[i].velocity;//获取射击速度
+                        let bombDelayTime = shootInfors[i].shootDelayTime;
+                        this.bombGuideArray.push(oneBombGuide);
+                        this.scheduleOnce(() => {
+                            // 这里的 this 指向 component
+                            this.ProduceOneShootBombAction(oneBombGuide,bombVel);
+                           
+                        }, bombDelayTime/1000.0 + 0.5);//2s后执行一次
+                    break;
+            }
+        }
+    }
+
 
     //创建一次球和炸弹的用例
     public ProduceOneBallAndBombCase(shootPos:number[],shootSeq:number[],shootAngel:number [])
@@ -192,24 +254,6 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
                 }, shootSeq[i]/1000.0 + 0.5);//2s后执行一次
             }
         }
-        // this.shootPos = 
-        // // this.CreatBornPos(num);
-        // // this.CreatBornTypeOrde();
-        // var posType = this.produceBasketManager.GetPosType();
-        // this.CreatBornPosByType(posType);
-        // for(var i = 0; i < this.bornPos.length; i++)
-        // {
-        //     var tempball = this.ProduceOneBallGuide(this.bornPos[i]);
-        //     this.scheduleOnce(() => {
-        //         // 这里的 this 指向 component
-        //         this.ProduceBallAction(tempball);
-        //     }, 0.5);//2s后执行一次
-        // } 
-
-        
-
-
-      //  this.ProduceOneBall(this.bornPos[0],cc.v2(0,2000));
     }
 
     //创建一次射球动作

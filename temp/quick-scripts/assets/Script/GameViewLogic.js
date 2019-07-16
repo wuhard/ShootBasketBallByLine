@@ -54,7 +54,7 @@ var GameViewLogic = /** @class */ (function (_super) {
         // }, 5); //5s执行一次
     };
     GameViewLogic.prototype.start = function () {
-        this.ProduceOneBasketCase(0, 1);
+        this.ProduceOneBasketCase(5, 1);
     };
     GameViewLogic.prototype.onEnter = function () {
     };
@@ -94,10 +94,8 @@ var GameViewLogic = /** @class */ (function (_super) {
     };
     ///创建一个球和炸弹的射击案例
     GameViewLogic.prototype.ProduceOneShootCase = function (levelIndex) {
-        var guidePos = this.levelDataManager.GetBallAndBombPos(levelIndex);
-        var shootSeq = this.levelDataManager.GetBallAndBombShootSeq(levelIndex);
-        var shootAngel = this.levelDataManager.GetBallAndBombShootAngle(levelIndex);
-        this.noticeAndProduceManager.ProduceOneBallAndBombCase(guidePos, shootSeq, shootAngel);
+        var shootInfors = this.levelDataManager.GetShootInforByLevel(levelIndex);
+        this.noticeAndProduceManager.ProduceOneShootCase(shootInfors);
     };
     GameViewLogic.prototype.PlayEnterBallEffect = function (pos) {
         this.effectPlayManager.PlayEnterBallAni(pos);

@@ -624,11 +624,6 @@
     "meta": 1563187486616,
     "relativePath": "resources\\prefab\\Bomb.prefab"
   },
-  "d106c7ed-d375-4351-91de-ca674dae8e20": {
-    "asset": 1563187427474,
-    "meta": 1563187487190,
-    "relativePath": "Script\\NoticeAndProduceManager.ts"
-  },
   "38ce1afc-6903-4f31-ad4e-a447b1ada351": {
     "asset": 1563187427471,
     "meta": 1563187486867,
@@ -644,29 +639,34 @@
     "meta": 1563187486931,
     "relativePath": "Script\\Bomb.ts"
   },
-  "0d903ab2-22ca-4d5c-b1b5-85df8395f9f4": {
-    "asset": 1563189673980,
-    "meta": 1563189675765,
-    "relativePath": "Script\\GameViewLogic.ts"
+  "abb6d563-49c0-4d35-a3ba-ab45290b93ed": {
+    "asset": 1563277165527,
+    "meta": 1563277167061,
+    "relativePath": "Script\\ProduceBasketManager.ts"
+  },
+  "d106c7ed-d375-4351-91de-ca674dae8e20": {
+    "asset": 1563277531609,
+    "meta": 1563277552271,
+    "relativePath": "Script\\NoticeAndProduceManager.ts"
+  },
+  "32a98fc4-5918-41fe-ac59-cdd701f81f6c": {
+    "asset": 1563277927032,
+    "meta": 1563277933318,
+    "relativePath": "Script\\SceneLevelData.ts"
+  },
+  "3baedeac-a040-4693-bbb4-9e18478ed212": {
+    "asset": 1563277974904,
+    "meta": 1563277976165,
+    "relativePath": "Script\\LevelDataManager.ts"
   },
   "01e40fe4-f616-4ba4-9752-b2cbdea62431": {
-    "asset": 1563189847104,
+    "asset": 1563278225997,
     "meta": 1563187427496,
     "relativePath": "resources\\json\\LevelData.json"
   },
-  "3baedeac-a040-4693-bbb4-9e18478ed212": {
-    "asset": 1563191497125,
-    "meta": 1563191498760,
-    "relativePath": "Script\\LevelDataManager.ts"
-  },
-  "32a98fc4-5918-41fe-ac59-cdd701f81f6c": {
-    "asset": 1563191476070,
-    "meta": 1563191498761,
-    "relativePath": "Script\\SceneLevelData.ts"
-  },
-  "abb6d563-49c0-4d35-a3ba-ab45290b93ed": {
-    "asset": 1563191542428,
-    "meta": 1563191543834,
-    "relativePath": "Script\\ProduceBasketManager.ts"
+  "0d903ab2-22ca-4d5c-b1b5-85df8395f9f4": {
+    "asset": 1563278249340,
+    "meta": 1563278250502,
+    "relativePath": "Script\\GameViewLogic.ts"
   }
 }

@@ -5,6 +5,7 @@ cc._RF.push(module, '3baed6soEBGk7u0nhhHjtIS', 'LevelDataManager', __filename);
 Object.defineProperty(exports, "__esModule", { value: true });
 var Singleton_1 = require("./Singleton");
 var SceneLevelData_1 = require("./SceneLevelData");
+var SceneLevelData_2 = require("./SceneLevelData");
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -58,21 +59,21 @@ var LevelDataManager = /** @class */ (function (_super) {
         }
         return infors;
     };
-    LevelDataManager.prototype.GetBasketPos = function (levelIndex) {
-        return this.StringToNumberArray(this.levelData[levelIndex].basketPos);
+    ///获取某一关卡的射击信息
+    LevelDataManager.prototype.GetShootInforByLevel = function (levelIndex) {
+        var infors = [];
+        for (var i = 0; i < this.levelData[levelIndex].shootInfors.length; i++) {
+            var oneInfor = new SceneLevelData_2.ShootInfor();
+            oneInfor.shootType = this.levelData[levelIndex].shootInfors[i].shootType;
+            oneInfor.shootPos = this.StringToVec2(this.levelData[levelIndex].shootInfors[i].shootPos);
+            oneInfor.velocity = this.StringToVec2(this.levelData[levelIndex].shootInfors[i].velocity);
+            oneInfor.shootDelayTime = this.levelData[levelIndex].shootInfors[i].shootDelayTime;
+            infors.push(oneInfor);
+        }
+        return infors;
     };
     LevelDataManager.prototype.GetLevelLength = function () {
         return this.levelData.length;
-    };
-    ///获取球射击的位置
-    LevelDataManager.prototype.GetBallAndBombPos = function (levelIndex) {
-        return this.StringToNumberArray(this.levelData[levelIndex].shootPos);
-    };
-    LevelDataManager.prototype.GetBallAndBombShootSeq = function (levelIndex) {
-        return this.StringToNumberArray(this.levelData[levelIndex].shootSeq);
-    };
-    LevelDataManager.prototype.GetBallAndBombShootAngle = function (levelIndex) {
-        return this.StringToNumberArray(this.levelData[levelIndex].shootAngle);
     };
     ///字符串转vec2
     LevelDataManager.prototype.StringToVec2 = function (str) {
