@@ -27,6 +27,7 @@ var GameViewLogic = /** @class */ (function (_super) {
         _this.physicsNodeArr = [];
         _this.currentLevelIndex = 0;
         _this.maxLevelCount = 0;
+        _this.drawLineCount = 3;
         return _this;
     }
     GameViewLogic.prototype.onLoad = function () {
@@ -63,6 +64,8 @@ var GameViewLogic = /** @class */ (function (_super) {
         var physicsNode = cc.instantiate(this.physicsNode);
         this.node.addChild(physicsNode);
         this.physicsNodeArr.push(physicsNode);
+        this.drawLineCount--;
+        this.lineCount.string = "x " + this.drawLineCount.toString();
     };
     GameViewLogic.prototype.touchMove = function (event) {
     };
@@ -70,6 +73,7 @@ var GameViewLogic = /** @class */ (function (_super) {
     };
     GameViewLogic.prototype.touchCancel = function (event) {
     };
+    //创建下一关的数据
     GameViewLogic.prototype.ProduceNextLevelBasketCase = function (delayTime) {
         if (delayTime === void 0) { delayTime = 0; }
         if (this.currentLevelIndex + 1 < this.maxLevelCount) {
@@ -99,7 +103,7 @@ var GameViewLogic = /** @class */ (function (_super) {
     };
     GameViewLogic.prototype.PlayEnterBallEffect = function (pos) {
         this.effectPlayManager.PlayEnterBallAni(pos);
-        this.effectPlayManager.PlayScoreAni(pos);
+        this.effectPlayManager.PlayScoreAni(pos, this.drawLineCount);
     };
     //创建一个篮筐
     GameViewLogic.prototype.ProduceBoomBasket = function (pos) {
@@ -166,6 +170,9 @@ var GameViewLogic = /** @class */ (function (_super) {
     __decorate([
         property(cc.Node)
     ], GameViewLogic.prototype, "losePanel", void 0);
+    __decorate([
+        property(cc.Label)
+    ], GameViewLogic.prototype, "lineCount", void 0);
     GameViewLogic = __decorate([
         ccclass
     ], GameViewLogic);

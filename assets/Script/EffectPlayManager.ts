@@ -1,4 +1,5 @@
 import Singleton from "./Singleton";
+import ShowScore from "./ShowScore";
 
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
@@ -43,9 +44,11 @@ export default class EffectPlayManager extends Singleton<EffectPlayManager> {
         ani.setPosition(pos);
     }
 
-    public PlayScoreAni(pos:cc.Vec2)
+    public PlayScoreAni(pos:cc.Vec2,lineCount:number)
     {
        let score = cc.instantiate(this.score);
+       var script = score.getComponent<ShowScore>(ShowScore);
+       script.ShowScorePoint(lineCount);
        // cc.log("PlayAni");
        score.parent = this.node;
        score.setPosition(pos);

@@ -4,6 +4,7 @@ cc._RF.push(module, '160ffJpn9lJJqkTiYEp0tL6', 'EffectPlayManager');
 
 Object.defineProperty(exports, "__esModule", { value: true });
 var Singleton_1 = require("./Singleton");
+var ShowScore_1 = require("./ShowScore");
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -30,8 +31,10 @@ var EffectPlayManager = /** @class */ (function (_super) {
         ani.parent = this.node;
         ani.setPosition(pos);
     };
-    EffectPlayManager.prototype.PlayScoreAni = function (pos) {
+    EffectPlayManager.prototype.PlayScoreAni = function (pos, lineCount) {
         var score = cc.instantiate(this.score);
+        var script = score.getComponent(ShowScore_1.default);
+        script.ShowScorePoint(lineCount);
         // cc.log("PlayAni");
         score.parent = this.node;
         score.setPosition(pos);

@@ -53,10 +53,14 @@ export default class GameViewLogic extends cc.Component {
     @property(cc.Node)
     losePanel:cc.Node;
 
+    @property(cc.Label)
+    lineCount:cc.Label;
+
     currentLevelIndex:number = 0;
 
     maxLevelCount:number = 0;
   
+    drawLineCount:number = 3;
 
     onLoad () {
         cc.director.getPhysicsManager().enabled = true;
@@ -108,6 +112,8 @@ export default class GameViewLogic extends cc.Component {
         let physicsNode = cc.instantiate(this.physicsNode);
         this.node.addChild(physicsNode); 
         this.physicsNodeArr.push(physicsNode);
+        this.drawLineCount--;
+        this.lineCount.string = "x "+this.drawLineCount.toString();
      
     }
 
@@ -123,6 +129,7 @@ export default class GameViewLogic extends cc.Component {
         
     }
 
+    //创建下一关的数据
     public ProduceNextLevelBasketCase(delayTime:number = 0)
     {
         if(this.currentLevelIndex + 1 < this.maxLevelCount)
@@ -164,7 +171,7 @@ export default class GameViewLogic extends cc.Component {
     public PlayEnterBallEffect(pos:cc.Vec2)
     {
         this.effectPlayManager.PlayEnterBallAni(pos);
-        this.effectPlayManager.PlayScoreAni(pos);
+        this.effectPlayManager.PlayScoreAni(pos,this.drawLineCount);
     }
     
 

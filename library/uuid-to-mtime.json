@@ -250,8 +250,8 @@
     "relativePath": "Animations\\GetScoreAni.anim"
   },
   "a72e4b6a-102e-4791-9723-1b6ddb633ff0": {
-    "asset": 1563187427499,
-    "meta": 1563187486621,
+    "asset": 1563363344570,
+    "meta": 1563363344576,
     "relativePath": "resources\\prefab\\OnePoint.prefab"
   },
   "69bc1475-6667-4e07-84db-9a45a499112d": {
@@ -405,8 +405,8 @@
     "relativePath": "Scene\\Test.fire"
   },
   "aa031956-af82-4cc1-9cbd-47038a432a40": {
-    "asset": 1563187427470,
-    "meta": 1563187486629,
+    "asset": 1563364096036,
+    "meta": 1563364096091,
     "relativePath": "Scene\\MainScene.fire"
   },
   "e851e89b-faa2-4484-bea6-5c01dd9f06e2": {
@@ -629,11 +629,6 @@
     "meta": 1563187486867,
     "relativePath": "Script\\Ball.ts"
   },
-  "160ff269-9fd9-4926-a913-898129d2d2fa": {
-    "asset": 1563187427473,
-    "meta": 1563187486978,
-    "relativePath": "Script\\EffectPlayManager.ts"
-  },
   "8ff742c8-947a-4bd1-804d-4a5ac6d333f9": {
     "asset": 1563187427472,
     "meta": 1563187486931,
@@ -664,9 +659,34 @@
     "meta": 1563187427496,
     "relativePath": "resources\\json\\LevelData.json"
   },
+  "11a65d77-ac84-4dd4-ae9a-ea2c1602d01b": {
+    "asset": 1563360960631,
+    "meta": 1563360960653,
+    "relativePath": "Texture\\voice_on.png"
+  },
+  "8edb40a9-51d9-48fe-9dc5-9320ec13b044": {
+    "asset": 1563360960632,
+    "meta": 1563360960655,
+    "relativePath": "Texture\\voice_off.png"
+  },
+  "489a9be0-295f-4ba6-81e7-1623a6e770dd": {
+    "asset": 1563361135945,
+    "meta": 1563361135961,
+    "relativePath": "Texture\\brush.png"
+  },
   "0d903ab2-22ca-4d5c-b1b5-85df8395f9f4": {
-    "asset": 1563278249340,
-    "meta": 1563278250502,
+    "asset": 1563363905264,
+    "meta": 1563363906685,
     "relativePath": "Script\\GameViewLogic.ts"
+  },
+  "7fe54ed8-fbd4-4ff6-bb84-82f3570fc196": {
+    "asset": 1563363958287,
+    "meta": 1563363959124,
+    "relativePath": "Script\\ShowScore.ts"
+  },
+  "160ff269-9fd9-4926-a913-898129d2d2fa": {
+    "asset": 1563364064163,
+    "meta": 1563364067603,
+    "relativePath": "Script\\EffectPlayManager.ts"
   }
 }
