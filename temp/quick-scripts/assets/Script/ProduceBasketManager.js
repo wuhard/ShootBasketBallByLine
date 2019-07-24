@@ -50,6 +50,7 @@ var ProduceBasketManager = /** @class */ (function (_super) {
     ProduceBasketManager.prototype.GetPos = function (index) {
         return this.basketBornPos[index].convertToWorldSpaceAR(cc.v2(0, 0));
     };
+    //创建篮筐案例
     ProduceBasketManager.prototype.ProduceOneBasketCase = function (basketInfors) {
         var tempbasket;
         var basketCount = basketInfors.length;
@@ -104,6 +105,7 @@ var ProduceBasketManager = /** @class */ (function (_super) {
             }
         }
     };
+    //根据
     ProduceBasketManager.prototype.ProduceOneBasketByPos = function (basketPos) {
         this.sizeType = this.random(0, 2);
         var pos;
@@ -190,92 +192,6 @@ var ProduceBasketManager = /** @class */ (function (_super) {
                         break;
                 }
             }
-        }
-    };
-    ProduceBasketManager.prototype.ProduceOneBasket = function () {
-        this.posType = this.random(-1, 2);
-        this.sizeType = this.random(0, 2);
-        var pos = this.GetPos(0);
-        var startPos = this.node.convertToNodeSpaceAR(pos);
-        var tempbasket;
-        switch (this.sizeType) {
-            case 0:
-                tempbasket = cc.instantiate(this.smallBasket);
-                switch (this.posType) {
-                    case -1:
-                        tempbasket.rotation = 30;
-                        break;
-                    case 0:
-                        tempbasket.rotation = 0;
-                        break;
-                    case 1:
-                        tempbasket.rotation = -30;
-                        break;
-                }
-                break;
-            case 1:
-                if (this.posType != 0) {
-                    switch (this.posType) {
-                        case -1:
-                            tempbasket = cc.instantiate(this.bigBasketL);
-                            break;
-                        case 1:
-                            tempbasket = cc.instantiate(this.bigBasketR);
-                            cc.log(tempbasket.scaleX);
-                            break;
-                    }
-                }
-                else {
-                    tempbasket = cc.instantiate(this.smallBasket);
-                }
-                break;
-        }
-        this.basketParent.addChild(tempbasket);
-        this.basketParent.convertToNodeSpaceAR(startPos);
-        tempbasket.position = startPos;
-        var basketS = tempbasket.getComponent(Basket_1.default);
-        basketS.AdjustColliders();
-        this.basketList.push(tempbasket);
-        var backSp = tempbasket.getChildByName("BackSprite");
-        var frontSp = tempbasket.getChildByName("FrontSprite");
-        var bottom = tempbasket.getChildByName("BasketBottom");
-        var frontSpWorldPos = tempbasket.convertToWorldSpaceAR(frontSp.getPosition());
-        var frontTargetPos = this.basketFrontParent.convertToNodeSpaceAR(frontSpWorldPos);
-        frontSp.parent = this.basketFrontParent;
-        frontSp.position = frontTargetPos;
-        var backSpWorldPos = tempbasket.convertToWorldSpaceAR(backSp.getPosition());
-        var backTargetPos = this.basketBackParent.convertToNodeSpaceAR(backSpWorldPos);
-        backSp.parent = this.basketBackParent;
-        backSp.position = backTargetPos;
-        switch (this.sizeType) {
-            case 0:
-                switch (this.posType) {
-                    case -1:
-                        backSp.rotation = 30;
-                        frontSp.rotation = 30;
-                        break;
-                    case 0:
-                        backSp.rotation = 0;
-                        frontSp.rotation = 0;
-                        break;
-                    case 1:
-                        backSp.rotation = -30;
-                        frontSp.rotation = -30;
-                        break;
-                }
-                break;
-            //  case 1:
-            //         switch(this.posType)
-            //              {
-            //                  case -1:
-            //                         backSp.scaleX = -1
-            //                         frontSp.rotation = 30;
-            //                      break;
-            //                  case 1:
-            //                          tempbasket.scaleX =  -1;
-            //                      break;    
-            //              }
-            //      break;
         }
     };
     //获取篮筐的位置类型（左 中 右）

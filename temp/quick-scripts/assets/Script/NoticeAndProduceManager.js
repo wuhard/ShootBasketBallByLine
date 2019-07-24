@@ -28,6 +28,8 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         _this.ballGuideArray = [];
         _this.bombGuideArray = [];
         _this.veloctiyY = 2000;
+        _this.basketBallNum = 0;
+        _this.basketBallArray = [];
         return _this;
     }
     // LIFE-CYCLE CALLBACKS:
@@ -119,6 +121,7 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
     ///创建一次射击用例
     NoticeAndProduceManager.prototype.ProduceOneShootCase = function (shootInfors) {
         var _this = this;
+        this.basketBallNum = 0;
         this.bornPos.splice(0, this.bornPos.length);
         this.ballGuideArray.splice(0, this.ballGuideArray.length);
         this.bombGuideArray.splice(0, this.bombGuideArray.length);
@@ -126,6 +129,7 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         var _loop_1 = function () {
             switch (shootInfors[i].shootType) {
                 case 0:
+                    this_1.basketBallNum++;
                     var oneBallGuide_1 = this_1.ProduceOneBallGuideByPos(shootInfors[i].shootPos);
                     var vel_1 = shootInfors[i].velocity; //获取射击速度
                     var delayTime = shootInfors[i].shootDelayTime;
@@ -158,6 +162,7 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         this.bornPos.splice(0, this.bornPos.length);
         this.ballGuideArray.splice(0, this.ballGuideArray.length);
         this.bombGuideArray.splice(0, this.bombGuideArray.length);
+        this.basketBallArray.splice(0, this.basketBallArray.length);
         var _loop_2 = function () {
             if (shootPos[i] == 1) {
                 var oneBallGuide_2 = this_2.ProduceOneBallGuide(this_2.guidePos[i]);
@@ -202,6 +207,17 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         tempball.parent = this.ballParent;
         tempball.position = this.ballParent.convertToNodeSpaceAR(startPos);
         tempball.getComponent(cc.RigidBody).linearVelocity = velocity;
+        this.basketBallArray.push(tempball);
+    };
+    NoticeAndProduceManager.prototype.CheckAllBallCanEnter = function () {
+        for (var i = 0; i < this.basketBallArray.length; i++) {
+            if (this.basketBallArray[i] != null) {
+                if (this.basketBallArray[i].getComponent(cc.RigidBody).linearVelocity.mag() < 0.1) {
+                    return false;
+                }
+            }
+        }
+        return true;
     };
     NoticeAndProduceManager.prototype.ProduceOneBomb = function (posNode, velocity) {
         var startPos = posNode.convertToWorldSpaceAR(cc.v2(0, 0));

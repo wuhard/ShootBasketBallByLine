@@ -43,22 +43,22 @@ export default class Ball extends cc.Component {
          {
             // cc.log("get one score");
              this.gameViewLogic = cc.find("Canvas/Logic").getComponent<GameViewLogic>(GameViewLogic);
- 
+             this.gameViewLogic.EnterOneBall(this.node,otherCollider.body.node);
            
-             this.gameViewLogic.RemoveBasketNode(otherCollider.body.node.parent);
-             this.gameViewLogic.RemaveAllLine();
+            //  this.gameViewLogic.RemoveBasketNode(otherCollider.body.node.parent);
+            //  this.gameViewLogic.RemaveAllLine();
             
-             this.gameViewLogic.PlayEnterBallEffect(otherCollider.body.node.convertToWorldSpaceAR(cc.v2(0, 0)));
+            //  this.gameViewLogic.PlayEnterBallEffect(otherCollider.body.node.convertToWorldSpaceAR(cc.v2(0, 0)));
              
              
-             let basketWorld = otherCollider.body.node.parent.convertToWorldSpaceAR(cc.v2(0, 0));
+            //  let basketWorld = otherCollider.body.node.parent.convertToWorldSpaceAR(cc.v2(0, 0));
  
-             let basketLocalPos =  otherCollider.body.node.parent.parent.convertToNodeSpaceAR(basketWorld);
+            //  let basketLocalPos =  otherCollider.body.node.parent.parent.convertToNodeSpaceAR(basketWorld);
  
  
              //this.gameViewLogic.ProduceBoomBasket(basketLocalPos);
 
-             this.ProduceNextBasket();
+            //  this.ProduceNextBasket();
              this.node.destroy();
 
          

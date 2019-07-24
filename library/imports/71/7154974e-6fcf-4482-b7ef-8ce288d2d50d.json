@@ -70,8 +70,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 178,
-      "y": 622
+      "x": 278,
+      "y": 433
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -191,7 +191,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "7154974e-6fcf-4482-b7ef-8ce288d2d50d"
     },
     "fileId": "56xBF2Pk5ApYqJ0MHaAxTc",
     "sync": false
@@ -307,7 +307,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "7154974e-6fcf-4482-b7ef-8ce288d2d50d"
     },
     "fileId": "46ajPfsIdCDqJG0PN9tsze",
     "sync": false
@@ -423,7 +423,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "7154974e-6fcf-4482-b7ef-8ce288d2d50d"
     },
     "fileId": "fdAaHI3ttBfLe3DQ2X0hVn",
     "sync": false
@@ -525,12 +525,12 @@
     "_offset": {
       "__type__": "cc.Vec2",
       "x": -42.2,
-      "y": 6.3
+      "y": 24.6
     },
     "_size": {
       "__type__": "cc.Size",
       "width": 28.3,
-      "height": 103.6
+      "height": 140.2
     }
   },
   {
@@ -539,7 +539,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "7154974e-6fcf-4482-b7ef-8ce288d2d50d"
     },
     "fileId": "6cAsBi/rVN/J1ryo4gSooC",
     "sync": false
@@ -630,7 +630,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "7154974e-6fcf-4482-b7ef-8ce288d2d50d"
     },
     "fileId": "7fYguZZUpKBqD3NLmpzZRj",
     "sync": false
@@ -779,7 +779,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "7154974e-6fcf-4482-b7ef-8ce288d2d50d"
     },
     "fileId": "65dvxWm4tNypa4Nm6xtoI/",
     "sync": false
@@ -816,7 +816,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "7154974e-6fcf-4482-b7ef-8ce288d2d50d"
     },
     "fileId": "9d4MMOVYFOLY86y4vaRlxy",
     "sync": false
@@ -856,7 +856,7 @@
       "__id__": 1
     },
     "asset": {
-      "__id__": 0
+      "__uuid__": "7154974e-6fcf-4482-b7ef-8ce288d2d50d"
     },
     "fileId": "df09qmlsBEWo4Teaio6Sre",
     "sync": false

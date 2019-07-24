@@ -31,6 +31,7 @@ var EffectPlayManager = /** @class */ (function (_super) {
         ani.parent = this.node;
         ani.setPosition(pos);
     };
+    ///得分动画
     EffectPlayManager.prototype.PlayScoreAni = function (pos, lineCount) {
         var score = cc.instantiate(this.score);
         var script = score.getComponent(ShowScore_1.default);

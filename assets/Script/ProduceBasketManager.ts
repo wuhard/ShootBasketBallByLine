@@ -41,6 +41,8 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
     basketBornPos: cc.Node[] = [];
    
     basketList:cc.Node[] = [];
+
+
      
     // LIFE-CYCLE CALLBACKS:
 
@@ -77,6 +79,7 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
         return this.basketBornPos[index].convertToWorldSpaceAR(cc.v2(0,0));
     }
 
+    //创建篮筐案例
     public ProduceOneBasketCase(basketInfors: BasketInfor[])
     {
         let tempbasket:cc.Node;
@@ -152,6 +155,7 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
 
     }
 
+    //根据
    public ProduceOneBasketByPos(basketPos:number[])
    {
      
@@ -281,135 +285,6 @@ export default class ProduceBasketManager extends Singleton<ProduceBasketManager
    }
 
 
-    public ProduceOneBasket()
-    {   
-        this.posType = this.random(-1,2);
-        this.sizeType = this.random(0,2);
-
-
-        let pos = this.GetPos(0);
-       
-
-        var startPos =  this.node.convertToNodeSpaceAR(pos);
-      
-        let tempbasket:cc.Node;
-        switch(this.sizeType)
-        {
-            case 0:
-                    tempbasket = cc.instantiate(this.smallBasket);
-                    switch(this.posType)
-                    {
-                        case -1:
-                                 tempbasket.rotation =  30;
-                            break;
-                        case 0:
-                                tempbasket.rotation =  0;
-                            break;
-                        case 1:
-                                tempbasket.rotation =  -30;
-                            break;    
-                    }
-                break;
-
-            case 1:
-                    if(this.posType != 0)
-                    {
-                      
-                        switch(this.posType)
-                        {
-                            case -1:
-                                    tempbasket = cc.instantiate(this.bigBasketL);
-                                break;
-                         
-                       
-                            case 1:
-                                    tempbasket = cc.instantiate(this.bigBasketR);
-                                    cc.log(tempbasket.scaleX);
-                                break;    
-                        }
-                    }
-                    else 
-                    {
-                        tempbasket = cc.instantiate(this.smallBasket);
-                    }
-                    
-                   
-                break;
-        }
-
-      
-
-        this.basketParent.addChild(tempbasket);
-   
-        this.basketParent.convertToNodeSpaceAR(startPos);
-
-        tempbasket.position = startPos;
-
-        var basketS =  tempbasket.getComponent<Basket>(Basket);
-        basketS.AdjustColliders();
-        this.basketList.push(tempbasket);
-
-        let backSp = tempbasket.getChildByName("BackSprite");
-        let frontSp = tempbasket.getChildByName("FrontSprite");
-        let bottom = tempbasket.getChildByName("BasketBottom");
-        
-
-       
-        var frontSpWorldPos = tempbasket.convertToWorldSpaceAR(frontSp.getPosition());
-
-        var frontTargetPos =  this.basketFrontParent.convertToNodeSpaceAR(frontSpWorldPos);
-
-        frontSp.parent = this.basketFrontParent;
-
-        frontSp.position = frontTargetPos;
-        
-         var backSpWorldPos = tempbasket.convertToWorldSpaceAR(backSp.getPosition());
-
-         var backTargetPos =  this.basketBackParent.convertToNodeSpaceAR(backSpWorldPos);
-
-         backSp.parent = this.basketBackParent;
-         backSp.position = backTargetPos;
-
-         switch(this.sizeType)
-         {
-             case 0:
-                     
-                     switch(this.posType)
-                     {
-                         case -1:
-                                backSp.rotation = 30;
-                                frontSp.rotation = 30;
-                             break;
-                         case 0:
-                                backSp.rotation = 0;
-                                frontSp.rotation = 0;
-                             break;
-                         case 1:
-                                backSp.rotation = -30;
-                                frontSp.rotation = -30;
-                             break;    
-                     }
-                 break;
- 
-            //  case 1:
-            //         switch(this.posType)
-            //              {
-            //                  case -1:
-            //                         backSp.scaleX = -1
-            //                         frontSp.rotation = 30;
-            //                      break;
-                          
-                        
-            //                  case 1:
-            //                          tempbasket.scaleX =  -1;
-            //                      break;    
-            //              }
-                    
-            //      break;
-         }
-      
-       
-    }
 
     //获取篮筐的位置类型（左 中 右）
     public GetPosType():number

@@ -45,12 +45,12 @@
     "relativePath": "Scene"
   },
   "4734c20c-0db8-4eb2-92ea-e692f4d70934": {
-    "asset": 1563187427476,
+    "asset": 1563361783908,
     "meta": 1563187427471,
     "relativePath": "Script"
   },
   "7b81d4e8-ec84-4716-968d-500ac1d78a54": {
-    "asset": 1563187427485,
+    "asset": 1563361135951,
     "meta": 1563187427477,
     "relativePath": "Texture"
   },
@@ -240,8 +240,8 @@
     "relativePath": "Texture\\+2.png"
   },
   "05d55bc1-cd4e-455e-8c66-e9c2b0e4246c": {
-    "asset": 1563187427497,
-    "meta": 1563187486615,
+    "asset": 1563967541378,
+    "meta": 1563967541382,
     "relativePath": "resources\\prefab\\BigBasketR.prefab"
   },
   "e8b5bccb-027b-461e-8f71-898c902440da": {
@@ -250,8 +250,8 @@
     "relativePath": "Animations\\GetScoreAni.anim"
   },
   "a72e4b6a-102e-4791-9723-1b6ddb633ff0": {
-    "asset": 1563363344570,
-    "meta": 1563363344576,
+    "asset": 1563966909041,
+    "meta": 1563966909045,
     "relativePath": "resources\\prefab\\OnePoint.prefab"
   },
   "69bc1475-6667-4e07-84db-9a45a499112d": {
@@ -265,8 +265,8 @@
     "relativePath": "Script\\ScoreEffect.ts"
   },
   "7154974e-6fcf-4482-b7ef-8ce288d2d50d": {
-    "asset": 1563187427497,
-    "meta": 1563187486613,
+    "asset": 1563967586505,
+    "meta": 1563967586509,
     "relativePath": "resources\\prefab\\BigBasketL.prefab"
   },
   "850ba1cf-00e4-45fb-960b-5ccac5f6d260": {
@@ -405,8 +405,8 @@
     "relativePath": "Scene\\Test.fire"
   },
   "aa031956-af82-4cc1-9cbd-47038a432a40": {
-    "asset": 1563364096036,
-    "meta": 1563364096091,
+    "asset": 1563969484392,
+    "meta": 1563969484404,
     "relativePath": "Scene\\MainScene.fire"
   },
   "e851e89b-faa2-4484-bea6-5c01dd9f06e2": {
@@ -624,25 +624,10 @@
     "meta": 1563187486616,
     "relativePath": "resources\\prefab\\Bomb.prefab"
   },
-  "38ce1afc-6903-4f31-ad4e-a447b1ada351": {
-    "asset": 1563187427471,
-    "meta": 1563187486867,
-    "relativePath": "Script\\Ball.ts"
-  },
   "8ff742c8-947a-4bd1-804d-4a5ac6d333f9": {
     "asset": 1563187427472,
     "meta": 1563187486931,
     "relativePath": "Script\\Bomb.ts"
-  },
-  "abb6d563-49c0-4d35-a3ba-ab45290b93ed": {
-    "asset": 1563277165527,
-    "meta": 1563277167061,
-    "relativePath": "Script\\ProduceBasketManager.ts"
-  },
-  "d106c7ed-d375-4351-91de-ca674dae8e20": {
-    "asset": 1563277531609,
-    "meta": 1563277552271,
-    "relativePath": "Script\\NoticeAndProduceManager.ts"
   },
   "32a98fc4-5918-41fe-ac59-cdd701f81f6c": {
     "asset": 1563277927032,
@@ -674,19 +659,34 @@
     "meta": 1563361135961,
     "relativePath": "Texture\\brush.png"
   },
-  "0d903ab2-22ca-4d5c-b1b5-85df8395f9f4": {
-    "asset": 1563363905264,
-    "meta": 1563363906685,
-    "relativePath": "Script\\GameViewLogic.ts"
-  },
   "7fe54ed8-fbd4-4ff6-bb84-82f3570fc196": {
     "asset": 1563363958287,
     "meta": 1563363959124,
     "relativePath": "Script\\ShowScore.ts"
   },
+  "abb6d563-49c0-4d35-a3ba-ab45290b93ed": {
+    "asset": 1563965628134,
+    "meta": 1563965635605,
+    "relativePath": "Script\\ProduceBasketManager.ts"
+  },
+  "38ce1afc-6903-4f31-ad4e-a447b1ada351": {
+    "asset": 1563966379452,
+    "meta": 1563966381693,
+    "relativePath": "Script\\Ball.ts"
+  },
   "160ff269-9fd9-4926-a913-898129d2d2fa": {
-    "asset": 1563364064163,
-    "meta": 1563364067603,
+    "asset": 1563966842237,
+    "meta": 1563966856146,
     "relativePath": "Script\\EffectPlayManager.ts"
+  },
+  "d106c7ed-d375-4351-91de-ca674dae8e20": {
+    "asset": 1563968620701,
+    "meta": 1563968828981,
+    "relativePath": "Script\\NoticeAndProduceManager.ts"
+  },
+  "0d903ab2-22ca-4d5c-b1b5-85df8395f9f4": {
+    "asset": 1563969407912,
+    "meta": 1563969411242,
+    "relativePath": "Script\\GameViewLogic.ts"
   }
 }

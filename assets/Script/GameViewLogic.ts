@@ -5,6 +5,7 @@ import NoticeAndProduceManager from "./NoticeAndProduceManager";
 import EffectPlayManager from "./EffectPlayManager";
 import LevelDataManager from "./LevelDataManager";
 import { BasketInfor, ShootInfor } from "./SceneLevelData";
+import Ball from "./Ball";
 
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
@@ -56,11 +57,16 @@ export default class GameViewLogic extends cc.Component {
     @property(cc.Label)
     lineCount:cc.Label;
 
+    //当前关卡
     currentLevelIndex:number = 0;
 
+    //最大关卡
     maxLevelCount:number = 0;
   
+    ///线的数量
     drawLineCount:number = 3;
+
+    ballCount: number = 0;
 
     onLoad () {
         cc.director.getPhysicsManager().enabled = true;
@@ -96,7 +102,7 @@ export default class GameViewLogic extends cc.Component {
     start()
     {
      
-        this.ProduceOneBasketCase(5,1);
+        this.ProduceOneBasketCase(0,1);
     }
 
 
@@ -107,14 +113,43 @@ export default class GameViewLogic extends cc.Component {
 
     touchStart(event : cc.Event.EventTouch) 
     {
-      
+        if(this.drawLineCount - 1 > 0)
+        {
+            this.drawLineCount--;
+            this.lineCount.string = "x "+ this.drawLineCount.toString();
+            let physicsNode = cc.instantiate(this.physicsNode);
+            this.node.addChild(physicsNode); 
+            this.physicsNodeArr.push(physicsNode);
+        }
+        else
+        { 
+            this.scheduleOnce(() => {
+            if (this.CheckBallCanEnterBasket())
+            {
+                 this.ShowLosePanel(true);
+            }
+           
+          }, 3);//2s后执行一次
+         return;
+
+        }
+       
        // cc.log("drawLine");
-        let physicsNode = cc.instantiate(this.physicsNode);
-        this.node.addChild(physicsNode); 
-        this.physicsNodeArr.push(physicsNode);
-        this.drawLineCount--;
-        this.lineCount.string = "x "+this.drawLineCount.toString();
+      
+       
      
+    }
+
+    //检测球是否能进篮筐
+    CheckBallCanEnterBasket():boolean
+    {
+        if(this.noticeAndProduceManager.CheckAllBallCanEnter())
+        {
+            return true;
+        }
+
+        return false;
+       
     }
 
     touchMove(event : cc.Event.EventTouch) {
@@ -139,9 +174,24 @@ export default class GameViewLogic extends cc.Component {
         this.ProduceOneBasketCase(this.currentLevelIndex,delayTime);
     }
 
+    ///进了一个球
+    public EnterOneBall(ball:cc.Node,basketBottom:cc.Node)
+    {
+        this.PlayEnterBallEffect(basketBottom.convertToWorldSpaceAR(cc.v2(0, 0)))
+        this.ballCount--;
+        if(this.ballCount == -1)
+        {
+            this.RemoveBasketNode(basketBottom.parent);
+            this.RemaveAllLine();
+            this.ProduceNextLevelBasketCase(2);
+        }
+    }
+
     ///创建一个篮球用例
     public ProduceOneBasketCase(levelIndex:number,delayTime:number = 0)
     {
+        this.drawLineCount = 3;
+        this.lineCount.string = "x "+this.drawLineCount.toString();
       //  cc.log("one basket");
         this.currentLevelIndex = levelIndex;
         this.scheduleOnce(() => {
@@ -154,6 +204,7 @@ export default class GameViewLogic extends cc.Component {
 
          this.scheduleOnce(() => {
             this.ProduceOneShootCase(levelIndex);
+            this.ballCount =  this.noticeAndProduceManager.basketBallNum;
          }, delayTime+1);//2s后执行一次
 
     }
@@ -217,11 +268,10 @@ export default class GameViewLogic extends cc.Component {
         this.produceBasketManager.RemoveOneBasket(nodeObj);
     }
 
+    ///失败
     public ShowLosePanel(flag:boolean)
     {
-        this.losePanel.active = flag;
-      
-      
+        this.losePanel.active = flag; 
         this.produceBasketManager.RemoveAllBaskets();
         this.RemaveAllLine();
     }
@@ -229,7 +279,7 @@ export default class GameViewLogic extends cc.Component {
     public ReplayGame()
     {
         this.ShowLosePanel(false);
-        this.ProduceOneBasketCase(0);
+        this.ProduceOneBasketCase(this.currentLevelIndex);
         this.RemaveAllLine();
     }
 }

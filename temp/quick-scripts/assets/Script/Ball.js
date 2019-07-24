@@ -34,13 +34,14 @@ var Ball = /** @class */ (function (_super) {
         else if (otherCollider.body.node.name == 'BasketBottom') {
             // cc.log("get one score");
             this.gameViewLogic = cc.find("Canvas/Logic").getComponent(GameViewLogic_1.default);
-            this.gameViewLogic.RemoveBasketNode(otherCollider.body.node.parent);
-            this.gameViewLogic.RemaveAllLine();
-            this.gameViewLogic.PlayEnterBallEffect(otherCollider.body.node.convertToWorldSpaceAR(cc.v2(0, 0)));
-            var basketWorld = otherCollider.body.node.parent.convertToWorldSpaceAR(cc.v2(0, 0));
-            var basketLocalPos = otherCollider.body.node.parent.parent.convertToNodeSpaceAR(basketWorld);
+            this.gameViewLogic.EnterOneBall(this.node, otherCollider.body.node);
+            //  this.gameViewLogic.RemoveBasketNode(otherCollider.body.node.parent);
+            //  this.gameViewLogic.RemaveAllLine();
+            //  this.gameViewLogic.PlayEnterBallEffect(otherCollider.body.node.convertToWorldSpaceAR(cc.v2(0, 0)));
+            //  let basketWorld = otherCollider.body.node.parent.convertToWorldSpaceAR(cc.v2(0, 0));
+            //  let basketLocalPos =  otherCollider.body.node.parent.parent.convertToNodeSpaceAR(basketWorld);
             //this.gameViewLogic.ProduceBoomBasket(basketLocalPos);
-            this.ProduceNextBasket();
+            //  this.ProduceNextBasket();
             this.node.destroy();
         }
     };

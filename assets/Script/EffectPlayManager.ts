@@ -44,6 +44,7 @@ export default class EffectPlayManager extends Singleton<EffectPlayManager> {
         ani.setPosition(pos);
     }
 
+    ///得分动画
     public PlayScoreAni(pos:cc.Vec2,lineCount:number)
     {
        let score = cc.instantiate(this.score);

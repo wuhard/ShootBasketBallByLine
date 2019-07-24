@@ -49,6 +49,10 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
     bombGuideArray: cc.Node[] = [];
     veloctiyY:number = 2000;
 
+    basketBallNum:number = 0;
+
+    basketBallArray:cc.Node[] = [];
+
     @property(ProduceBasketManager)
     produceBasketManager:ProduceBasketManager;
 
@@ -180,9 +184,12 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
 
     }
 
+
+
     ///创建一次射击用例
     public ProduceOneShootCase(shootInfors:ShootInfor[])
     {
+        this.basketBallNum = 0;
         this.bornPos.splice(0,this.bornPos.length);
         this.ballGuideArray.splice(0,this.ballGuideArray.length);
         this.bombGuideArray.splice(0,this.bombGuideArray.length);
@@ -192,6 +199,7 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
             switch(shootInfors[i].shootType)
             {
                 case 0:
+                    this.basketBallNum++;
                     let oneBallGuide = this.ProduceOneBallGuideByPos(shootInfors[i].shootPos);  
                     let vel = shootInfors[i].velocity;//获取射击速度
                     let delayTime = shootInfors[i].shootDelayTime;
@@ -226,6 +234,7 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         this.bornPos.splice(0,this.bornPos.length);
         this.ballGuideArray.splice(0,this.ballGuideArray.length);
         this.bombGuideArray.splice(0,this.bombGuideArray.length);
+        this.basketBallArray.splice(0,this.basketBallArray.length);
 
         for(var i = 0; i < shootPos.length; i++)
         {
@@ -285,8 +294,24 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         tempball.parent = this.ballParent;
         tempball.position = this.ballParent.convertToNodeSpaceAR(startPos);
         tempball.getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity = velocity;
+        this.basketBallArray.push(tempball);
     }
 
+    CheckAllBallCanEnter():boolean
+    {
+        for(var i = 0; i < this.basketBallArray.length; i++)
+        {
+            if(this.basketBallArray[i] != null)
+            {
+                if(this.basketBallArray[i].getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity.mag() < 0.1)
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
 
     ProduceOneBomb(posNode:cc.Node,velocity:cc.Vec2)
     {

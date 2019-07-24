@@ -25,9 +25,13 @@ var GameViewLogic = /** @class */ (function (_super) {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.ball = null;
         _this.physicsNodeArr = [];
+        //当前关卡
         _this.currentLevelIndex = 0;
+        //最大关卡
         _this.maxLevelCount = 0;
+        ///线的数量
         _this.drawLineCount = 3;
+        _this.ballCount = 0;
         return _this;
     }
     GameViewLogic.prototype.onLoad = function () {
@@ -55,17 +59,35 @@ var GameViewLogic = /** @class */ (function (_super) {
         // }, 5); //5s执行一次
     };
     GameViewLogic.prototype.start = function () {
-        this.ProduceOneBasketCase(5, 1);
+        this.ProduceOneBasketCase(0, 1);
     };
     GameViewLogic.prototype.onEnter = function () {
     };
     GameViewLogic.prototype.touchStart = function (event) {
+        var _this = this;
+        if (this.drawLineCount - 1 > 0) {
+            this.drawLineCount--;
+            this.lineCount.string = "x " + this.drawLineCount.toString();
+            var physicsNode = cc.instantiate(this.physicsNode);
+            this.node.addChild(physicsNode);
+            this.physicsNodeArr.push(physicsNode);
+        }
+        else {
+            this.scheduleOnce(function () {
+                if (_this.CheckBallCanEnterBasket()) {
+                    _this.ShowLosePanel(true);
+                }
+            }, 3); //2s后执行一次
+            return;
+        }
         // cc.log("drawLine");
-        var physicsNode = cc.instantiate(this.physicsNode);
-        this.node.addChild(physicsNode);
-        this.physicsNodeArr.push(physicsNode);
-        this.drawLineCount--;
-        this.lineCount.string = "x " + this.drawLineCount.toString();
+    };
+    //检测球是否能进篮筐
+    GameViewLogic.prototype.CheckBallCanEnterBasket = function () {
+        if (this.noticeAndProduceManager.CheckAllBallCanEnter()) {
+            return true;
+        }
+        return false;
     };
     GameViewLogic.prototype.touchMove = function (event) {
     };
@@ -81,10 +103,22 @@ var GameViewLogic = /** @class */ (function (_super) {
         }
         this.ProduceOneBasketCase(this.currentLevelIndex, delayTime);
     };
+    ///进了一个球
+    GameViewLogic.prototype.EnterOneBall = function (ball, basketBottom) {
+        this.PlayEnterBallEffect(basketBottom.convertToWorldSpaceAR(cc.v2(0, 0)));
+        this.ballCount--;
+        if (this.ballCount == -1) {
+            this.RemoveBasketNode(basketBottom.parent);
+            this.RemaveAllLine();
+            this.ProduceNextLevelBasketCase(2);
+        }
+    };
     ///创建一个篮球用例
     GameViewLogic.prototype.ProduceOneBasketCase = function (levelIndex, delayTime) {
         var _this = this;
         if (delayTime === void 0) { delayTime = 0; }
+        this.drawLineCount = 3;
+        this.lineCount.string = "x " + this.drawLineCount.toString();
         //  cc.log("one basket");
         this.currentLevelIndex = levelIndex;
         this.scheduleOnce(function () {
@@ -94,6 +128,7 @@ var GameViewLogic = /** @class */ (function (_super) {
         }, delayTime); //2s后执行一次
         this.scheduleOnce(function () {
             _this.ProduceOneShootCase(levelIndex);
+            _this.ballCount = _this.noticeAndProduceManager.basketBallNum;
         }, delayTime + 1); //2s后执行一次
     };
     ///创建一个球和炸弹的射击案例
@@ -130,6 +165,7 @@ var GameViewLogic = /** @class */ (function (_super) {
     GameViewLogic.prototype.RemoveBasketNode = function (nodeObj) {
         this.produceBasketManager.RemoveOneBasket(nodeObj);
     };
+    ///失败
     GameViewLogic.prototype.ShowLosePanel = function (flag) {
         this.losePanel.active = flag;
         this.produceBasketManager.RemoveAllBaskets();
@@ -137,7 +173,7 @@ var GameViewLogic = /** @class */ (function (_super) {
     };
     GameViewLogic.prototype.ReplayGame = function () {
         this.ShowLosePanel(false);
-        this.ProduceOneBasketCase(0);
+        this.ProduceOneBasketCase(this.currentLevelIndex);
         this.RemaveAllLine();
     };
     __decorate([
