@@ -36,6 +36,8 @@ export default class PhysicsNodeLogic extends cc.Component {
     lineCount:number = 25;
     @property(Number)
     limitLineLength:number = 125;
+    
+    darwFlag : boolean = true;
 
     // LIFE-CYCLE CALLBACKS:    
     onLoad () {
@@ -59,6 +61,7 @@ export default class PhysicsNodeLogic extends cc.Component {
     }
 
     addTouch() {
+    
         this.node.on(cc.Node.EventType.TOUCH_START, this.touchStartHandler);
         this.node.on(cc.Node.EventType.TOUCH_MOVE, this.touchMoveHandler);
         this.node.on(cc.Node.EventType.TOUCH_END, this.touchEndHandler);
@@ -74,6 +77,11 @@ export default class PhysicsNodeLogic extends cc.Component {
 
     touchStart(event : cc.Event.EventTouch) {
 
+        if(!this.darwFlag)
+        {
+            return;
+        }
+
         let touchLoc = event.getLocation();
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
 
@@ -86,6 +94,10 @@ export default class PhysicsNodeLogic extends cc.Component {
     }
 
     touchMove(event : cc.Event.EventTouch) {
+        if(!this.darwFlag)
+        {
+            return;
+        }
         let touchLoc = event.getLocation();
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
 
@@ -111,6 +123,7 @@ export default class PhysicsNodeLogic extends cc.Component {
     touchEnd(event : cc.Event.EventTouch) {
 
          this.createRigibody();
+         this.darwFlag = false;
     }
 
     touchCancel(event : cc.Event.EventTouch) {

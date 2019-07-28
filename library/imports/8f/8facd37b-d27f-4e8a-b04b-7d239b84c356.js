@@ -27,6 +27,7 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
         _this.pathColor = cc.color(0, 0, 0);
         _this.lineCount = 25;
         _this.limitLineLength = 125;
+        _this.darwFlag = true;
         return _this;
     }
     // LIFE-CYCLE CALLBACKS:    
@@ -58,6 +59,9 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
         this.node.off(cc.Node.EventType.TOUCH_CANCEL, this.touchCancelHandler);
     };
     PhysicsNodeLogic.prototype.touchStart = function (event) {
+        if (!this.darwFlag) {
+            return;
+        }
         var touchLoc = event.getLocation();
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
         this.points.push(cc.p(touchLoc.x, touchLoc.y));
@@ -66,6 +70,9 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
         return true;
     };
     PhysicsNodeLogic.prototype.touchMove = function (event) {
+        if (!this.darwFlag) {
+            return;
+        }
         var touchLoc = event.getLocation();
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
         if (!this.checkIsCanDraw(this.points)) {
@@ -80,6 +87,7 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
     };
     PhysicsNodeLogic.prototype.touchEnd = function (event) {
         this.createRigibody();
+        this.darwFlag = false;
     };
     PhysicsNodeLogic.prototype.touchCancel = function (event) {
         this.createRigibody();

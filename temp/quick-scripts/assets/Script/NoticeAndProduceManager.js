@@ -212,12 +212,21 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
     NoticeAndProduceManager.prototype.CheckAllBallCanEnter = function () {
         for (var i = 0; i < this.basketBallArray.length; i++) {
             if (this.basketBallArray[i] != null) {
-                if (this.basketBallArray[i].getComponent(cc.RigidBody).linearVelocity.mag() < 0.1) {
+                if (this.basketBallArray[i].getComponent(cc.RigidBody).linearVelocity.mag() < 0.2) {
                     return false;
                 }
             }
         }
         return true;
+    };
+    //删除所有球
+    NoticeAndProduceManager.prototype.DestroyAllBall = function () {
+        for (var i = 0; i < this.basketBallArray.length; i++) {
+            if (this.basketBallArray[i] != null) {
+                this.basketBallArray[i].destroy();
+            }
+        }
+        this.basketBallArray.splice(0, this.basketBallArray.length);
     };
     NoticeAndProduceManager.prototype.ProduceOneBomb = function (posNode, velocity) {
         var startPos = posNode.convertToWorldSpaceAR(cc.v2(0, 0));

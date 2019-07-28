@@ -299,11 +299,12 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
 
     CheckAllBallCanEnter():boolean
     {
+      
         for(var i = 0; i < this.basketBallArray.length; i++)
         {
             if(this.basketBallArray[i] != null)
             {
-                if(this.basketBallArray[i].getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity.mag() < 0.1)
+                if(this.basketBallArray[i].getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity.mag() < 0.2)
                 {
                     return false;
                 }
@@ -311,6 +312,19 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         }
 
         return true;
+    }
+
+    //删除所有球
+    DestroyAllBall()
+    {
+        for(var i = 0; i < this.basketBallArray.length; i++)
+        {
+            if(this.basketBallArray[i] != null)
+            {
+                this.basketBallArray[i].destroy();
+            }
+        }
+        this.basketBallArray.splice(0,this.basketBallArray.length);
     }
 
     ProduceOneBomb(posNode:cc.Node,velocity:cc.Vec2)

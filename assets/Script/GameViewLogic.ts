@@ -6,6 +6,7 @@ import EffectPlayManager from "./EffectPlayManager";
 import LevelDataManager from "./LevelDataManager";
 import { BasketInfor, ShootInfor } from "./SceneLevelData";
 import Ball from "./Ball";
+import ShowHOrHideObj from "./ShowOrHideObj";
 
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
@@ -51,8 +52,8 @@ export default class GameViewLogic extends cc.Component {
     @property(LevelDataManager)
     levelDataManager:LevelDataManager;
 
-    @property(cc.Node)
-    losePanel:cc.Node;
+    @property(ShowHOrHideObj)
+    uiPanel:ShowHOrHideObj;
 
     @property(cc.Label)
     lineCount:cc.Label;
@@ -68,14 +69,18 @@ export default class GameViewLogic extends cc.Component {
 
     ballCount: number = 0;
 
+    drawEnable:boolean = false;
+
+    isFinishCurrentLevel:boolean = false;
+
     onLoad () {
         cc.director.getPhysicsManager().enabled = true;
-        // cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
-        // cc.PhysicsManager.DrawBits.e_pairBit |
-        // cc.PhysicsManager.DrawBits.e_centerOfMassBit |
-        // cc.PhysicsManager.DrawBits.e_jointBit |
-        // cc.PhysicsManager.DrawBits.e_shapeBit
-        // ;
+        cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
+        cc.PhysicsManager.DrawBits.e_pairBit |
+        cc.PhysicsManager.DrawBits.e_centerOfMassBit |
+        cc.PhysicsManager.DrawBits.e_jointBit |
+        cc.PhysicsManager.DrawBits.e_shapeBit
+        ;
         cc.director.getPhysicsManager().gravity = cc.v2(0, -960);
 
         let self = this;
@@ -87,10 +92,7 @@ export default class GameViewLogic extends cc.Component {
         self.node.on(cc.Node.EventType.TOUCH_CANCEL, self.touchCancel.bind(self));
 
         //先创建一个物体等待绘画，如果在touchstart里面创建第一条线就不能监听到划线的start函数了。
-        let physicsNode = cc.instantiate(this.physicsNode);
-        this.node.addChild(physicsNode);
-        physicsNode.name = "first";
-        this.physicsNodeArr.push(physicsNode);
+
 
        
         // this.schedule(function() {
@@ -100,9 +102,30 @@ export default class GameViewLogic extends cc.Component {
     }
 
     start()
+    {    
+        this.uiPanel.ShowOnlyObjByIndex(0);
+    }
+    public BackToMainPage()
     {
-     
+        this.uiPanel.ShowOnlyObjByIndex(0);
+    }
+
+    public StartGame()
+    {
+        this.uiPanel.ShowOnlyObjByIndex(1);
+        this.StartDrawLine();
+        this.drawEnable = true;
         this.ProduceOneBasketCase(0,1);
+    }
+
+  
+
+    StartDrawLine()
+    {
+        let physicsNode = cc.instantiate(this.physicsNode);
+        this.node.addChild(physicsNode);
+        physicsNode.name = "first";
+        this.physicsNodeArr.push(physicsNode);
     }
 
 
@@ -113,31 +136,40 @@ export default class GameViewLogic extends cc.Component {
 
     touchStart(event : cc.Event.EventTouch) 
     {
-        if(this.drawLineCount - 1 > 0)
+        if(this.drawEnable == false)
         {
-            this.drawLineCount--;
-            this.lineCount.string = "x "+ this.drawLineCount.toString();
-            let physicsNode = cc.instantiate(this.physicsNode);
-            this.node.addChild(physicsNode); 
-            this.physicsNodeArr.push(physicsNode);
+            return;
         }
-        else
-        { 
-            this.scheduleOnce(() => {
-            if (this.CheckBallCanEnterBasket())
+
+        cc.log(this.drawLineCount);
+        if(this.drawLineCount - 1 >= 0)
+        {
+            if(this.drawLineCount - 1 > 0)
             {
-                 this.ShowLosePanel(true);
+                let physicsNode = cc.instantiate(this.physicsNode);
+                this.node.addChild(physicsNode); 
+                this.physicsNodeArr.push(physicsNode);
             }
            
-          }, 3);//2s后执行一次
-         return;
-
-        }
+            this.drawLineCount--; 
+            this.lineCount.string = "x "+ this.drawLineCount.toString();
+        
+            if(this.drawLineCount == 0)
+            {
+                this.drawEnable = false;
+                this.scheduleOnce(() => {
+          
+                    if (this.CheckBallCanEnterBasket())
+                    {
+                         this.ShowLosePanel(true);
+                    }
+                   
+                  }, 3);//2s后执行一次
+            }
+        } 
        
-       // cc.log("drawLine");
-      
        
-     
+             
     }
 
     //检测球是否能进篮筐
@@ -179,12 +211,22 @@ export default class GameViewLogic extends cc.Component {
     {
         this.PlayEnterBallEffect(basketBottom.convertToWorldSpaceAR(cc.v2(0, 0)))
         this.ballCount--;
-        if(this.ballCount == -1)
+        if(this.ballCount == 0)
         {
             this.RemoveBasketNode(basketBottom.parent);
-            this.RemaveAllLine();
-            this.ProduceNextLevelBasketCase(2);
+            this.ShowWinPanel();
+           // this.ProduceNextLevelBasketCase(2);
         }
+    }
+
+
+    public ProduceNextBaksetCase()
+    {
+        this.StartDrawLine();
+        this.drawLineCount = 3;
+        this.drawEnable = true;
+        this.uiPanel.ShowOnlyObjByIndex(1);
+        this.ProduceNextLevelBasketCase(2);
     }
 
     ///创建一个篮球用例
@@ -252,13 +294,13 @@ export default class GameViewLogic extends cc.Component {
       
         var children = this.node.children;
        
-        for(var i = 0; i < children.length - 1; i++)
+        for(var i = 0; i < children.length ; i++)
         {
             children[i].destroy();
         }
 
         var arrLenght = this.physicsNodeArr.length;
-        this.physicsNodeArr.slice(0,arrLenght-1);
+        this.physicsNodeArr.slice(0,arrLenght);
     }
 
     //删除节点
@@ -271,15 +313,29 @@ export default class GameViewLogic extends cc.Component {
     ///失败
     public ShowLosePanel(flag:boolean)
     {
-        this.losePanel.active = flag; 
+        this.unscheduleAllCallbacks();
+        this.uiPanel.ShowOnlyObjByIndex(3);
         this.produceBasketManager.RemoveAllBaskets();
+        this.noticeAndProduceManager.DestroyAllBall();
+        this.RemaveAllLine();
+    }
+
+    public ShowWinPanel()
+    {
+        this.unscheduleAllCallbacks();
+        this.uiPanel.ShowOnlyObjByIndex(2);
+        this.produceBasketManager.RemoveAllBaskets();
+        this.noticeAndProduceManager.DestroyAllBall();
         this.RemaveAllLine();
     }
 
     public ReplayGame()
     {
-        this.ShowLosePanel(false);
+        this.StartDrawLine();
+        this.drawLineCount = 3;
+        this.drawEnable = true;
+        this.uiPanel.ShowOnlyObjByIndex(1);
         this.ProduceOneBasketCase(this.currentLevelIndex);
-        this.RemaveAllLine();
+   
     }
 }
