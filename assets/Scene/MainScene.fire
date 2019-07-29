@@ -914,9 +914,9 @@
     },
     "_enabled": true,
     "tag": 0,
-    "_density": 0.5,
+    "_density": 0.8,
     "_sensor": false,
-    "_friction": 0.2,
+    "_friction": 0.5,
     "_restitution": 0.8,
     "body": null,
     "_offset": {

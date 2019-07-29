@@ -11,7 +11,7 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "PhysicsNode",
+    "_name": "physicsNode",
     "_objFlags": 0,
     "_parent": null,
     "_children": [],
@@ -132,7 +132,7 @@
     "tag": 0,
     "_density": 1,
     "_sensor": false,
-    "_friction": 0.5,
+    "_friction": 0.2,
     "_restitution": 0,
     "body": null,
     "_offset": {

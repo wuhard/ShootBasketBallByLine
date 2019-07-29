@@ -75,12 +75,12 @@ export default class GameViewLogic extends cc.Component {
 
     onLoad () {
         cc.director.getPhysicsManager().enabled = true;
-        cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
-        cc.PhysicsManager.DrawBits.e_pairBit |
-        cc.PhysicsManager.DrawBits.e_centerOfMassBit |
-        cc.PhysicsManager.DrawBits.e_jointBit |
-        cc.PhysicsManager.DrawBits.e_shapeBit
-        ;
+        // cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
+        // cc.PhysicsManager.DrawBits.e_pairBit |
+        // cc.PhysicsManager.DrawBits.e_centerOfMassBit |
+        // cc.PhysicsManager.DrawBits.e_jointBit |
+        // cc.PhysicsManager.DrawBits.e_shapeBit
+        // ;
         cc.director.getPhysicsManager().gravity = cc.v2(0, -960);
 
         let self = this;
@@ -156,33 +156,40 @@ export default class GameViewLogic extends cc.Component {
         
             if(this.drawLineCount == 0)
             {
+                cc.log("CheckBallCanEnterBasket");
                 this.drawEnable = false;
-                this.scheduleOnce(() => {
-          
-                    if (this.CheckBallCanEnterBasket())
-                    {
-                         this.ShowLosePanel(true);
-                    }
-                   
-                  }, 3);//2s后执行一次
+                this.schedule(this.CheckEnterBasket,1, 10,3);//2s后执行一次
             }
         } 
        
-       
              
     }
+
+    CheckEnterBasket()
+    {
+        if (!this.CheckBallCanEnterBasket())
+        {
+             this.unschedule(this.CheckEnterBasket);
+             this.ShowLosePanel(true);
+        }
+       
+    }
+
 
     //检测球是否能进篮筐
     CheckBallCanEnterBasket():boolean
     {
         if(this.noticeAndProduceManager.CheckAllBallCanEnter())
         {
+           
             return true;
         }
 
         return false;
        
     }
+
+    check
 
     touchMove(event : cc.Event.EventTouch) {
         
@@ -214,7 +221,13 @@ export default class GameViewLogic extends cc.Component {
         if(this.ballCount == 0)
         {
             this.RemoveBasketNode(basketBottom.parent);
-            this.ShowWinPanel();
+            this.RemaveAllLine();
+            this.scheduleOnce(() => {
+           
+                this.ShowWinPanel();
+    
+             }, 2);//2s后执行一次
+           
            // this.ProduceNextLevelBasketCase(2);
         }
     }
@@ -326,7 +339,7 @@ export default class GameViewLogic extends cc.Component {
         this.uiPanel.ShowOnlyObjByIndex(2);
         this.produceBasketManager.RemoveAllBaskets();
         this.noticeAndProduceManager.DestroyAllBall();
-        this.RemaveAllLine();
+     
     }
 
     public ReplayGame()

@@ -297,14 +297,17 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         this.basketBallArray.push(tempball);
     }
 
+      
+
     CheckAllBallCanEnter():boolean
     {
-      
+        
         for(var i = 0; i < this.basketBallArray.length; i++)
         {
             if(this.basketBallArray[i] != null)
             {
-                if(this.basketBallArray[i].getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity.mag() < 0.2)
+                cc.log(this.basketBallArray[i].getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity.mag() );
+                if(this.basketBallArray[i].getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity.mag() < 3)
                 {
                     return false;
                 }
