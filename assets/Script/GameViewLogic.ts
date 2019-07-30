@@ -189,7 +189,7 @@ export default class GameViewLogic extends cc.Component {
        
     }
 
-    check
+    
 
     touchMove(event : cc.Event.EventTouch) {
         
@@ -319,7 +319,6 @@ export default class GameViewLogic extends cc.Component {
     //删除节点
     public RemoveBasketNode(nodeObj:cc.Node)
     {
-
         this.produceBasketManager.RemoveOneBasket(nodeObj);
     }
 

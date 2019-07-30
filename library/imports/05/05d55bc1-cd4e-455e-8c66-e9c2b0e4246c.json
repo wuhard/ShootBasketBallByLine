@@ -32,6 +32,9 @@
       },
       {
         "__id__": 21
+      },
+      {
+        "__id__": 24
       }
     ],
     "_tag": -1,
@@ -70,8 +73,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 218,
-      "y": 576
+      "x": 485,
+      "y": 949
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -243,8 +246,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -153.5,
-      "y": -16
+      "x": -153,
+      "y": -21
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -360,7 +363,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": 12.6,
-      "y": -16
+      "y": -18.2
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -580,7 +583,7 @@
     "_contentSize": {
       "__type__": "cc.Size",
       "width": 144,
-      "height": 81
+      "height": 100
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -589,7 +592,7 @@
     "_position": {
       "__type__": "cc.Vec2",
       "x": -66,
-      "y": 1
+      "y": 5.3
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -610,7 +613,7 @@
       "__uuid__": "a4a88e67-571a-4fe2-8afd-b377de6142b2"
     },
     "_type": 0,
-    "_sizeMode": 1,
+    "_sizeMode": 2,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -619,7 +622,7 @@
     },
     "_fillStart": 0,
     "_fillRange": 0,
-    "_isTrimmedMode": true,
+    "_isTrimmedMode": false,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_atlas": null
@@ -637,79 +640,21 @@
   },
   {
     "__type__": "cc.Node",
-    "_name": "BackSprite",
-    "_objFlags": 0,
-    "_parent": {
-      "__id__": 1
-    },
-    "_children": [
-      {
-        "__id__": 22
-      }
-    ],
-    "_tag": -1,
-    "_active": true,
-    "_components": [
-      {
-        "__id__": 25
-      }
-    ],
-    "_prefab": {
-      "__id__": 26
-    },
-    "_id": "",
-    "_opacity": 255,
-    "_color": {
-      "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
-      "a": 255
-    },
-    "_cascadeOpacityEnabled": true,
-    "_anchorPoint": {
-      "__type__": "cc.Vec2",
-      "x": 0.5,
-      "y": 0.5
-    },
-    "_contentSize": {
-      "__type__": "cc.Size",
-      "width": 122,
-      "height": 37
-    },
-    "_rotationX": 0,
-    "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
-    "_position": {
-      "__type__": "cc.Vec2",
-      "x": -66,
-      "y": 34
-    },
-    "_skewX": 0,
-    "_skewY": 0,
-    "_localZOrder": 0,
-    "_globalZOrder": 0,
-    "_opacityModifyRGB": false,
-    "groupIndex": 0
-  },
-  {
-    "__type__": "cc.Node",
     "_name": "board",
     "_objFlags": 0,
     "_parent": {
-      "__id__": 21
+      "__id__": 1
     },
     "_children": [],
     "_tag": -1,
     "_active": true,
     "_components": [
       {
-        "__id__": 23
+        "__id__": 22
       }
     ],
     "_prefab": {
-      "__id__": 24
+      "__id__": 23
     },
     "_id": "",
     "_opacity": 255,
@@ -737,8 +682,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 101.7,
-      "y": 47
+      "x": 40,
+      "y": 79
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -752,7 +697,7 @@
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 22
+      "__id__": 21
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -785,11 +730,65 @@
     "sync": false
   },
   {
+    "__type__": "cc.Node",
+    "_name": "BackSprite",
+    "_objFlags": 0,
+    "_parent": {
+      "__id__": 1
+    },
+    "_children": [],
+    "_tag": -1,
+    "_active": true,
+    "_components": [
+      {
+        "__id__": 25
+      }
+    ],
+    "_prefab": {
+      "__id__": 26
+    },
+    "_id": "",
+    "_opacity": 255,
+    "_color": {
+      "__type__": "cc.Color",
+      "r": 255,
+      "g": 255,
+      "b": 255,
+      "a": 255
+    },
+    "_cascadeOpacityEnabled": true,
+    "_anchorPoint": {
+      "__type__": "cc.Vec2",
+      "x": 0.5,
+      "y": 0.5
+    },
+    "_contentSize": {
+      "__type__": "cc.Size",
+      "width": 144,
+      "height": 100
+    },
+    "_rotationX": 0,
+    "_rotationY": 0,
+    "_scaleX": 1,
+    "_scaleY": 1,
+    "_position": {
+      "__type__": "cc.Vec2",
+      "x": -66,
+      "y": 4.6
+    },
+    "_skewX": 0,
+    "_skewY": 0,
+    "_localZOrder": 0,
+    "_globalZOrder": 0,
+    "_opacityModifyRGB": false,
+    "groupIndex": 0
+  },
+  {
     "__type__": "cc.Sprite",
     "_name": "",
     "_objFlags": 0,
     "node": {
-      "__id__": 21
+      "__id__": 24
     },
     "_enabled": true,
     "_spriteFrame": {
@@ -805,7 +804,7 @@
     },
     "_fillStart": 0,
     "_fillRange": 0,
-    "_isTrimmedMode": true,
+    "_isTrimmedMode": false,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_atlas": null
@@ -830,7 +829,7 @@
     },
     "_enabled": true,
     "backSprit": {
-      "__id__": 21
+      "__id__": 24
     },
     "frontSprit": {
       "__id__": 18

@@ -7,8 +7,8 @@
       "windowType": "dockable",
       "x": -8,
       "y": -8,
-      "width": 1936,
-      "height": 1056,
+      "width": 1456,
+      "height": 876,
       "layout": {
         "children": [
           {
@@ -18,7 +18,7 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 469,
+                "height": 400.546875,
                 "type": "panel",
                 "width": 469
               },
@@ -27,12 +27,12 @@
                 "children": [
                   "assets"
                 ],
-                "height": 456,
+                "height": 389.453125,
                 "type": "panel",
                 "width": 469
               }
             ],
-            "height": 928,
+            "height": 793,
             "type": "dock-v",
             "width": 469
           },
@@ -45,7 +45,7 @@
                     "children": [
                       "scene"
                     ],
-                    "height": 595,
+                    "height": 508.15625,
                     "type": "panel",
                     "width": 447
                   },
@@ -54,12 +54,12 @@
                     "children": [
                       "node-library"
                     ],
-                    "height": 595,
+                    "height": 508.15625,
                     "type": "panel",
                     "width": 258
                   }
                 ],
-                "height": 595,
+                "height": 508.15625,
                 "type": "dock-h",
                 "width": 708
               },
@@ -69,12 +69,12 @@
                   "console",
                   "timeline"
                 ],
-                "height": 330,
+                "height": 281.84375,
                 "type": "panel",
                 "width": 708
               }
             ],
-            "height": 928,
+            "height": 793,
             "type": "dock-v",
             "width": 708
           },
@@ -83,7 +83,7 @@
             "children": [
               "inspector"
             ],
-            "height": 928,
+            "height": 793,
             "type": "panel",
             "width": 731
           }
@@ -107,6 +107,12 @@
       "y": 264,
       "width": 580,
       "height": 565
+    },
+    "sprite-editor": {
+      "x": 462,
+      "y": 151,
+      "width": 516,
+      "height": 538
     }
   }
 }
