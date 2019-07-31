@@ -5,7 +5,7 @@
       "id": "adCImcszhHzYyzC91l6hVP"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "46V/GJrOBP2ohQoS46YQZu"
     },
     {
@@ -25,11 +25,11 @@
       "id": "48RqshemBKYbYasrg449q/"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "f35pMMhxVJbatuofzlE6aE"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "10KiAltFNDoZniukHGrBPU"
     },
     {
@@ -65,23 +65,39 @@
       "id": "72Og4kcHRIkYrdVyopAUU7"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "a7uNG/jwlIMbD4gZXBXfr9"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "edCm3Dmu9BMaUuBC/azv4A"
+    },
+    {
+      "folded": false,
+      "id": "c79ZKP5tpO/7BYIFgO5TxM"
+    },
+    {
+      "folded": false,
+      "id": "78GpDHO9hLiajv+F5icDCi"
+    },
+    {
+      "folded": false,
+      "id": "3fs62yBctBtq9lfrhXIG4i"
+    },
+    {
+      "folded": false,
+      "id": "3e2LFKEu5JZrAl5bjReDQh"
     },
     {
       "folded": false,
       "id": "39upF+uwpCqbbYzdINcKwn"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "63NhUJcpJHwYv7EztKGg+c"
     },
     {
-      "folded": true,
+      "folded": false,
       "id": "68fWkzp9ZOYLTmrBR56SCH"
     },
     {
@@ -127,22 +143,6 @@
     {
       "folded": false,
       "id": "6eWcrGIChF9qWxHtSTL+Nn"
-    },
-    {
-      "folded": false,
-      "id": "3e2LFKEu5JZrAl5bjReDQh"
-    },
-    {
-      "folded": true,
-      "id": "c79ZKP5tpO/7BYIFgO5TxM"
-    },
-    {
-      "folded": true,
-      "id": "78GpDHO9hLiajv+F5icDCi"
-    },
-    {
-      "folded": true,
-      "id": "3fs62yBctBtq9lfrhXIG4i"
     }
   ]
 }

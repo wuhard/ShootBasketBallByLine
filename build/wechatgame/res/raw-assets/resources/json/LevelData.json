@@ -1,0 +1,251 @@
+  [
+        {          
+            "basketInfors":
+            [
+                {
+                    "basketPos":"350_500",
+                    "moveEndPos":"350_500",
+                    "basketType":2,
+                    "moveDuringTime":0
+                }
+            ],
+
+            "shootInfors":
+            [
+                {
+                    "shootType":0,
+                    "shootPos": "100_54",
+                    "velocity":"0_2000",
+                    "shootDelayTime":0
+                    
+                }
+              
+            ]
+        },
+        {
+			 "basketInfors":
+            [
+                {
+                    "basketPos":"360_640",
+                    "moveEndPos":"360_640",
+                    "basketType":2,
+                    "moveDuringTime":0
+                }
+            ],
+
+            "shootInfors":
+            [
+                {
+                    "shootType":0,
+                    "shootPos": "360_54",
+                    "velocity":"-1000_2200",
+                    "shootDelayTime":0
+                    
+                }
+              
+            ]
+        },
+        {       
+			 "basketInfors":
+            [
+                {
+                    "basketPos":"78_640",
+                    "moveEndPos":"360_640",
+                    "basketType":1,
+                    "moveDuringTime":0
+                }
+            ],
+
+            "shootInfors":
+            [
+                {
+                    "shootType":0,
+                    "shootPos": "360_54",
+                    "velocity":"0_2000",
+                    "shootDelayTime":0
+                    
+                }
+              
+            ]
+        },
+        {
+			 "basketInfors":
+            [
+                {
+                    "basketPos":"360_500",
+                    "moveEndPos":"360_500",
+                    "basketType":2,
+                    "moveDuringTime":0
+                }
+            ],
+
+            "shootInfors":
+            [
+                {
+                    "shootType":0,
+                    "shootPos": "180_54",
+                    "velocity":"2000_2500",
+                    "shootDelayTime":1000
+                    
+                },
+				{
+                    "shootType":1,
+                    "shootPos": "540_54",
+                    "velocity":"-2000_2500",
+                    "shootDelayTime":0
+                    
+                }
+              
+            ]
+        },
+	    {
+			 "basketInfors":
+            [
+                {
+                    "basketPos":"630_300",
+                    "moveEndPos":"630_500",
+                    "basketType":3,
+                    "moveDuringTime":0
+                }
+            ],
+
+            "shootInfors":
+            [
+                {
+                    "shootType":0,
+                    "shootPos": "180_54",
+                    "velocity":"800_2000",
+                    "shootDelayTime":1000
+                    
+                },
+				{
+                    "shootType":1,
+                    "shootPos": "240_54",
+                    "velocity":"800_2000",
+                    "shootDelayTime":0
+                    
+                }
+              
+            ]
+        },
+    {
+      "basketInfors": [
+        {
+          "basketPos": "78_640",
+          "moveEndPos": "78_640",
+          "basketType": 0,
+          "moveDuringTime": 0
+        }
+      ],
+
+      "shootInfors": [
+        {
+          "shootType": 0,
+          "shootPos": "480_54",
+          "velocity": "0_2000",
+          "shootDelayTime": 1000
+
+        },
+        {
+          "shootType": 0,
+          "shootPos": "480_54",
+          "velocity": "0_2000",
+          "shootDelayTime": 0
+
+        }
+
+      ]
+    },
+    {
+      "basketInfors": [
+        {
+          "basketPos": "78_640",
+          "moveEndPos": "78_640",
+          "basketType": 0,
+          "moveDuringTime": 0
+        }
+      ],
+
+      "shootInfors": [
+        {
+          "shootType": 1,
+          "shootPos": "320_54",
+          "velocity": "0_2000",
+          "shootDelayTime": 0
+
+        },
+        {
+          "shootType": 0,
+          "shootPos": "420_54",
+          "velocity": "0_2000",
+          "shootDelayTime": 1000
+
+        }
+
+      ]
+    },
+     {
+			 "basketInfors":
+            [
+                {
+                    "basketPos":"630_720",
+                    "moveEndPos":"630_720",
+                    "basketType":3,
+                    "moveDuringTime":0
+                }
+            ],
+
+            "shootInfors":
+            [
+                {
+                    "shootType":0,
+                    "shootPos": "240_54",
+                    "velocity":"0_2000",
+                    "shootDelayTime":1000
+                    
+                },
+				        {
+                    "shootType":1,
+                    "shootPos": "240_54",
+                    "velocity":"0_2000",
+                    "shootDelayTime":0
+                    
+                }
+              
+            ]
+        },
+    {
+      "basketInfors": [
+        {
+          "basketPos": "78_750",
+          "moveEndPos": "78_750",
+          "basketType": 0,
+          "moveDuringTime": 0
+        },
+        {
+          "basketPos": "78_480",
+          "moveEndPos": "78_480",
+          "basketType": 0,
+          "moveDuringTime": 0
+        }
+      ],
+
+      "shootInfors": [
+        {
+          "shootType": 0,
+          "shootPos": "320_54",
+          "velocity": "0_1500",
+          "shootDelayTime":1000
+
+        },
+        {
+          "shootType": 0,
+          "shootPos": "420_54",
+          "velocity": "0_2000",
+          "shootDelayTime": 0
+
+        }
+
+      ]
+    }
+    ]
