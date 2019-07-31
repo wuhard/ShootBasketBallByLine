@@ -101,10 +101,10 @@
     },
     "_enabled": true,
     "tag": 0,
-    "_density": 0.8,
+    "_density": 0.6,
     "_sensor": false,
     "_friction": 0.5,
-    "_restitution": 0.8,
+    "_restitution": 0.7,
     "body": null,
     "_offset": {
       "__type__": "cc.Vec2",

@@ -93,7 +93,7 @@ var GameViewLogic = /** @class */ (function (_super) {
             if (this.drawLineCount == 0) {
                 cc.log("CheckBallCanEnterBasket");
                 this.drawEnable = false;
-                this.schedule(this.CheckEnterBasket, 1, 10, 3); //2s后执行一次
+                this.schedule(this.CheckEnterBasket, 0.2, 10, 2); //2s后执行一次
             }
         }
     };
@@ -202,7 +202,7 @@ var GameViewLogic = /** @class */ (function (_super) {
         this.unscheduleAllCallbacks();
         this.uiPanel.ShowOnlyObjByIndex(3);
         this.produceBasketManager.RemoveAllBaskets();
-        this.noticeAndProduceManager.DestroyAllBall();
+        this.noticeAndProduceManager.StopProduceAction();
         this.RemaveAllLine();
     };
     GameViewLogic.prototype.ShowWinPanel = function () {

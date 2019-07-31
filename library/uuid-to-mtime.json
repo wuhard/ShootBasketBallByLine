@@ -90,8 +90,8 @@
     "relativePath": "Texture\\ball.png"
   },
   "05229913-f510-41eb-804d-840796ab433e": {
-    "asset": 1564485477695,
-    "meta": 1564485477698,
+    "asset": 1564570239619,
+    "meta": 1564570239644,
     "relativePath": "resources\\prefab\\ball.prefab"
   },
   "88589bdb-285f-4af2-ba00-9d639e3ef600": {
@@ -340,8 +340,8 @@
     "relativePath": "Scene\\Test.fire"
   },
   "aa031956-af82-4cc1-9cbd-47038a432a40": {
-    "asset": 1564486411626,
-    "meta": 1564486411640,
+    "asset": 1564573092890,
+    "meta": 1564573092921,
     "relativePath": "Scene\\MainScene.fire"
   },
   "e851e89b-faa2-4484-bea6-5c01dd9f06e2": {
@@ -609,11 +609,6 @@
     "meta": 1563187427496,
     "relativePath": "resources\\json\\LevelData.json"
   },
-  "d106c7ed-d375-4351-91de-ca674dae8e20": {
-    "asset": 1564484098118,
-    "meta": 1564484142537,
-    "relativePath": "Script\\NoticeAndProduceManager.ts"
-  },
   "ff6e0d25-2e4b-4d62-9f7d-947b8a9970da": {
     "asset": 1563443291257,
     "meta": 1564484286873,
@@ -689,9 +684,14 @@
     "meta": 1564486014532,
     "relativePath": "Texture\\hoot_3.png"
   },
+  "d106c7ed-d375-4351-91de-ca674dae8e20": {
+    "asset": 1564571987977,
+    "meta": 1564571989984,
+    "relativePath": "Script\\NoticeAndProduceManager.ts"
+  },
   "0d903ab2-22ca-4d5c-b1b5-85df8395f9f4": {
-    "asset": 1564486400271,
-    "meta": 1564486409785,
+    "asset": 1564572746977,
+    "meta": 1564572749222,
     "relativePath": "Script\\GameViewLogic.ts"
   }
 }

@@ -51,7 +51,9 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
 
     basketBallNum:number = 0;
 
+    bombArray:cc.Node[] = [];
     basketBallArray:cc.Node[] = [];
+    basektBallPosArray:cc.Vec2[] = [];
 
     @property(ProduceBasketManager)
     produceBasketManager:ProduceBasketManager;
@@ -193,6 +195,7 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         this.bornPos.splice(0,this.bornPos.length);
         this.ballGuideArray.splice(0,this.ballGuideArray.length);
         this.bombGuideArray.splice(0,this.bombGuideArray.length);
+        this.bombArray.splice(0,this.bombArray.length);
         cc.log(shootInfors.length);
         for(var i = 0; i < shootInfors.length; i++)
         {
@@ -235,6 +238,7 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         this.ballGuideArray.splice(0,this.ballGuideArray.length);
         this.bombGuideArray.splice(0,this.bombGuideArray.length);
         this.basketBallArray.splice(0,this.basketBallArray.length);
+        this.basektBallPosArray.splice(0,this.basektBallPosArray.length);
 
         for(var i = 0; i < shootPos.length; i++)
         {
@@ -295,9 +299,21 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         tempball.position = this.ballParent.convertToNodeSpaceAR(startPos);
         tempball.getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity = velocity;
         this.basketBallArray.push(tempball);
+        this.basektBallPosArray.push(cc.v2(0,0));
     }
 
       
+    ProduceOneBomb(posNode:cc.Node,velocity:cc.Vec2)
+    {
+      
+        var startPos =  posNode.convertToWorldSpaceAR(cc.v2(0,0));
+      
+        let tempball = cc.instantiate(this.bomb);
+        tempball.parent = this.ballParent;
+        tempball.position = this.ballParent.convertToNodeSpaceAR(startPos);
+        tempball.getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity = velocity;
+        this.bombArray.push(tempball);
+    }
 
     CheckAllBallCanEnter():boolean
     {
@@ -306,17 +322,53 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         {
             if(this.basketBallArray[i] != null)
             {
-                cc.log(this.basketBallArray[i].getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity.mag() );
-                if(this.basketBallArray[i].getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity.mag() < 3)
+                var movePos = cc.v2(this.basektBallPosArray[i].x - this.basketBallArray[i].position.x,
+                    this.basektBallPosArray[i].y - this.basketBallArray[i].position.y);
+                
+                if(movePos.mag() <0.3)
                 {
                     return false;
                 }
+           
+                this.basektBallPosArray[i] = this.basketBallArray[i].position;
             }
         }
 
         return true;
     }
 
+    DestroyAllGuide()
+    {
+        for(var i = 0; i < this.bombGuideArray.length; i++)
+        {
+            if(this.bombGuideArray[i] != null)
+            {
+                this.bombGuideArray[i].destroy();
+            }
+        }
+        this.bombGuideArray.splice(0,this.bombGuideArray.length);
+
+        for(var i = 0; i < this.ballGuideArray.length; i++)
+        {
+            if(this.ballGuideArray[i] != null)
+            {
+                this.ballGuideArray[i].destroy();
+            }
+        }
+        this.ballGuideArray.splice(0,this.ballGuideArray.length);
+    }
+
+    DestroyAllBomb()
+    {
+        for(var i = 0; i < this.bombArray.length; i++)
+        {
+            if(this.bombArray[i] != null)
+            {
+                this.bombArray[i].destroy();
+            }
+        }
+        this.bombArray.splice(0,this.bombArray.length);
+    }
     //删除所有球
     DestroyAllBall()
     {
@@ -330,17 +382,14 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         this.basketBallArray.splice(0,this.basketBallArray.length);
     }
 
-    ProduceOneBomb(posNode:cc.Node,velocity:cc.Vec2)
-    {
-      
-        var startPos =  posNode.convertToWorldSpaceAR(cc.v2(0,0));
-      
-        let tempball = cc.instantiate(this.bomb);
-        tempball.parent = this.ballParent;
-        tempball.position = this.ballParent.convertToNodeSpaceAR(startPos);
-        tempball.getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity = velocity;
-    }
 
+    StopProduceAction()
+    {
+        this.DestroyAllBall();
+        this.DestroyAllBomb();
+        this.DestroyAllGuide();
+        this.unscheduleAllCallbacks();
+    }
 
     random(lower, upper) {
 

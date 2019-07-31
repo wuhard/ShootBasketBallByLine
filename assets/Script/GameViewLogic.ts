@@ -158,7 +158,7 @@ export default class GameViewLogic extends cc.Component {
             {
                 cc.log("CheckBallCanEnterBasket");
                 this.drawEnable = false;
-                this.schedule(this.CheckEnterBasket,1, 10,3);//2s后执行一次
+                this.schedule(this.CheckEnterBasket, 0.2, 10,2);//2s后执行一次
             }
         } 
        
@@ -328,8 +328,9 @@ export default class GameViewLogic extends cc.Component {
         this.unscheduleAllCallbacks();
         this.uiPanel.ShowOnlyObjByIndex(3);
         this.produceBasketManager.RemoveAllBaskets();
-        this.noticeAndProduceManager.DestroyAllBall();
+        this.noticeAndProduceManager.StopProduceAction();
         this.RemaveAllLine();
+    
     }
 
     public ShowWinPanel()
