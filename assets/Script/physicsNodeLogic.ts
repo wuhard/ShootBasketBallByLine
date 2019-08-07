@@ -83,8 +83,9 @@ export default class PhysicsNodeLogic extends cc.Component {
         }
 
         let touchLoc = event.getLocation();
+       
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
-
+      //  let rigibodyPos = 
        this.points.push(cc.p(touchLoc.x, touchLoc.y));
        this.path.moveTo(touchLoc.x, touchLoc.y);
 
@@ -99,6 +100,7 @@ export default class PhysicsNodeLogic extends cc.Component {
             return;
         }
         let touchLoc = event.getLocation();
+     
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
 
 

@@ -2,7 +2,9 @@
   "appKey": "",
   "appSecret": "",
   "encryptJs": true,
-  "excludeScenes": [],
+  "excludeScenes": [
+    "a4461eba-0984-4cc6-ab31-5a7a74d2c461"
+  ],
   "fb-instant-games": {},
   "includeAnySDK": false,
   "includeSDKBox": false,
@@ -31,7 +33,7 @@
   "webOrientation": "auto",
   "wechatgame": {
     "REMOTE_SERVER_ROOT": "",
-    "appid": "wx9377358f96123fb8",
+    "appid": "wx8decbecc83aebdae",
     "isSubdomain": false,
     "orientation": "portrait",
     "subContext": ""

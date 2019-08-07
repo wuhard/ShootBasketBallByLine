@@ -64,6 +64,7 @@ var PhysicsNodeLogic = /** @class */ (function (_super) {
         }
         var touchLoc = event.getLocation();
         touchLoc = this.node.parent.convertToNodeSpaceAR(touchLoc);
+        //  let rigibodyPos = 
         this.points.push(cc.p(touchLoc.x, touchLoc.y));
         this.path.moveTo(touchLoc.x, touchLoc.y);
         // cc.log("start");

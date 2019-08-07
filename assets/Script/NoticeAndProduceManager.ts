@@ -137,8 +137,9 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
     ProduceOneBallGuide(posNode:cc.Node):cc.Node
     {
         let bornNode = posNode;
-
         let tempball = cc.instantiate(this.ballGuide);
+        var fadeAction = cc.fadeTo(0.3,1);
+        tempball.runAction(fadeAction);
         this.node.addChild(tempball);
         tempball.setPosition(bornNode.position);
         return tempball;
@@ -150,6 +151,8 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
     {
       
         let tempball = cc.instantiate(this.ballGuide);
+        var fadeAction = cc.fadeTo(0.3,255);
+        tempball.runAction(fadeAction);
         this.node.addChild(tempball);
         tempball.setPosition(guidePos);
         return tempball;
@@ -171,6 +174,8 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         let bornNode = posNode;
 
         let tempbomb = cc.instantiate(this.bombGuide);
+        var fadeAction = cc.fadeTo(0.3,255);
+        tempbomb.runAction(fadeAction);
         this.node.addChild(tempbomb);
         tempbomb.setPosition(bornNode.position);
         return tempbomb;
@@ -181,6 +186,8 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
       
         let tempball = cc.instantiate(this.bombGuide);
         this.node.addChild(tempball);
+        var fadeAction = cc.fadeTo(0.3,255);
+        tempball.runAction(fadeAction);
         tempball.setPosition(guidePos);
         return tempball;
 
@@ -273,19 +280,44 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
     //velocity表示射球角度
     ProduceOneShootBallAction(guidBall:cc.Node,velocity:cc.Vec2)
     {
-       // cc.log("Destory");
-        this.ProduceOneBall(guidBall,velocity);
-        guidBall.destroy();
+        
       
+        var fadeAction = cc.fadeTo(0.3,0);
+        var finished = cc.callFunc(this.GuidBallDestroy, guidBall,velocity);
+     
+        var seq = cc.sequence(fadeAction,finished);
+        guidBall.runAction(seq);
+        this.scheduleOnce(() => {
+            this.ProduceOneBall(guidBall,velocity);
+         }, 0.3);//2s后执行一次
+      
+    }
+
+    GuidBallDestroy(guidBall:cc.Node,velocity:cc.Vec2)
+    {
+        cc.log("Destory");
+      //  this.ProduceOneBall(guidBall,velocity);
+        guidBall.destroy();  
     }
 
 
     ProduceOneShootBombAction(guidBall:cc.Node,velocity:cc.Vec2)
     {
-       // cc.log("Destory");
-        this.ProduceOneBomb(guidBall,velocity);
-        guidBall.destroy();
+     
+        var fadeAction = cc.fadeTo(0.3,0);
+        var finished = cc.callFunc(this.GuidBallDestroy, guidBall,velocity);
+     
+        var seq = cc.sequence(fadeAction,finished);
+        guidBall.runAction(seq);
+        this.scheduleOnce(() => {
+            this.ProduceOneBomb(guidBall,velocity);
+         }, 0.3);//2s后执行一次
       
+    }
+
+    GuideBombDestroy(guidBomb:cc.Node,velocity:cc.Vec2)
+    {
+        guidBomb.destroy();
     }
 
     //创建一个球的

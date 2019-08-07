@@ -28,8 +28,18 @@ export default class EffectPlayManager extends Singleton<EffectPlayManager> {
     @property(cc.Prefab)
     bombBasket:cc.Prefab;
 
+    
+    @property(cc.Prefab)
+    lineDieParticlePrefab:cc.Prefab;
     // LIFE-CYCLE CALLBACKS:
 
+    //线的间隔
+    linePointDieDis:number = 25;
+
+    ///线的长度
+    lineDis : number;
+    
+    linePartices:cc.Node[] = [];
     // onLoad () {}
 
     start () {
@@ -64,4 +74,78 @@ export default class EffectPlayManager extends Singleton<EffectPlayManager> {
 
     }
 
+    ///获取线的长度
+    GetLineDis(points:cc.Vec2[]):number
+    {
+        this.lineDis = 0;
+        for(var i = 0; i < points.length-1; i++)
+        {
+            this.lineDis += cc.pDistance(points[i], points[i+1]) 
+        }
+
+        return this.lineDis;
+    }
+
+    public PlayLineDieEffection(points:cc.Vec2[])
+    {
+        this.linePartices.splice(0,this.linePartices.length);
+      
+        if(points.length <= 0)
+        {
+            return;
+        }
+
+        var diePointNum = this.GetLineDis(points) / this.linePointDieDis + 1;
+      //  cc.log(points.length + "  " + diePointNum);
+        if(points.length > diePointNum)
+        {
+            
+            for(var i = 0; i < diePointNum; i++)
+            {
+                let lineDie = cc.instantiate(this.lineDieParticlePrefab);
+                lineDie.parent = this.node;
+                this.linePartices.push(lineDie);
+                if(points.length/diePointNum * i < points.length)
+                {
+                  
+                    lineDie.setPosition(points[Math.floor(points.length/diePointNum * i)]);
+                }
+                
+            }
+        }
+        else
+        {
+            for(var i = 0; i < points.length-1; i++)
+            {
+                
+                let pointNum = cc.pDistance(points[i],points[i+1])/this.linePointDieDis;
+                // cc.log(cc.pDistance(points[i],points[i+1])+ "  " + pointNum);
+                let lineDie = cc.instantiate(this.lineDieParticlePrefab);
+                lineDie.parent = this.node;
+                this.linePartices.push(lineDie);
+                lineDie.setPosition(points[i]);
+                for(var j = 1; j < pointNum; j++)
+                {
+                    cc.log ("add");
+                    let lineDie = cc.instantiate(this.lineDieParticlePrefab);
+                    lineDie.parent = this.node;
+                    this.linePartices.push(lineDie);
+                    let x = (j+1)/pointNum*points[i+1].x + (pointNum - j - 1)/pointNum*points[i].x;
+                    let y = (j+1)/pointNum*points[i+1].y + (pointNum - j - 1)/pointNum*points[i].y;
+                    let pos = cc.v2(x,y);
+                    lineDie.setPosition(pos);
+                } 
+              
+            }
+            
+                let lineDie = cc.instantiate(this.lineDieParticlePrefab);
+                lineDie.parent = this.node;
+                this.linePartices.push(lineDie);
+                lineDie.setPosition(points[points.length - 1]);
+        }
+    
+    }
+
+      
+       
 }

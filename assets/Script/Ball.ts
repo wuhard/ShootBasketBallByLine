@@ -33,10 +33,9 @@ export default class Ball extends cc.Component {
         if (otherCollider.body.node.name == 'ground') {
             this.gameViewLogic = cc.find("Canvas/Logic").getComponent<GameViewLogic>(GameViewLogic);
  
-           
-            this.gameViewLogic.RemaveAllLine();
+
             this.node.destroy();
-            this.gameViewLogic.ShowLosePanel(true);
+            this.gameViewLogic.ShowFaithAction();
  
          } 
          else if(otherCollider.body.node.name == 'BasketBottom')

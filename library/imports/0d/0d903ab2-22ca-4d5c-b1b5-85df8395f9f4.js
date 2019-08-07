@@ -8,6 +8,9 @@ var NoticeAndProduceManager_1 = require("./NoticeAndProduceManager");
 var EffectPlayManager_1 = require("./EffectPlayManager");
 var LevelDataManager_1 = require("./LevelDataManager");
 var ShowOrHideObj_1 = require("./ShowOrHideObj");
+var EnterScenePanel_1 = require("./EnterScenePanel");
+var physicsNodeLogic_1 = require("./physicsNodeLogic");
+var MenuPanel_1 = require("./MenuPanel");
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/editors_and_tools/creator-chapters/scripting/typescript/index.html
@@ -35,6 +38,8 @@ var GameViewLogic = /** @class */ (function (_super) {
         _this.ballCount = 0;
         _this.drawEnable = false;
         _this.isFinishCurrentLevel = false;
+        _this.canDrawPraticle = false;
+        _this.score = 0;
         return _this;
     }
     GameViewLogic.prototype.onLoad = function () {
@@ -58,10 +63,9 @@ var GameViewLogic = /** @class */ (function (_super) {
         // }, 5); //5s执行一次
     };
     GameViewLogic.prototype.start = function () {
-        this.uiPanel.ShowOnlyObjByIndex(0);
+        this.ShowMenuPanel();
     };
     GameViewLogic.prototype.BackToMainPage = function () {
-        this.uiPanel.ShowOnlyObjByIndex(0);
     };
     GameViewLogic.prototype.StartGame = function () {
         this.uiPanel.ShowOnlyObjByIndex(1);
@@ -70,10 +74,15 @@ var GameViewLogic = /** @class */ (function (_super) {
         this.ProduceOneBasketCase(0, 1);
     };
     GameViewLogic.prototype.StartDrawLine = function () {
+        this.physicsNodeArr.splice(0, this.physicsNodeArr.length);
         var physicsNode = cc.instantiate(this.physicsNode);
         this.node.addChild(physicsNode);
         physicsNode.name = "first";
         this.physicsNodeArr.push(physicsNode);
+    };
+    GameViewLogic.prototype.ShowMenuPanel = function () {
+        this.uiPanel.ShowOnlyObjByIndex(0);
+        this.menuPanel.ShowLevelInfor(this.currentLevelIndex, this.score, this.maxLevelCount);
     };
     GameViewLogic.prototype.onEnter = function () {
     };
@@ -86,22 +95,39 @@ var GameViewLogic = /** @class */ (function (_super) {
             if (this.drawLineCount - 1 > 0) {
                 var physicsNode = cc.instantiate(this.physicsNode);
                 this.node.addChild(physicsNode);
+                physicsNode.name = this.physicsNodeArr.length.toString();
                 this.physicsNodeArr.push(physicsNode);
+                this.drawLineParticle = cc.instantiate(this.drawLineParticlePrefab);
+                this.node.addChild(this.drawLineParticle);
+                var touchLoc = event.getLocation();
+                touchLoc = this.node.convertToNodeSpaceAR(touchLoc);
+                this.drawLineParticle.setPosition(touchLoc);
+                this.canDrawPraticle = true;
             }
             this.drawLineCount--;
-            this.lineCount.string = "x " + this.drawLineCount.toString();
+            this.enterScenePanel.ShowLineCount("x " + this.drawLineCount.toString());
             if (this.drawLineCount == 0) {
                 cc.log("CheckBallCanEnterBasket");
                 this.drawEnable = false;
-                this.schedule(this.CheckEnterBasket, 0.2, 10, 2); //2s后执行一次
+                this.schedule(this.CheckEnterBasket, 0.2, 100, 2); //2s后执行一次
             }
         }
     };
     GameViewLogic.prototype.CheckEnterBasket = function () {
         if (!this.CheckBallCanEnterBasket()) {
             this.unschedule(this.CheckEnterBasket);
-            this.ShowLosePanel(true);
+            this.ShowFaithAction();
         }
+    };
+    //显示失败的动作
+    GameViewLogic.prototype.ShowFaithAction = function () {
+        var _this = this;
+        this.RemaveAllLine();
+        this.produceBasketManager.RemoveAllBaskets();
+        this.noticeAndProduceManager.DestroyAllBall();
+        this.scheduleOnce(function () {
+            _this.ShowLosePanel(true);
+        }, 2); //2s后执行一次
     };
     //检测球是否能进篮筐
     GameViewLogic.prototype.CheckBallCanEnterBasket = function () {
@@ -111,10 +137,20 @@ var GameViewLogic = /** @class */ (function (_super) {
         return false;
     };
     GameViewLogic.prototype.touchMove = function (event) {
+        if (this.canDrawPraticle == false) {
+            return;
+        }
+        var touchLoc = event.getLocation();
+        touchLoc = this.node.convertToNodeSpaceAR(touchLoc);
+        this.drawLineParticle.setPosition(touchLoc);
     };
     GameViewLogic.prototype.touchEnd = function (event) {
+        this.canDrawPraticle = false;
+        this.drawLineParticle.destroy();
     };
     GameViewLogic.prototype.touchCancel = function (event) {
+        this.drawLineParticle.destroy();
+        this.canDrawPraticle = false;
     };
     //创建下一关的数据
     GameViewLogic.prototype.ProduceNextLevelBasketCase = function (delayTime) {
@@ -150,7 +186,7 @@ var GameViewLogic = /** @class */ (function (_super) {
         var _this = this;
         if (delayTime === void 0) { delayTime = 0; }
         this.drawLineCount = 3;
-        this.lineCount.string = "x " + this.drawLineCount.toString();
+        this.enterScenePanel.ShowLineCount("x " + this.drawLineCount.toString());
         //  cc.log("one basket");
         this.currentLevelIndex = levelIndex;
         this.scheduleOnce(function () {
@@ -168,17 +204,16 @@ var GameViewLogic = /** @class */ (function (_super) {
         var shootInfors = this.levelDataManager.GetShootInforByLevel(levelIndex);
         this.noticeAndProduceManager.ProduceOneShootCase(shootInfors);
     };
+    ///播放进球特效
     GameViewLogic.prototype.PlayEnterBallEffect = function (pos) {
         this.effectPlayManager.PlayEnterBallAni(pos);
         this.effectPlayManager.PlayScoreAni(pos, this.drawLineCount);
+        this.score += this.drawLineCount + 1;
+        this.enterScenePanel.ShowScore(this.score);
     };
     //创建一个篮筐
     GameViewLogic.prototype.ProduceBoomBasket = function (pos) {
         this.effectPlayManager.PlayBombBasketAni(pos);
-        //   //  var startPos =  this.node.convertToNodeSpaceAR(pos);
-        //     let tempbasket= cc.instantiate(this.boomBasket);
-        //     tempbasket.setPosition(pos);
-        //   //  this.basketParent.addChild(tempbasket);
     };
     GameViewLogic.prototype.MoveToPos = function (colliderNode, pos) {
         this.scheduleOnce(function () {
@@ -187,11 +222,19 @@ var GameViewLogic = /** @class */ (function (_super) {
     };
     GameViewLogic.prototype.RemaveAllLine = function () {
         var children = this.node.children;
+        var lineLenght = this.physicsNodeArr.length;
+        for (var j = 0; j < lineLenght; j++) {
+            if (this.physicsNodeArr[j] != null) {
+                var lineDiePoints = this.physicsNodeArr[j].getComponent(physicsNodeLogic_1.default).points;
+                this.effectPlayManager.PlayLineDieEffection(lineDiePoints);
+            }
+        }
         for (var i = 0; i < children.length; i++) {
             children[i].destroy();
         }
         var arrLenght = this.physicsNodeArr.length;
-        this.physicsNodeArr.slice(0, arrLenght);
+        cc.log(arrLenght);
+        this.physicsNodeArr.splice(0, arrLenght);
     };
     //删除节点
     GameViewLogic.prototype.RemoveBasketNode = function (nodeObj) {
@@ -203,7 +246,6 @@ var GameViewLogic = /** @class */ (function (_super) {
         this.uiPanel.ShowOnlyObjByIndex(3);
         this.produceBasketManager.RemoveAllBaskets();
         this.noticeAndProduceManager.StopProduceAction();
-        this.RemaveAllLine();
     };
     GameViewLogic.prototype.ShowWinPanel = function () {
         this.unscheduleAllCallbacks();
@@ -211,11 +253,22 @@ var GameViewLogic = /** @class */ (function (_super) {
         this.produceBasketManager.RemoveAllBaskets();
         this.noticeAndProduceManager.DestroyAllBall();
     };
+    GameViewLogic.prototype.GotoMainPageFromWinPanel = function () {
+        if (this.currentLevelIndex + 1 < this.maxLevelCount) {
+            this.currentLevelIndex++;
+        }
+        this.ShowMenuPanel();
+    };
+    GameViewLogic.prototype.GotoMainPageFromLosePanel = function () {
+        this.ShowMenuPanel();
+    };
     GameViewLogic.prototype.ReplayGame = function () {
+        this.score = 0;
         this.StartDrawLine();
         this.drawLineCount = 3;
         this.drawEnable = true;
         this.uiPanel.ShowOnlyObjByIndex(1);
+        this.enterScenePanel.ShowScore(this.score);
         this.ProduceOneBasketCase(this.currentLevelIndex);
     };
     __decorate([
@@ -232,7 +285,16 @@ var GameViewLogic = /** @class */ (function (_super) {
     ], GameViewLogic.prototype, "linesParent", void 0);
     __decorate([
         property(cc.Prefab)
+    ], GameViewLogic.prototype, "drawLineParticlePrefab", void 0);
+    __decorate([
+        property(cc.Prefab)
     ], GameViewLogic.prototype, "boomBasket", void 0);
+    __decorate([
+        property(EnterScenePanel_1.default)
+    ], GameViewLogic.prototype, "enterScenePanel", void 0);
+    __decorate([
+        property(MenuPanel_1.default)
+    ], GameViewLogic.prototype, "menuPanel", void 0);
     __decorate([
         property(ProduceBasketManager_1.default)
     ], GameViewLogic.prototype, "produceBasketManager", void 0);

@@ -7,6 +7,9 @@ import LevelDataManager from "./LevelDataManager";
 import { BasketInfor, ShootInfor } from "./SceneLevelData";
 import Ball from "./Ball";
 import ShowHOrHideObj from "./ShowOrHideObj";
+import EnterScenePanel from "./EnterScenePanel";
+import PhysicsNodeLogic from "./physicsNodeLogic";
+import MenuPanel from "./MenuPanel";
 
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
@@ -35,11 +38,20 @@ export default class GameViewLogic extends cc.Component {
     @property(cc.Node)
     linesParent:cc.Node;
     physicsNodeArr: cc.Node[] = [];
- 
+     
+    @property(cc.Prefab)
+    drawLineParticlePrefab:cc.Prefab;
+
+    drawLineParticle:cc.Node;
 
     @property(cc.Prefab)
     boomBasket:cc.Prefab;
 
+    @property(EnterScenePanel)
+    enterScenePanel:EnterScenePanel;
+
+    @property(MenuPanel)
+    menuPanel:MenuPanel;
 
     @property(ProduceBasketManager)
     produceBasketManager:ProduceBasketManager;
@@ -73,6 +85,10 @@ export default class GameViewLogic extends cc.Component {
 
     isFinishCurrentLevel:boolean = false;
 
+    canDrawPraticle:boolean = false;
+
+    score:number = 0;
+
     onLoad () {
         cc.director.getPhysicsManager().enabled = true;
         // cc.director.getPhysicsManager().debugDrawFlags = cc.PhysicsManager.DrawBits.e_aabbBit |
@@ -103,11 +119,11 @@ export default class GameViewLogic extends cc.Component {
 
     start()
     {    
-        this.uiPanel.ShowOnlyObjByIndex(0);
+        this.ShowMenuPanel();
     }
     public BackToMainPage()
     {
-        this.uiPanel.ShowOnlyObjByIndex(0);
+       
     }
 
     public StartGame()
@@ -122,12 +138,18 @@ export default class GameViewLogic extends cc.Component {
 
     StartDrawLine()
     {
+        this.physicsNodeArr.splice(0,this.physicsNodeArr.length);
         let physicsNode = cc.instantiate(this.physicsNode);
         this.node.addChild(physicsNode);
         physicsNode.name = "first";
         this.physicsNodeArr.push(physicsNode);
     }
 
+    public ShowMenuPanel()
+    {
+        this.uiPanel.ShowOnlyObjByIndex(0);
+        this.menuPanel.ShowLevelInfor(this.currentLevelIndex,this.score,this.maxLevelCount);
+    }
 
 
     onEnter() {
@@ -148,17 +170,25 @@ export default class GameViewLogic extends cc.Component {
             {
                 let physicsNode = cc.instantiate(this.physicsNode);
                 this.node.addChild(physicsNode); 
+                physicsNode.name = this.physicsNodeArr.length.toString();
                 this.physicsNodeArr.push(physicsNode);
+               
+                this.drawLineParticle = cc.instantiate(this.drawLineParticlePrefab);
+                this.node.addChild(this.drawLineParticle);
+                let touchLoc = event.getLocation();
+                touchLoc = this.node.convertToNodeSpaceAR(touchLoc);
+                this.drawLineParticle.setPosition(touchLoc);
+                this.canDrawPraticle = true;
             }
            
             this.drawLineCount--; 
-            this.lineCount.string = "x "+ this.drawLineCount.toString();
+            this.enterScenePanel.ShowLineCount("x "+ this.drawLineCount.toString());
         
             if(this.drawLineCount == 0)
             {
                 cc.log("CheckBallCanEnterBasket");
                 this.drawEnable = false;
-                this.schedule(this.CheckEnterBasket, 0.2, 10,2);//2s后执行一次
+                this.schedule(this.CheckEnterBasket, 0.2, 100,2);//2s后执行一次
             }
         } 
        
@@ -169,12 +199,27 @@ export default class GameViewLogic extends cc.Component {
     {
         if (!this.CheckBallCanEnterBasket())
         {
+         
              this.unschedule(this.CheckEnterBasket);
-             this.ShowLosePanel(true);
+             
+             this.ShowFaithAction();
+            
         }
        
     }
 
+    //显示失败的动作
+    public ShowFaithAction()
+    {
+        this.RemaveAllLine();
+        this.produceBasketManager.RemoveAllBaskets();
+        this.noticeAndProduceManager.DestroyAllBall();
+        this.scheduleOnce(() => {
+    
+             this.ShowLosePanel(true);
+
+        }, 2);//2s后执行一次
+    }
 
     //检测球是否能进篮筐
     CheckBallCanEnterBasket():boolean
@@ -192,24 +237,34 @@ export default class GameViewLogic extends cc.Component {
     
 
     touchMove(event : cc.Event.EventTouch) {
-        
+        if(this.canDrawPraticle == false)
+        {
+            return
+        }
+        let touchLoc = event.getLocation();
+        touchLoc = this.node.convertToNodeSpaceAR(touchLoc);
+        this.drawLineParticle.setPosition(touchLoc);
     }
 
     touchEnd(event : cc.Event.EventTouch) {
-        
+        this.canDrawPraticle = false;
+        this.drawLineParticle.destroy();
     }
 
     touchCancel(event : cc.Event.EventTouch) {
-        
+        this.drawLineParticle.destroy();
+        this.canDrawPraticle = false;
     }
 
     //创建下一关的数据
     public ProduceNextLevelBasketCase(delayTime:number = 0)
     {
+     
         if(this.currentLevelIndex + 1 < this.maxLevelCount)
         {
             this.currentLevelIndex++;
         }  
+    
         this.ProduceOneBasketCase(this.currentLevelIndex,delayTime);
     }
 
@@ -222,8 +277,10 @@ export default class GameViewLogic extends cc.Component {
         {
             this.RemoveBasketNode(basketBottom.parent);
             this.RemaveAllLine();
+            
             this.scheduleOnce(() => {
-           
+                
+             
                 this.ShowWinPanel();
     
              }, 2);//2s后执行一次
@@ -246,7 +303,7 @@ export default class GameViewLogic extends cc.Component {
     public ProduceOneBasketCase(levelIndex:number,delayTime:number = 0)
     {
         this.drawLineCount = 3;
-        this.lineCount.string = "x "+this.drawLineCount.toString();
+        this.enterScenePanel.ShowLineCount("x "+this.drawLineCount.toString());
       //  cc.log("one basket");
         this.currentLevelIndex = levelIndex;
         this.scheduleOnce(() => {
@@ -273,11 +330,14 @@ export default class GameViewLogic extends cc.Component {
     }
 
     
-
+///播放进球特效
     public PlayEnterBallEffect(pos:cc.Vec2)
     {
         this.effectPlayManager.PlayEnterBallAni(pos);
         this.effectPlayManager.PlayScoreAni(pos,this.drawLineCount);
+        this.score += this.drawLineCount +1;
+        this.enterScenePanel.ShowScore( this.score);
+
     }
     
 
@@ -286,12 +346,6 @@ export default class GameViewLogic extends cc.Component {
     public ProduceBoomBasket(pos:cc.Vec2)
     {
         this.effectPlayManager.PlayBombBasketAni(pos);
-     
-    //   //  var startPos =  this.node.convertToNodeSpaceAR(pos);
-    //     let tempbasket= cc.instantiate(this.boomBasket);
-    //     tempbasket.setPosition(pos);
-    //   //  this.basketParent.addChild(tempbasket);
-    
     }
 
     MoveToPos(colliderNode:cc.Node,pos : cc.Vec2){
@@ -303,18 +357,37 @@ export default class GameViewLogic extends cc.Component {
     
 
     public RemaveAllLine()
-    {
-      
+    {    
         var children = this.node.children;
+        var lineLenght = this.physicsNodeArr.length;
+      
        
-        for(var i = 0; i < children.length ; i++)
-        {
-            children[i].destroy();
+        for(var j = 0; j <lineLenght; j++)
+        {          
+     
+            if(this.physicsNodeArr[j] != null)
+            {
+                let lineDiePoints:cc.Vec2[] = this.physicsNodeArr[j].getComponent<PhysicsNodeLogic>(PhysicsNodeLogic).points;
+             
+                this.effectPlayManager.PlayLineDieEffection(lineDiePoints);
+            }
+    
         }
-
-        var arrLenght = this.physicsNodeArr.length;
-        this.physicsNodeArr.slice(0,arrLenght);
+        
+        for(var i = 0; i < children.length ; i++)
+            {      
+                children[i].destroy();
+            }
+    
+            var arrLenght = this.physicsNodeArr.length;
+            cc.log(arrLenght);
+            this.physicsNodeArr.splice(0,arrLenght);
+        
+        
+       
     }
+
+  
 
     //删除节点
     public RemoveBasketNode(nodeObj:cc.Node)
@@ -329,12 +402,13 @@ export default class GameViewLogic extends cc.Component {
         this.uiPanel.ShowOnlyObjByIndex(3);
         this.produceBasketManager.RemoveAllBaskets();
         this.noticeAndProduceManager.StopProduceAction();
-        this.RemaveAllLine();
+        
     
     }
 
     public ShowWinPanel()
     {
+       
         this.unscheduleAllCallbacks();
         this.uiPanel.ShowOnlyObjByIndex(2);
         this.produceBasketManager.RemoveAllBaskets();
@@ -342,12 +416,30 @@ export default class GameViewLogic extends cc.Component {
      
     }
 
+    public GotoMainPageFromWinPanel()
+    {
+        if(this.currentLevelIndex + 1 < this.maxLevelCount)
+        {
+            this.currentLevelIndex++;
+        } 
+        this.ShowMenuPanel();
+    }
+
+    public GotoMainPageFromLosePanel()
+    {
+        this.ShowMenuPanel();
+    }
+
+
     public ReplayGame()
     {
+        this.score = 0;
         this.StartDrawLine();
         this.drawLineCount = 3;
         this.drawEnable = true;
         this.uiPanel.ShowOnlyObjByIndex(1);
+
+        this.enterScenePanel.ShowScore(this.score);
         this.ProduceOneBasketCase(this.currentLevelIndex);
    
     }

@@ -27,9 +27,8 @@ var Ball = /** @class */ (function (_super) {
     Ball.prototype.onBeginContact = function (contact, selfCollider, otherCollider) {
         if (otherCollider.body.node.name == 'ground') {
             this.gameViewLogic = cc.find("Canvas/Logic").getComponent(GameViewLogic_1.default);
-            this.gameViewLogic.RemaveAllLine();
             this.node.destroy();
-            this.gameViewLogic.ShowLosePanel(true);
+            this.gameViewLogic.ShowFaithAction();
         }
         else if (otherCollider.body.node.name == 'BasketBottom') {
             // cc.log("get one score");
