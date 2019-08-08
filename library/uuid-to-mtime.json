@@ -335,8 +335,8 @@
     "relativePath": "Scene\\Test.fire"
   },
   "aa031956-af82-4cc1-9cbd-47038a432a40": {
-    "asset": 1565186333571,
-    "meta": 1565186333583,
+    "asset": 1565272863112,
+    "meta": 1565272863130,
     "relativePath": "Scene\\MainScene.fire"
   },
   "bbd5c560-db15-488d-aa76-746c47156f9a": {
@@ -363,11 +363,6 @@
     "asset": 1564281584259,
     "meta": 1564577326358,
     "relativePath": "Script\\SceneLevelData.ts"
-  },
-  "3baedeac-a040-4693-bbb4-9e18478ed212": {
-    "asset": 1564281584256,
-    "meta": 1564577326211,
-    "relativePath": "Script\\LevelDataManager.ts"
   },
   "11a65d77-ac84-4dd4-ae9a-ea2c1602d01b": {
     "asset": 1564281584261,
@@ -398,11 +393,6 @@
     "asset": 1564304061222,
     "meta": 1564577326377,
     "relativePath": "Script\\ShowOrHideObj.ts"
-  },
-  "01e40fe4-f616-4ba4-9752-b2cbdea62431": {
-    "asset": 1564577273870,
-    "meta": 1563102579109,
-    "relativePath": "resources\\json\\LevelData.json"
   },
   "ff6e0d25-2e4b-4d62-9f7d-947b8a9970da": {
     "asset": 1564489908396,
@@ -579,20 +569,10 @@
     "meta": 1564911481475,
     "relativePath": "Script\\MenuPanel.ts"
   },
-  "d106c7ed-d375-4351-91de-ca674dae8e20": {
-    "asset": 1564915752468,
-    "meta": 1564915756382,
-    "relativePath": "Script\\NoticeAndProduceManager.ts"
-  },
   "8facd37b-d27f-4e8a-b04b-7d239b84c356": {
     "asset": 1565181613769,
     "meta": 1565181617387,
     "relativePath": "Script\\physicsNodeLogic.ts"
-  },
-  "0d903ab2-22ca-4d5c-b1b5-85df8395f9f4": {
-    "asset": 1565182255800,
-    "meta": 1565182257332,
-    "relativePath": "Script\\GameViewLogic.ts"
   },
   "71561142-4c83-4933-afca-cb7a17f67053": {
     "asset": 1530695500000,
@@ -778,5 +758,25 @@
     "asset": 1530695500000,
     "meta": 1565186259349,
     "relativePath": "prefab\\webview.prefab"
+  },
+  "0d903ab2-22ca-4d5c-b1b5-85df8395f9f4": {
+    "asset": 1565267807972,
+    "meta": 1565267810688,
+    "relativePath": "Script\\GameViewLogic.ts"
+  },
+  "d106c7ed-d375-4351-91de-ca674dae8e20": {
+    "asset": 1565268149153,
+    "meta": 1565268222859,
+    "relativePath": "Script\\NoticeAndProduceManager.ts"
+  },
+  "01e40fe4-f616-4ba4-9752-b2cbdea62431": {
+    "asset": 1565271445132,
+    "meta": 1563102579109,
+    "relativePath": "resources\\json\\LevelData.json"
+  },
+  "3baedeac-a040-4693-bbb4-9e18478ed212": {
+    "asset": 1565272672462,
+    "meta": 1565272673842,
+    "relativePath": "Script\\LevelDataManager.ts"
   }
 }

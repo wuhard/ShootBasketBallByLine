@@ -119,6 +119,7 @@ export default class GameViewLogic extends cc.Component {
 
     start()
     {    
+ 
         this.ShowMenuPanel();
     }
     public BackToMainPage()

@@ -20,11 +20,18 @@ let talefun = (<any>cc).talefun;
 export default class LevelDataManager extends Singleton<LevelDataManager> {
 
    public levelData:SceneLevelData[] = [];
-
+   relateDis:number;
+   screenWidth:number;
 
     start () {
         this.LoadJson("LevelData");
-      
+        var b = cc.director.getWinSizeInPixels();
+        var bx = b.width;
+        var by = b.height;
+        this.screenWidth = bx;
+        cc.log(bx);
+        this.relateDis = (720 - bx)*0.5;
+       
     }
 
     //读取关卡数据
@@ -53,7 +60,17 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
             let oneInfor = new BasketInfor();
             cc.log(this.StringToVec2(this.levelData[levelIndex].basketInfors[i].basketPos));
             oneInfor.basketPos = this.StringToVec2(this.levelData[levelIndex].basketInfors[i].basketPos);
+            
+           
             oneInfor.basketType = this.levelData[levelIndex].basketInfors[i].basketType;
+            if(oneInfor.basketType == 0 || oneInfor.basketType == 1 )
+            {
+                oneInfor.basketPos =new cc.Vec2(oneInfor.basketPos.x + this.relateDis, oneInfor.basketPos.y);
+            }
+            else if(oneInfor.basketType == 3 || oneInfor.basketType == 4 )
+            {
+                oneInfor.basketPos =new cc.Vec2(oneInfor.basketPos.x - this.relateDis, oneInfor.basketPos.y);
+            }
             oneInfor.moveEndPos = this.StringToVec2(this.levelData[levelIndex].basketInfors[i].moveEndPos)
             oneInfor.moveDuringTime =  this.levelData[levelIndex].basketInfors[i].moveDuringTime;
             infors.push(oneInfor);
@@ -64,20 +81,47 @@ export default class LevelDataManager extends Singleton<LevelDataManager> {
     ///获取某一关卡的射击信息
     public GetShootInforByLevel(levelIndex:number):ShootInfor[]
     {
+        let basketInfor= this.GetBasketInforsByLevel(levelIndex)[0];
+
+      
+
+
         let infors:ShootInfor[] = [];
         for(var i = 0; i < this.levelData[levelIndex].shootInfors.length; i++)
         {
             let oneInfor = new ShootInfor();
-         
+            
             oneInfor.shootType = this.levelData[levelIndex].shootInfors[i].shootType;
             oneInfor.shootPos = this.StringToVec2(this.levelData[levelIndex].shootInfors[i].shootPos);
+           
+           
+               if(oneInfor.shootPos.x - basketInfor.basketPos.x < 0)
+               {
+                   oneInfor.shootPos = new cc.Vec2(oneInfor.shootPos.x - this.relateDis < 23?23:oneInfor.shootPos.x - this.relateDis ,oneInfor.shootPos.y);
+               }
+               else
+               {
+
+               
+                oneInfor.shootPos = new cc.Vec2(oneInfor.shootPos.x + this.relateDis > this.screenWidth-this.relateDis? this.screenWidth - this.relateDis:oneInfor.shootPos.x + this.relateDis ,oneInfor.shootPos.y);
+               }
+          
+
+           
+      
+           
             oneInfor.velocity = this.StringToVec2(this.levelData[levelIndex].shootInfors[i].velocity)
             oneInfor.shootDelayTime =  this.levelData[levelIndex].shootInfors[i].shootDelayTime;
             infors.push(oneInfor);
         }
         return infors;
     }
+ 
+    ///分辨率不同手机对球的位置处理 -1代表球在篮筐左边，0代表在中间， 1代表在右边
+    GetBallPosType(levelIndex:number)
+    {
 
+    }
 
     public GetLevelLength():number
     {

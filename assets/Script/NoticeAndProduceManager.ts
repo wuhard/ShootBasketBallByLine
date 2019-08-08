@@ -58,12 +58,13 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
     @property(ProduceBasketManager)
     produceBasketManager:ProduceBasketManager;
 
+
     // LIFE-CYCLE CALLBACKS:
 
     // onLoad () {}
 
     start () {
-      
+       
     }
 
 
@@ -237,44 +238,44 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
     }
 
 
-    //创建一次球和炸弹的用例
-    public ProduceOneBallAndBombCase(shootPos:number[],shootSeq:number[],shootAngel:number [])
-    {
+    // //创建一次球和炸弹的用例
+    // public ProduceOneBallAndBombCase(shootPos:number[],shootSeq:number[],shootAngel:number [])
+    // {
 
-        this.bornPos.splice(0,this.bornPos.length);
-        this.ballGuideArray.splice(0,this.ballGuideArray.length);
-        this.bombGuideArray.splice(0,this.bombGuideArray.length);
-        this.basketBallArray.splice(0,this.basketBallArray.length);
-        this.basektBallPosArray.splice(0,this.basektBallPosArray.length);
+    //     this.bornPos.splice(0,this.bornPos.length);
+    //     this.ballGuideArray.splice(0,this.ballGuideArray.length);
+    //     this.bombGuideArray.splice(0,this.bombGuideArray.length);
+    //     this.basketBallArray.splice(0,this.basketBallArray.length);
+    //     this.basektBallPosArray.splice(0,this.basektBallPosArray.length);
 
-        for(var i = 0; i < shootPos.length; i++)
-        {
-            if(shootPos[i] == 1)
-            {
-                let oneBallGuide = this.ProduceOneBallGuide(this.guidePos[i]);  
-                let vel = this.GetShootVelority(shootAngel[i]);//获取射击速度
-                this.ballGuideArray.push(oneBallGuide);
+    //     for(var i = 0; i < shootPos.length; i++)
+    //     {
+    //         if(shootPos[i] == 1)
+    //         {
+    //             let oneBallGuide = this.ProduceOneBallGuide(this.guidePos[i]);  
+    //             let vel = this.GetShootVelority(shootAngel[i]);//获取射击速度
+    //             this.ballGuideArray.push(oneBallGuide);
                
-                this.scheduleOnce(() => {
-                    // 这里的 this 指向 component
-                    this.ProduceOneShootBallAction(oneBallGuide,vel);
+    //             this.scheduleOnce(() => {
+    //                 // 这里的 this 指向 component
+    //                 this.ProduceOneShootBallAction(oneBallGuide,vel);
                    
-                }, shootSeq[i]/1000.0 + 0.5);//2s后执行一次
+    //             }, shootSeq[i]/1000.0 + 0.5);//2s后执行一次
 
-            }
-            else if(shootPos[i] == 2)
-            {
-                let oneBombGuide = this.ProduceOneBoomGuide(this.guidePos[i]);
-                let vel = this.GetShootVelority(shootAngel[i]);//获取射击速度
-                this.bombGuideArray.push(oneBombGuide);
-                this.scheduleOnce(() => {
-                    // 这里的 this 指向 component
-                    this.ProduceOneShootBombAction(oneBombGuide,vel);
+    //         }
+    //         else if(shootPos[i] == 2)
+    //         {
+    //             let oneBombGuide = this.ProduceOneBoomGuide(this.guidePos[i]);
+    //             let vel = this.GetShootVelority(shootAngel[i]);//获取射击速度
+    //             this.bombGuideArray.push(oneBombGuide);
+    //             this.scheduleOnce(() => {
+    //                 // 这里的 this 指向 component
+    //                 this.ProduceOneShootBombAction(oneBombGuide,vel);
                    
-                }, shootSeq[i]/1000.0 + 0.5);//2s后执行一次
-            }
-        }
-    }
+    //             }, shootSeq[i]/1000.0 + 0.5);//2s后执行一次
+    //         }
+    //     }
+    // }
 
     //创建一次射球动作
     //velocity表示射球角度
