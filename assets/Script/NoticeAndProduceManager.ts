@@ -2,6 +2,7 @@ import Singleton from "./Singleton";
 import ProduceBasketManager from "./ProduceBasketManager";
 import LevelDataManager from "./LevelDataManager";
 import { ShootInfor } from "./SceneLevelData";
+import AudioPlayManager from "./AudioPlayManager";
 
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
@@ -333,6 +334,9 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         tempball.getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity = velocity;
         this.basketBallArray.push(tempball);
         this.basektBallPosArray.push(cc.v2(0,0));
+        this.node.parent.getChildByName("AudioManager").getComponent(AudioPlayManager).PlayEffect("进球.mp3");
+
+
     }
 
       
@@ -346,6 +350,7 @@ export default class NoticeAndProduceManager extends Singleton<NoticeAndProduceM
         tempball.position = this.ballParent.convertToNodeSpaceAR(startPos);
         tempball.getComponent<cc.RigidBody>(cc.RigidBody).linearVelocity = velocity;
         this.bombArray.push(tempball);
+        this.node.parent.getChildByName("AudioManager").getComponent(AudioPlayManager).PlayEffect("进球.mp3");
     }
 
     CheckAllBallCanEnter():boolean

@@ -5,6 +5,7 @@ cc._RF.push(module, 'd106cft03VDUZHeymdNro4g', 'NoticeAndProduceManager');
 Object.defineProperty(exports, "__esModule", { value: true });
 var Singleton_1 = require("./Singleton");
 var ProduceBasketManager_1 = require("./ProduceBasketManager");
+var AudioPlayManager_1 = require("./AudioPlayManager");
 // Learn TypeScript:
 //  - [Chinese] http://docs.cocos.com/creator/manual/zh/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/creator/manual/en/scripting/typescript.html
@@ -238,6 +239,7 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         tempball.getComponent(cc.RigidBody).linearVelocity = velocity;
         this.basketBallArray.push(tempball);
         this.basektBallPosArray.push(cc.v2(0, 0));
+        this.node.parent.getChildByName("AudioManager").getComponent(AudioPlayManager_1.default).PlayEffect("进球.mp3");
     };
     NoticeAndProduceManager.prototype.ProduceOneBomb = function (posNode, velocity) {
         var startPos = posNode.convertToWorldSpaceAR(cc.v2(0, 0));
@@ -246,6 +248,7 @@ var NoticeAndProduceManager = /** @class */ (function (_super) {
         tempball.position = this.ballParent.convertToNodeSpaceAR(startPos);
         tempball.getComponent(cc.RigidBody).linearVelocity = velocity;
         this.bombArray.push(tempball);
+        this.node.parent.getChildByName("AudioManager").getComponent(AudioPlayManager_1.default).PlayEffect("进球.mp3");
     };
     NoticeAndProduceManager.prototype.CheckAllBallCanEnter = function () {
         for (var i = 0; i < this.basketBallArray.length; i++) {

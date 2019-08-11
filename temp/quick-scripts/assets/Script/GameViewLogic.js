@@ -11,6 +11,7 @@ var ShowOrHideObj_1 = require("./ShowOrHideObj");
 var EnterScenePanel_1 = require("./EnterScenePanel");
 var physicsNodeLogic_1 = require("./physicsNodeLogic");
 var MenuPanel_1 = require("./MenuPanel");
+var AudioPlayManager_1 = require("./AudioPlayManager");
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
 //  - [English] http://www.cocos2d-x.org/docs/editors_and_tools/creator-chapters/scripting/typescript/index.html
@@ -122,6 +123,7 @@ var GameViewLogic = /** @class */ (function (_super) {
     //显示失败的动作
     GameViewLogic.prototype.ShowFaithAction = function () {
         var _this = this;
+        this.audioPlayManager.PlayEffect("球落空");
         this.RemaveAllLine();
         this.produceBasketManager.RemoveAllBaskets();
         this.noticeAndProduceManager.DestroyAllBall();
@@ -145,10 +147,16 @@ var GameViewLogic = /** @class */ (function (_super) {
         this.drawLineParticle.setPosition(touchLoc);
     };
     GameViewLogic.prototype.touchEnd = function (event) {
+        if (this.drawEnable == false) {
+            return;
+        }
         this.canDrawPraticle = false;
         this.drawLineParticle.destroy();
     };
     GameViewLogic.prototype.touchCancel = function (event) {
+        if (this.drawEnable == false) {
+            return;
+        }
         this.drawLineParticle.destroy();
         this.canDrawPraticle = false;
     };
@@ -164,6 +172,7 @@ var GameViewLogic = /** @class */ (function (_super) {
     GameViewLogic.prototype.EnterOneBall = function (ball, basketBottom) {
         var _this = this;
         this.PlayEnterBallEffect(basketBottom.convertToWorldSpaceAR(cc.v2(0, 0)));
+        this.audioPlayManager.PlayEffect("得分.mp3", false);
         this.ballCount--;
         if (this.ballCount == 0) {
             this.RemoveBasketNode(basketBottom.parent);
@@ -185,6 +194,7 @@ var GameViewLogic = /** @class */ (function (_super) {
     GameViewLogic.prototype.ProduceOneBasketCase = function (levelIndex, delayTime) {
         var _this = this;
         if (delayTime === void 0) { delayTime = 0; }
+        this.audioPlayManager.PlayEffect("开场准备");
         this.drawLineCount = 3;
         this.enterScenePanel.ShowLineCount("x " + this.drawLineCount.toString());
         //  cc.log("one basket");
@@ -213,6 +223,7 @@ var GameViewLogic = /** @class */ (function (_super) {
     };
     //创建一个篮筐
     GameViewLogic.prototype.ProduceBoomBasket = function (pos) {
+        this.audioPlayManager.PlayEffect("bomb");
         this.effectPlayManager.PlayBombBasketAni(pos);
     };
     GameViewLogic.prototype.MoveToPos = function (colliderNode, pos) {
@@ -246,12 +257,14 @@ var GameViewLogic = /** @class */ (function (_super) {
         this.uiPanel.ShowOnlyObjByIndex(3);
         this.produceBasketManager.RemoveAllBaskets();
         this.noticeAndProduceManager.StopProduceAction();
+        this.audioPlayManager.PlayEffect("失败界面");
     };
     GameViewLogic.prototype.ShowWinPanel = function () {
         this.unscheduleAllCallbacks();
         this.uiPanel.ShowOnlyObjByIndex(2);
         this.produceBasketManager.RemoveAllBaskets();
         this.noticeAndProduceManager.DestroyAllBall();
+        this.audioPlayManager.PlayEffect("胜利界面");
     };
     GameViewLogic.prototype.GotoMainPageFromWinPanel = function () {
         if (this.currentLevelIndex + 1 < this.maxLevelCount) {
@@ -307,6 +320,9 @@ var GameViewLogic = /** @class */ (function (_super) {
     __decorate([
         property(LevelDataManager_1.default)
     ], GameViewLogic.prototype, "levelDataManager", void 0);
+    __decorate([
+        property(AudioPlayManager_1.default)
+    ], GameViewLogic.prototype, "audioPlayManager", void 0);
     __decorate([
         property(ShowOrHideObj_1.default)
     ], GameViewLogic.prototype, "uiPanel", void 0);

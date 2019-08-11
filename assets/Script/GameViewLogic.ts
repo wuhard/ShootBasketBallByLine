@@ -10,6 +10,7 @@ import ShowHOrHideObj from "./ShowOrHideObj";
 import EnterScenePanel from "./EnterScenePanel";
 import PhysicsNodeLogic from "./physicsNodeLogic";
 import MenuPanel from "./MenuPanel";
+import AudioPlayManager from "./AudioPlayManager";
 
 // Learn TypeScript:
 //  - [Chinese] http://www.cocos.com/docs/creator/scripting/typescript.html
@@ -63,6 +64,9 @@ export default class GameViewLogic extends cc.Component {
 
     @property(LevelDataManager)
     levelDataManager:LevelDataManager;
+    
+    @property(AudioPlayManager)
+    audioPlayManager:AudioPlayManager;
 
     @property(ShowHOrHideObj)
     uiPanel:ShowHOrHideObj;
@@ -196,6 +200,8 @@ export default class GameViewLogic extends cc.Component {
              
     }
 
+
+
     CheckEnterBasket()
     {
         if (!this.CheckBallCanEnterBasket())
@@ -212,6 +218,7 @@ export default class GameViewLogic extends cc.Component {
     //显示失败的动作
     public ShowFaithAction()
     {
+        this.audioPlayManager.PlayEffect("球落空");
         this.RemaveAllLine();
         this.produceBasketManager.RemoveAllBaskets();
         this.noticeAndProduceManager.DestroyAllBall();
@@ -248,11 +255,19 @@ export default class GameViewLogic extends cc.Component {
     }
 
     touchEnd(event : cc.Event.EventTouch) {
+        if(this.drawEnable == false)
+        {
+            return;
+        }
         this.canDrawPraticle = false;
         this.drawLineParticle.destroy();
     }
 
     touchCancel(event : cc.Event.EventTouch) {
+        if(this.drawEnable == false)
+        {
+            return;
+        }
         this.drawLineParticle.destroy();
         this.canDrawPraticle = false;
     }
@@ -273,6 +288,7 @@ export default class GameViewLogic extends cc.Component {
     public EnterOneBall(ball:cc.Node,basketBottom:cc.Node)
     {
         this.PlayEnterBallEffect(basketBottom.convertToWorldSpaceAR(cc.v2(0, 0)))
+        this.audioPlayManager.PlayEffect("得分.mp3",false);
         this.ballCount--;
         if(this.ballCount == 0)
         {
@@ -303,6 +319,9 @@ export default class GameViewLogic extends cc.Component {
     ///创建一个篮球用例
     public ProduceOneBasketCase(levelIndex:number,delayTime:number = 0)
     {
+
+        this.audioPlayManager.PlayEffect("开场准备");
+
         this.drawLineCount = 3;
         this.enterScenePanel.ShowLineCount("x "+this.drawLineCount.toString());
       //  cc.log("one basket");
@@ -346,6 +365,7 @@ export default class GameViewLogic extends cc.Component {
    
     public ProduceBoomBasket(pos:cc.Vec2)
     {
+        this.audioPlayManager.PlayEffect("bomb");
         this.effectPlayManager.PlayBombBasketAni(pos);
     }
 
@@ -403,7 +423,8 @@ export default class GameViewLogic extends cc.Component {
         this.uiPanel.ShowOnlyObjByIndex(3);
         this.produceBasketManager.RemoveAllBaskets();
         this.noticeAndProduceManager.StopProduceAction();
-        
+        this.audioPlayManager.PlayEffect("失败界面");
+     
     
     }
 
@@ -414,6 +435,7 @@ export default class GameViewLogic extends cc.Component {
         this.uiPanel.ShowOnlyObjByIndex(2);
         this.produceBasketManager.RemoveAllBaskets();
         this.noticeAndProduceManager.DestroyAllBall();
+        this.audioPlayManager.PlayEffect("胜利界面");
      
     }
 
