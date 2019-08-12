@@ -25,6 +25,11 @@ export default class ShowScore extends cc.Component {
 
     public ShowScorePoint(scoreNum:number)
     {
+        if(scoreNum == 3)
+        {
+            scoreNum = 2;
+        }
+
         for(var i = 0; i < this.score.length; i++)
         {
             this.score[i].active = false;

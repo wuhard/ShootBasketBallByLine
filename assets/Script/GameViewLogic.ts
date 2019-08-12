@@ -136,7 +136,7 @@ export default class GameViewLogic extends cc.Component {
         this.uiPanel.ShowOnlyObjByIndex(1);
         this.StartDrawLine();
         this.drawEnable = true;
-        this.ProduceOneBasketCase(12,1);
+        this.ProduceOneBasketCase(13,1);
     }
 
   
