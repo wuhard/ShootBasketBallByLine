@@ -72,7 +72,7 @@ var GameViewLogic = /** @class */ (function (_super) {
         this.uiPanel.ShowOnlyObjByIndex(1);
         this.StartDrawLine();
         this.drawEnable = true;
-        this.ProduceOneBasketCase(0, 1);
+        this.ProduceOneBasketCase(12, 1);
     };
     GameViewLogic.prototype.StartDrawLine = function () {
         this.physicsNodeArr.splice(0, this.physicsNodeArr.length);

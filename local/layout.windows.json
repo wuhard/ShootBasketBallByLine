@@ -8,7 +8,7 @@
       "x": -8,
       "y": -8,
       "width": 1936,
-      "height": 1056,
+      "height": 920,
       "layout": {
         "children": [
           {
@@ -18,7 +18,7 @@
                 "children": [
                   "hierarchy"
                 ],
-                "height": 641,
+                "height": 547.453125,
                 "type": "panel",
                 "width": 687
               },
@@ -27,12 +27,12 @@
                 "children": [
                   "assets"
                 ],
-                "height": 284,
+                "height": 242.546875,
                 "type": "panel",
                 "width": 687
               }
             ],
-            "height": 928,
+            "height": 793,
             "type": "dock-v",
             "width": 687
           },
@@ -45,7 +45,7 @@
                     "children": [
                       "scene"
                     ],
-                    "height": 595,
+                    "height": 508.15625,
                     "type": "panel",
                     "width": 297
                   },
@@ -54,12 +54,12 @@
                     "children": [
                       "node-library"
                     ],
-                    "height": 595,
+                    "height": 508.15625,
                     "type": "panel",
                     "width": 204
                   }
                 ],
-                "height": 595,
+                "height": 508.15625,
                 "type": "dock-h",
                 "width": 504
               },
@@ -69,12 +69,12 @@
                   "console",
                   "timeline"
                 ],
-                "height": 330,
+                "height": 281.84375,
                 "type": "panel",
                 "width": 504
               }
             ],
-            "height": 928,
+            "height": 793,
             "type": "dock-v",
             "width": 504
           },
@@ -83,7 +83,7 @@
             "children": [
               "inspector"
             ],
-            "height": 928,
+            "height": 793,
             "type": "panel",
             "width": 717
           }
